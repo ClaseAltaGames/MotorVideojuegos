@@ -1,0 +1,1 @@
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\x64\Debug\sdl2_simple_example.vcxproj.CopyComplete

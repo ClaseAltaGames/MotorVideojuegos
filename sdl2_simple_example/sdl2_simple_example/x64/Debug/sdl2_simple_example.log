@@ -1,0 +1,60 @@
+﻿C:\Users\edgar\AppData\Local\vcpkg\vcpkg.user.props(3,3): warning MSB4011: "C:\Users\edgar\temp\vcpkg\scripts\buildsystems\msbuild\vcpkg.props" no se puede volver a importar. Ya se importó en "C:\Users\edgar\temp\Directory.Build.props (8,3)". Lo más probable es que se trate de un error al crear la compilación. Se omitirá esta importación. [C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\sdl2_simple_example.vcxproj]
+C:\Users\edgar\AppData\Local\vcpkg\vcpkg.user.targets(3,3): warning MSB4011: "C:\Users\edgar\temp\vcpkg\scripts\buildsystems\msbuild\vcpkg.targets" no se puede volver a importar. Ya se importó en "C:\Users\edgar\temp\Directory.Build.targets (11,3)". Lo más probable es que se trate de un error al crear la compilación. Se omitirá esta importación. [C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\sdl2_simple_example.vcxproj]
+  Installing vcpkg dependencies to C:\Users\edgar\temp\vcpkg_installed\x64-windows\
+  "C:\Users\edgar\temp\vcpkg\vcpkg.exe" install  --x-wait-for-lock --triplet "x64-windows" --vcpkg-root "C:\Users\edgar\temp\vcpkg\\" "--x-manifest-root=C:\Users\edgar\temp\\" "--x-install-root=C:\Users\edgar\temp\vcpkg_installed\x64-windows\\" 
+  Detectando hash del compilador para el triplete x64-windows...
+  Se encontró el compilador: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.38.33130/bin/Hostx64/x64/cl.exe
+  Se volverán a generar los siguientes paquetes:
+      imgui[core,opengl3-binding,sdl2-binding]:x64-windows@1.91.0
+  Se restauraron 0 paquetes de C:\Users\edgar\AppData\Local\vcpkg\archives en 718 us. Use --debug para ver más detalles.
+  Quitando 1/2 imgui:x64-windows
+  Tiempo transcurrido para controlar imgui:x64-windows: 25.5 ms
+  Instalando 2/2 imgui[core,opengl3-binding,sdl2-binding]:x64-windows@1.91.0...
+  Compilando imgui[core,opengl3-binding,sdl2-binding]:x64-windows@1.91.0...
+  -- Note: imgui only supports static library linkage. Building static library.
+  -- Using cached ocornut-imgui-v1.91.0.tar.gz.
+  -- Cleaning sources at C:/Users/edgar/temp/vcpkg/buildtrees/imgui/src/v1.91.0-51846a2755.clean. Use --editable to skip cleaning for the packages you specify.
+  -- Extracting source C:/Users/edgar/temp/vcpkg/downloads/ocornut-imgui-v1.91.0.tar.gz
+  -- Using source at C:/Users/edgar/temp/vcpkg/buildtrees/imgui/src/v1.91.0-51846a2755.clean
+  -- Found external ninja('1.11.0').
+  -- Configuring x64-windows
+  -- Building x64-windows-dbg
+  -- Building x64-windows-rel
+  -- Installing: C:/Users/edgar/temp/vcpkg/packages/imgui_x64-windows/share/imgui/copyright
+  -- Realizando la validación posterior a la compilación
+  Archivos binarios almacenados en 1 destinos en 2.7 s.
+  Tiempo transcurrido para controlar imgui:x64-windows: 50 s
+  ABI del paquete imgui:x64-windows: 5c2e517a80190c97f5cfb5d94515dc9856011e969438097c099d23f5f0a94fbb
+  Tiempo total de instalación: 51 s
+  The package glew is compatible with built-in CMake targets:
+  
+      find_package(GLEW REQUIRED)
+      target_link_libraries(main PRIVATE GLEW::GLEW)
+  
+  The package glm provides CMake targets:
+  
+      find_package(glm CONFIG REQUIRED)
+      target_link_libraries(main PRIVATE glm::glm)
+  
+      # Or use the header-only version
+      find_package(glm CONFIG REQUIRED)
+      target_link_libraries(main PRIVATE glm::glm-header-only)
+  
+  sdl2 provides CMake targets:
+  
+      find_package(SDL2 CONFIG REQUIRED)
+      target_link_libraries(main
+          PRIVATE
+          $<TARGET_NAME_IF_EXISTS:SDL2::SDL2main>
+          $<IF:$<TARGET_EXISTS:SDL2::SDL2>,SDL2::SDL2,SDL2::SDL2-static>
+      )
+  
+  imgui proporciona destinos de CMake:
+  
+    # esto se genera de forma heurística y puede que no sea correcto
+    find_package(imgui CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE imgui::imgui)
+  
+  sdl2_simple_example.vcxproj -> C:\Users\edgar\temp\sdl2_simple_example\x64\Debug\sdl2_simple_example.exe
+  "pwsh.exe" no se reconoce como un comando interno o externo,
+  programa o archivo por lotes ejecutable.
