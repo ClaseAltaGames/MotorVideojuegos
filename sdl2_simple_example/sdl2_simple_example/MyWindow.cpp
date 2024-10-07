@@ -45,7 +45,7 @@ void MyWindow::swapBuffers() const {
     ImGui::NewFrame();
     if (ImGui::BeginMainMenuBar()) {
         if (ImGui::BeginMenu("Menu")) {
-            if (ImGui::MenuItem("Adeu")) {
+            if (ImGui::MenuItem("Adios")) {
                 // ... codi activació
                 SDL_Event quit_event;
                 quit_event.type = SDL_QUIT;
@@ -55,7 +55,7 @@ void MyWindow::swapBuffers() const {
         }
         ImGui::EndMainMenuBar();
     }
-
+    
 
     ImGui::Render();
     ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());

@@ -1,0 +1,69 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\paumt\\Documents\\GitHub\\MotorVideojuegos\\sdl2_simple_example\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{58145ABE-1438-4332-BECA-65D74173C2B7}|sdl2_simple_example\\sdl2_simple_example.vcxproj|C:\\Users\\paumt\\Documents\\GitHub\\MotorVideojuegos\\sdl2_simple_example\\sdl2_simple_example\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{58145ABE-1438-4332-BECA-65D74173C2B7}|sdl2_simple_example\\sdl2_simple_example.vcxproj|solutionrelative:sdl2_simple_example\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58145ABE-1438-4332-BECA-65D74173C2B7}|sdl2_simple_example\\sdl2_simple_example.vcxproj|C:\\Users\\paumt\\Documents\\GitHub\\MotorVideojuegos\\sdl2_simple_example\\sdl2_simple_example\\MyWindow.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{58145ABE-1438-4332-BECA-65D74173C2B7}|sdl2_simple_example\\sdl2_simple_example.vcxproj|solutionrelative:sdl2_simple_example\\MyWindow.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\edgar\\temp\\vcpkg\\buildtrees\\imgui\\src\\v1.91.0-51846a2755.clean\\backends\\imgui_impl_sdl2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "imgui_impl_sdl2.cpp",
+              "DocumentMoniker": "C:\\Users\\edgar\\temp\\vcpkg\\buildtrees\\imgui\\src\\v1.91.0-51846a2755.clean\\backends\\imgui_impl_sdl2.cpp",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\edgar\\temp\\vcpkg\\buildtrees\\imgui\\src\\v1.91.0-51846a2755.clean\\backends\\imgui_impl_sdl2.cpp",
+              "ToolTip": "C:\\Users\\edgar\\temp\\vcpkg\\buildtrees\\imgui\\src\\v1.91.0-51846a2755.clean\\backends\\imgui_impl_sdl2.cpp",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\edgar\\temp\\vcpkg\\buildtrees\\imgui\\src\\v1.91.0-51846a2755.clean\\backends\\imgui_impl_sdl2.cpp",
+              "ViewState": "AQIAABUCAAAAAAAAAAAtwB8CAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-10-02T10:03:41.681Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\paumt\\Documents\\GitHub\\MotorVideojuegos\\sdl2_simple_example\\sdl2_simple_example\\main.cpp",
+              "RelativeDocumentMoniker": "sdl2_simple_example\\main.cpp",
+              "ToolTip": "C:\\Users\\paumt\\Documents\\GitHub\\MotorVideojuegos\\sdl2_simple_example\\sdl2_simple_example\\main.cpp",
+              "RelativeToolTip": "sdl2_simple_example\\main.cpp",
+              "ViewState": "AgIAACoAAAAAAAAAAAAgwDgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-10-07T10:54:08.949Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MyWindow.cpp",
+              "DocumentMoniker": "C:\\Users\\paumt\\Documents\\GitHub\\MotorVideojuegos\\sdl2_simple_example\\sdl2_simple_example\\MyWindow.cpp",
+              "RelativeDocumentMoniker": "sdl2_simple_example\\MyWindow.cpp",
+              "ToolTip": "C:\\Users\\paumt\\Documents\\GitHub\\MotorVideojuegos\\sdl2_simple_example\\sdl2_simple_example\\MyWindow.cpp",
+              "RelativeToolTip": "sdl2_simple_example\\MyWindow.cpp",
+              "ViewState": "AgIAACkAAAAAAAAAAAAAADQAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-10-07T10:54:08.996Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,6 +1,39 @@
-﻿C:\Users\edgar\AppData\Local\vcpkg\vcpkg.user.props(3,3): warning MSB4011: "C:\Users\edgar\temp\vcpkg\scripts\buildsystems\msbuild\vcpkg.props" no se puede volver a importar. Ya se importó en "C:\Users\edgar\temp\Directory.Build.props (8,3)". Lo más probable es que se trate de un error al crear la compilación. Se omitirá esta importación. [C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\sdl2_simple_example.vcxproj]
-C:\Users\edgar\AppData\Local\vcpkg\vcpkg.user.targets(3,3): warning MSB4011: "C:\Users\edgar\temp\vcpkg\scripts\buildsystems\msbuild\vcpkg.targets" no se puede volver a importar. Ya se importó en "C:\Users\edgar\temp\Directory.Build.targets (11,3)". Lo más probable es que se trate de un error al crear la compilación. Se omitirá esta importación. [C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\sdl2_simple_example.vcxproj]
-  MyWindow.cpp
-  sdl2_simple_example.vcxproj -> C:\Users\edgar\temp\sdl2_simple_example\x64\Debug\sdl2_simple_example.exe
+﻿  & : El término 'C:\Users\paumt\Documents\GitHub\MotorVideojuegos\vcpkg\scripts/tls12-download.exe' no se reconoce como 
+  nombre de un cmdlet, función, archivo de script o programa ejecutable. Compruebe si escribió correctamente el nombre 
+  o, si incluyó una ruta de acceso, compruebe que dicha ruta es correcta e inténtelo de nuevo.
+  En C:\Users\paumt\Documents\GitHub\MotorVideojuegos\vcpkg\scripts\bootstrap.ps1: 55 Carácter: 7
+  +     & "$scriptsDir/tls12-download.exe" github.com "/microsoft/vcpkg-t ...
+  +       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      + CategoryInfo          : ObjectNotFound: (C:\Users\paumt\...12-download.exe:String) [], CommandNotFoundException
+      + FullyQualifiedErrorId : CommandNotFoundException
+   
+  
+  La variable '$LASTEXITCODE' no se puede recuperar porque no se ha establecido.
+  En C:\Users\paumt\Documents\GitHub\MotorVideojuegos\vcpkg\scripts\bootstrap.ps1: 60 Carácter: 5
+  + if ($LASTEXITCODE -ne 0)
+  +     ~~~~~~~~~~~~~
+      + CategoryInfo          : InvalidOperation: (LASTEXITCODE:String) [], RuntimeException
+      + FullyQualifiedErrorId : VariableIsUndefined
+   
+  & : El término 'C:\Users\paumt\Documents\GitHub\MotorVideojuegos\vcpkg\vcpkg.exe' no se reconoce como nombre de un 
+  cmdlet, función, archivo de script o programa ejecutable. Compruebe si escribió correctamente el nombre o, si incluyó 
+  una ruta de acceso, compruebe que dicha ruta es correcta e inténtelo de nuevo.
+  En C:\Users\paumt\Documents\GitHub\MotorVideojuegos\vcpkg\scripts\bootstrap.ps1: 66 Carácter: 3
+  + & "$vcpkgRootDir\vcpkg.exe" version --disable-metrics
+  +   ~~~~~~~~~~~~~~~~~~~~~~~~~
+      + CategoryInfo          : ObjectNotFound: (C:\Users\paumt\...vcpkg\vcpkg.exe:String) [], CommandNotFoundException
+      + FullyQualifiedErrorId : CommandNotFoundException
+   
+  Telemetry
+  ---------
+  vcpkg collects usage data in order to help us improve your experience.
+  The data collected by Microsoft is anonymous.
+  You can opt-out of telemetry by re-running the bootstrap-vcpkg script with -disableMetrics,
+  passing --disable-metrics to vcpkg on the command line,
+  or by setting the VCPKG_DISABLE_METRICS environment variable.
+  
+  Read more about vcpkg telemetry at docs/about/privacy.md
+  main.cpp
+  sdl2_simple_example.vcxproj -> C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\x64\Debug\sdl2_simple_example.exe
   "pwsh.exe" no se reconoce como un comando interno o externo,
   programa o archivo por lotes ejecutable.
