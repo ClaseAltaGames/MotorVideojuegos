@@ -34,6 +34,252 @@
   
   Read more about vcpkg telemetry at docs/about/privacy.md
   main.cpp
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(149,36): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(149,36): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(149,44): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(149,44): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(149,54): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(149,54): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(150,36): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(150,36): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(150,43): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(150,43): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(150,53): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(150,53): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(151,36): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(151,36): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(151,44): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(151,44): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(151,53): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(151,53): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(152,36): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(152,36): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(152,45): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(152,45): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(152,54): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(152,54): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(153,36): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(153,36): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(153,44): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(153,44): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(153,53): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(153,53): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(154,36): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(154,36): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(154,43): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(154,43): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(154,52): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(154,52): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(155,36): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(155,36): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(155,44): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(155,44): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(155,52): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(155,52): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(156,36): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(156,36): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(156,45): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(156,45): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(156,53): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(156,53): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(197,43): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(197,43): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(198,36): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(198,36): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(198,43): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(198,43): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(198,51): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(198,51): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(199,36): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(199,36): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(199,42): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(199,42): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(199,50): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(199,50): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(200,42): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(200,42): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(200,49): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(200,49): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(227,42): warning C4838: la conversión de 'const T' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(227,42): warning C4838:         with
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(227,42): warning C4838:         [
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(227,42): warning C4838:             T=glm::f64
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(227,42): warning C4838:         ]
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(227,42): warning C4244: 'inicializando': conversión de 'const T' a 'const GLfloat'; posible pérdida de datos
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(227,42): warning C4244:         with
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(227,42): warning C4244:         [
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(227,42): warning C4244:             T=glm::f64
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(227,42): warning C4244:         ]
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(227,55): warning C4838: la conversión de 'T' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(227,55): warning C4838:         with
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(227,55): warning C4838:         [
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(227,55): warning C4838:             T=glm::f64
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(227,55): warning C4838:         ]
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(227,55): warning C4244: 'inicializando': conversión de 'T' a 'const GLfloat'; posible pérdida de datos
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(227,55): warning C4244:         with
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(227,55): warning C4244:         [
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(227,55): warning C4244:             T=glm::f64
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(227,55): warning C4244:         ]
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(227,69): warning C4838: la conversión de 'const T' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(227,69): warning C4838:         with
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(227,69): warning C4838:         [
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(227,69): warning C4838:             T=glm::f64
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(227,69): warning C4838:         ]
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(227,69): warning C4244: 'inicializando': conversión de 'const T' a 'const GLfloat'; posible pérdida de datos
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(227,69): warning C4244:         with
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(227,69): warning C4244:         [
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(227,69): warning C4244:             T=glm::f64
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(227,69): warning C4244:         ]
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(228,45): warning C4838: la conversión de 'T' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(228,45): warning C4838:         with
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(228,45): warning C4838:         [
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(228,45): warning C4838:             T=glm::f64
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(228,45): warning C4838:         ]
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(228,45): warning C4244: 'inicializando': conversión de 'T' a 'const GLfloat'; posible pérdida de datos
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(228,45): warning C4244:         with
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(228,45): warning C4244:         [
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(228,45): warning C4244:             T=glm::f64
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(228,45): warning C4244:         ]
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(228,59): warning C4838: la conversión de 'const T' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(228,59): warning C4838:         with
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(228,59): warning C4838:         [
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(228,59): warning C4838:             T=glm::f64
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(228,59): warning C4838:         ]
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(228,59): warning C4244: 'inicializando': conversión de 'const T' a 'const GLfloat'; posible pérdida de datos
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(228,59): warning C4244:         with
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(228,59): warning C4244:         [
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(228,59): warning C4244:             T=glm::f64
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(228,59): warning C4244:         ]
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(228,72): warning C4838: la conversión de 'T' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(228,72): warning C4838:         with
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(228,72): warning C4838:         [
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(228,72): warning C4838:             T=glm::f64
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(228,72): warning C4838:         ]
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(228,72): warning C4244: 'inicializando': conversión de 'T' a 'const GLfloat'; posible pérdida de datos
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(228,72): warning C4244:         with
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(228,72): warning C4244:         [
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(228,72): warning C4244:             T=glm::f64
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(228,72): warning C4244:         ]
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(229,45): warning C4838: la conversión de 'T' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(229,45): warning C4838:         with
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(229,45): warning C4838:         [
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(229,45): warning C4838:             T=glm::f64
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(229,45): warning C4838:         ]
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(229,45): warning C4244: 'inicializando': conversión de 'T' a 'const GLfloat'; posible pérdida de datos
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(229,45): warning C4244:         with
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(229,45): warning C4244:         [
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(229,45): warning C4244:             T=glm::f64
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(229,45): warning C4244:         ]
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(229,59): warning C4838: la conversión de 'const T' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(229,59): warning C4838:         with
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(229,59): warning C4838:         [
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(229,59): warning C4838:             T=glm::f64
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(229,59): warning C4838:         ]
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(229,59): warning C4244: 'inicializando': conversión de 'const T' a 'const GLfloat'; posible pérdida de datos
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(229,59): warning C4244:         with
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(229,59): warning C4244:         [
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(229,59): warning C4244:             T=glm::f64
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(229,59): warning C4244:         ]
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(229,72): warning C4838: la conversión de 'T' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(229,72): warning C4838:         with
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(229,72): warning C4838:         [
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(229,72): warning C4838:             T=glm::f64
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(229,72): warning C4838:         ]
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(229,72): warning C4244: 'inicializando': conversión de 'T' a 'const GLfloat'; posible pérdida de datos
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(229,72): warning C4244:         with
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(229,72): warning C4244:         [
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(229,72): warning C4244:             T=glm::f64
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(229,72): warning C4244:         ]
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(230,45): warning C4838: la conversión de 'T' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(230,45): warning C4838:         with
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(230,45): warning C4838:         [
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(230,45): warning C4838:             T=glm::f64
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(230,45): warning C4838:         ]
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(230,45): warning C4244: 'inicializando': conversión de 'T' a 'const GLfloat'; posible pérdida de datos
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(230,45): warning C4244:         with
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(230,45): warning C4244:         [
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(230,45): warning C4244:             T=glm::f64
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(230,45): warning C4244:         ]
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(230,59): warning C4838: la conversión de 'const T' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(230,59): warning C4838:         with
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(230,59): warning C4838:         [
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(230,59): warning C4838:             T=glm::f64
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(230,59): warning C4838:         ]
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(230,59): warning C4244: 'inicializando': conversión de 'const T' a 'const GLfloat'; posible pérdida de datos
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(230,59): warning C4244:         with
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(230,59): warning C4244:         [
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(230,59): warning C4244:             T=glm::f64
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(230,59): warning C4244:         ]
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(230,72): warning C4838: la conversión de 'T' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(230,72): warning C4838:         with
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(230,72): warning C4838:         [
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(230,72): warning C4838:             T=glm::f64
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(230,72): warning C4838:         ]
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(230,72): warning C4244: 'inicializando': conversión de 'T' a 'const GLfloat'; posible pérdida de datos
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(230,72): warning C4244:         with
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(230,72): warning C4244:         [
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(230,72): warning C4244:             T=glm::f64
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(230,72): warning C4244:         ]
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(231,45): warning C4838: la conversión de 'T' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(231,45): warning C4838:         with
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(231,45): warning C4838:         [
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(231,45): warning C4838:             T=glm::f64
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(231,45): warning C4838:         ]
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(231,45): warning C4244: 'inicializando': conversión de 'T' a 'const GLfloat'; posible pérdida de datos
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(231,45): warning C4244:         with
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(231,45): warning C4244:         [
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(231,45): warning C4244:             T=glm::f64
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(231,45): warning C4244:         ]
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(231,59): warning C4838: la conversión de 'const T' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(231,59): warning C4838:         with
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(231,59): warning C4838:         [
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(231,59): warning C4838:             T=glm::f64
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(231,59): warning C4838:         ]
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(231,59): warning C4244: 'inicializando': conversión de 'const T' a 'const GLfloat'; posible pérdida de datos
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(231,59): warning C4244:         with
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(231,59): warning C4244:         [
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(231,59): warning C4244:             T=glm::f64
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(231,59): warning C4244:         ]
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(231,72): warning C4838: la conversión de 'T' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(231,72): warning C4838:         with
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(231,72): warning C4838:         [
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(231,72): warning C4838:             T=glm::f64
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(231,72): warning C4838:         ]
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(231,72): warning C4244: 'inicializando': conversión de 'T' a 'const GLfloat'; posible pérdida de datos
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(231,72): warning C4244:         with
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(231,72): warning C4244:         [
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(231,72): warning C4244:             T=glm::f64
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(231,72): warning C4244:         ]
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(232,42): warning C4838: la conversión de 'const T' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(232,42): warning C4838:         with
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(232,42): warning C4838:         [
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(232,42): warning C4838:             T=glm::f64
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(232,42): warning C4838:         ]
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(232,42): warning C4244: 'inicializando': conversión de 'const T' a 'const GLfloat'; posible pérdida de datos
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(232,42): warning C4244:         with
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(232,42): warning C4244:         [
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(232,42): warning C4244:             T=glm::f64
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(232,42): warning C4244:         ]
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(232,55): warning C4838: la conversión de 'T' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(232,55): warning C4838:         with
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(232,55): warning C4838:         [
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(232,55): warning C4838:             T=glm::f64
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(232,55): warning C4838:         ]
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(232,55): warning C4244: 'inicializando': conversión de 'T' a 'const GLfloat'; posible pérdida de datos
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(232,55): warning C4244:         with
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(232,55): warning C4244:         [
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(232,55): warning C4244:             T=glm::f64
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(232,55): warning C4244:         ]
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(232,69): warning C4838: la conversión de 'const T' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(232,69): warning C4838:         with
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(232,69): warning C4838:         [
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(232,69): warning C4838:             T=glm::f64
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(232,69): warning C4838:         ]
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(232,69): warning C4244: 'inicializando': conversión de 'const T' a 'const GLfloat'; posible pérdida de datos
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(232,69): warning C4244:         with
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(232,69): warning C4244:         [
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(232,69): warning C4244:             T=glm::f64
+C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\main.cpp(232,69): warning C4244:         ]
   sdl2_simple_example.vcxproj -> C:\Users\paumt\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\x64\Debug\sdl2_simple_example.exe
   "pwsh.exe" no se reconoce como un comando interno o externo,
   programa o archivo por lotes ejecutable.

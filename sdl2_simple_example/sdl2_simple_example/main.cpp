@@ -27,6 +27,19 @@ static void init_openGL() {
 	glClearColor(0.5, 0.5, 0.5, 1.0);
 }
 
+void set3dView(GLdouble angle) {
+    // Configurar la matriz de proyección
+    glMatrixMode(GL_PROJECTION);
+    glLoadIdentity();
+    gluPerspective(angle, 1.0, 0.1, 200.0);  // Perspectiva con campo de visión de 45 grados
+
+    // Configuración de la cámara
+    glMatrixMode(GL_MODELVIEW);
+    glLoadIdentity();
+    gluLookAt(5.0, 5.0, 5.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0);  // La cámara se posiciona en (3, 3, 3)
+
+}
+
 static void draw_triangle(const u8vec4& color, const vec3& center, double size) {
 	glColor4ub(color.r, color.g, color.b, color.a);
 	glBegin(GL_TRIANGLES);
@@ -48,7 +61,6 @@ static void draw_lines(const u8vec4& color, const vec3& center, double size) {
 
 static void draw_cube(const vec3& center, double size) {
     // Vértices del cubo
-       // Vértices del cubo
     static const GLfloat v0[3] = { -1.0f, -1.0f,  1.0f };
     static const GLfloat v1[3] = { 1.0f, -1.0f,  1.0f };
     static const GLfloat v2[3] = { 1.0f,  1.0f,  1.0f };
@@ -58,16 +70,7 @@ static void draw_cube(const vec3& center, double size) {
     static const GLfloat v6[3] = { 1.0f,  1.0f, -1.0f };
     static const GLfloat v7[3] = { -1.0f,  1.0f, -1.0f };
 
-
-    // Configurar la matriz de proyección
-    glMatrixMode(GL_PROJECTION);
-    glLoadIdentity();
-    gluPerspective(45.0, 1.0, 0.1, 100.0);  // Perspectiva con campo de visión de 45 grados
-
-    // Configuración de la cámara
-    glMatrixMode(GL_MODELVIEW);
-    glLoadIdentity();
-    gluLookAt(3.0, 3.0, 3.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0);  // La cámara se posiciona en (3, 3, 3)
+	set3dView(45);
 
     glBegin(GL_TRIANGLES);  // Dibujar el cubo con triángulos
 
@@ -104,12 +107,183 @@ static void draw_cube(const vec3& center, double size) {
     glEnd();
 }
 
+static void draw_pyramid(const vec3& center, double size) {
+    // Vértices de la pirámide
+    static const GLfloat v0[3] = { -1.0f, -1.0f,  1.0f }; // base inferior izquierda
+    static const GLfloat v1[3] = { 1.0f, -1.0f,  1.0f }; // base inferior derecha
+    static const GLfloat v2[3] = { 1.0f, -1.0f, -1.0f }; // base superior derecha
+    static const GLfloat v3[3] = { -1.0f, -1.0f, -1.0f }; // base superior izquierda
+    static const GLfloat top[3] = { 0.0f,  1.0f,  0.0f }; // vértice superior
+
+	set3dView(45);
+
+    glBegin(GL_TRIANGLES);  // Dibujar la pirámide con triángulos
+
+    // Cara frontal (v0, v1, top) - Color: Rojo
+    glColor4ub(255, 0, 0, 255);
+    glVertex3fv(v0); glVertex3fv(v1); glVertex3fv(top);
+
+    // Cara derecha (v1, v2, top) - Color: Verde
+    glColor4ub(0, 255, 0, 255);
+    glVertex3fv(v1); glVertex3fv(v2); glVertex3fv(top);
+
+    // Cara trasera (v2, v3, top) - Color: Azul
+    glColor4ub(0, 0, 255, 255);
+    glVertex3fv(v2); glVertex3fv(v3); glVertex3fv(top);
+
+    // Cara izquierda (v3, v0, top) - Color: Amarillo
+    glColor4ub(255, 255, 0, 255);
+    glVertex3fv(v3); glVertex3fv(v0); glVertex3fv(top);
+
+    // Base cuadrada (v0, v1, v2, v3) - Color: Cian
+    glColor4ub(0, 255, 255, 255);
+    glVertex3fv(v0); glVertex3fv(v1); glVertex3fv(v2); // Primer triángulo
+    glVertex3fv(v2); glVertex3fv(v3); glVertex3fv(v0); // Segundo triángulo
+
+    glEnd();
+}
+
+
+static void draw_prism(const vec3& center, double width, double height, double depth) {
+    // Vértices del prisma rectangular
+    static const GLfloat v0[3] = { -width, -height,  depth };
+    static const GLfloat v1[3] = { width, -height,  depth };
+    static const GLfloat v2[3] = { width,  height,  depth };
+    static const GLfloat v3[3] = { -width,  height,  depth };
+    static const GLfloat v4[3] = { -width, -height, -depth };
+    static const GLfloat v5[3] = { width, -height, -depth };
+    static const GLfloat v6[3] = { width,  height, -depth };
+    static const GLfloat v7[3] = { -width,  height, -depth };
+
+	set3dView(45);
+
+    glBegin(GL_TRIANGLES);  // Dibujar el prisma con triángulos
+
+    // Cara frontal (v0, v1, v2, v3) - Color: Rojo
+    glColor4ub(255, 0, 0, 255);
+    glVertex3fv(v0); glVertex3fv(v1); glVertex3fv(v2);
+    glVertex3fv(v2); glVertex3fv(v3); glVertex3fv(v0);
+
+    // Cara derecha (v1, v5, v6, v2) - Color: Verde
+    glColor4ub(0, 255, 0, 255);
+    glVertex3fv(v1); glVertex3fv(v5); glVertex3fv(v6);
+    glVertex3fv(v6); glVertex3fv(v2); glVertex3fv(v1);
+
+    // Cara trasera (v5, v4, v7, v6) - Color: Azul
+    glColor4ub(0, 0, 255, 255);
+    glVertex3fv(v5); glVertex3fv(v4); glVertex3fv(v7);
+    glVertex3fv(v7); glVertex3fv(v6); glVertex3fv(v5);
+
+    // Cara izquierda (v4, v0, v3, v7) - Color: Amarillo
+    glColor4ub(255, 255, 0, 255);
+    glVertex3fv(v4); glVertex3fv(v0); glVertex3fv(v3);
+    glVertex3fv(v3); glVertex3fv(v7); glVertex3fv(v4);
+
+    // Cara superior (v3, v2, v6, v7) - Color: Naranja
+    glColor4ub(255, 165, 0, 255);
+    glVertex3fv(v3); glVertex3fv(v2); glVertex3fv(v6);
+    glVertex3fv(v6); glVertex3fv(v7); glVertex3fv(v3);
+
+    // Cara inferior (v4, v5, v1, v0) - Color: Cian
+    glColor4ub(0, 255, 255, 255);
+    glVertex3fv(v4); glVertex3fv(v5); glVertex3fv(v1);
+    glVertex3fv(v1); glVertex3fv(v0); glVertex3fv(v4);
+
+    glEnd();
+}
+
+static void draw_tetrahedron(const vec3& center, double size) {
+    // Vértices del tetraedro
+    static const GLfloat v0[3] = { 0.0f,  size,  0.0f };  // vértice superior
+    static const GLfloat v1[3] = { -size, -size,  size };  // base izquierda
+    static const GLfloat v2[3] = { size, -size,  size };  // base derecha
+    static const GLfloat v3[3] = { 0.0f, -size, -size };  // base trasera
+
+	set3dView(45);
+
+    glBegin(GL_TRIANGLES);  // Dibujar el tetraedro con triángulos
+
+    // Cara frontal (v0, v1, v2) - Color: Rojo
+    glColor4ub(255, 0, 0, 255);
+    glVertex3fv(v0); glVertex3fv(v1); glVertex3fv(v2);
+
+    // Cara derecha (v0, v2, v3) - Color: Verde
+    glColor4ub(0, 255, 0, 255);
+    glVertex3fv(v0); glVertex3fv(v2); glVertex3fv(v3);
+
+    // Cara izquierda (v0, v3, v1) - Color: Azul
+    glColor4ub(0, 0, 255, 255);
+    glVertex3fv(v0); glVertex3fv(v3); glVertex3fv(v1);
+
+    // Cara inferior (v1, v2, v3) - Color: Amarillo
+    glColor4ub(255, 255, 0, 255);
+    glVertex3fv(v1); glVertex3fv(v2); glVertex3fv(v3);
+
+    glEnd();
+}
+
+static void draw_octahedron(const vec3& center, double size) {
+    // Vértices del octaedro en torno al centro especificado
+    static const GLfloat v0[3] = { center.x, center.y + size, center.z };  // vértice superior
+    static const GLfloat v1[3] = { center.x - size, center.y, center.z + size };  // base frontal izquierda
+    static const GLfloat v2[3] = { center.x + size, center.y, center.z + size };  // base frontal derecha
+    static const GLfloat v3[3] = { center.x + size, center.y, center.z - size };  // base trasera derecha
+    static const GLfloat v4[3] = { center.x - size, center.y, center.z - size };  // base trasera izquierda
+    static const GLfloat v5[3] = { center.x, center.y - size, center.z };  // vértice inferior
+
+	set3dView(45);
+
+    glBegin(GL_TRIANGLES);
+
+    // Caras superiores (cuatro triángulos)
+    // Cara 1: v0, v1, v2 (color rojo)
+    glColor3f(1.0f, 0.0f, 0.0f);  // Color rojo
+    glVertex3fv(v0); glVertex3fv(v1); glVertex3fv(v2);
+
+    // Cara 2: v0, v2, v3 (color verde)
+    glColor3f(0.0f, 1.0f, 0.0f);  // Color verde
+    glVertex3fv(v0); glVertex3fv(v2); glVertex3fv(v3);
+
+    // Cara 3: v0, v3, v4 (color azul)
+    glColor3f(0.0f, 0.0f, 1.0f);  // Color azul
+    glVertex3fv(v0); glVertex3fv(v3); glVertex3fv(v4);
+
+    // Cara 4: v0, v4, v1 (color amarillo)
+    glColor3f(1.0f, 1.0f, 0.0f);  // Color amarillo
+    glVertex3fv(v0); glVertex3fv(v4); glVertex3fv(v1);
+
+    // Caras inferiores (cuatro triángulos)
+    // Cara 5: v5, v2, v1 (color cian)
+    glColor3f(0.0f, 1.0f, 1.0f);  // Color cian
+    glVertex3fv(v5); glVertex3fv(v2); glVertex3fv(v1);
+
+    // Cara 6: v5, v3, v2 (color magenta)
+    glColor3f(1.0f, 0.0f, 1.0f);  // Color magenta
+    glVertex3fv(v5); glVertex3fv(v3); glVertex3fv(v2);
+
+    // Cara 7: v5, v4, v3 (color blanco)
+    glColor3f(1.0f, 1.0f, 1.0f);  // Color blanco
+    glVertex3fv(v5); glVertex3fv(v4); glVertex3fv(v3);
+
+    // Cara 8: v5, v1, v4 (color gris)
+    glColor3f(0.5f, 0.5f, 0.5f);  // Color gris
+    glVertex3fv(v5); glVertex3fv(v1); glVertex3fv(v4);
+
+    glEnd();
+}
+
+
 static void display_func() {
     // Limpiar el buffer de color y profundidad
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-    // Dibujar el cubo
-    draw_cube(vec3(0.0, 0.0, 0.0), 1.0);
+	//draw_triangle(u8vec4(255, 0, 0, 255), vec3(0.0, 0.0, 0.0), 1.0);
+	//draw_lines(u8vec4(0, 255, 0, 255), vec3(0.0, 0.0, 0.0), 1.0);
+	//draw_cube(vec3(0.0, 0.0, 0.0), 1.0);
+	//draw_prism(vec3(0.0, 0.0, 0.0), 2.0, 2.0, 1.0);
+	//draw_pyramid(vec3(0.0, 0.0, 0.0), 1.0);
+	//draw_tetrahedron(vec3(0.0, 0.0, 0.0), 1.0);
+	draw_octahedron(vec3(0.0, 0.0, 0.0), 1.0);
 
     // Forzar el renderizado
     glFlush();
