@@ -8,6 +8,10 @@
 #include "imgui.h"
 #include "imgui_impl_sdl2.h"
 #include "imgui_impl_opengl3.h"
+#include <assimp/cimport.h>
+#include <assimp/scene.h>
+#include <assimp/postprocess.h>
+#include <stdio.h>
 
 using namespace std;
 
@@ -271,6 +275,40 @@ static void draw_octahedron(const vec3& center, double size) {
 
     glEnd();
 }
+static int draw_fbx(const char *file) {
+    set3dView(45);
+    const struct aiScene* scene = aiImportFile(file, aiProcess_Triangulate);
+    if (!scene) {
+        fprintf(stderr, "Error en carregar el fitxer: %s\n", aiGetErrorString());
+        return -1;
+    }
+    printf("Numero de malles: %u\n", scene->mNumMeshes);
+    for (unsigned int i = 0; i < scene->mNumMeshes; i++) {
+        aiMesh* mesh = scene->mMeshes[i];
+        printf("\nMalla %u:\n", i);
+        printf(" Numero de vertexs: %u\n", mesh->mNumVertices);
+        printf(" Numero de triangles: %u\n", mesh->mNumFaces);
+        // Vèrtexs
+        for (unsigned int v = 0; v < mesh->mNumVertices; v++) {
+            aiVector3D vertex = mesh->mVertices[v];
+            printf(" Vertex %u: (%f, %f, %f)\n", v, vertex.x, vertex.y, vertex.z);
+        }
+        // Índexs de triangles (3 per triangle)
+        for (unsigned int f = 0; f < mesh->mNumFaces; f++) {
+
+            aiFace face = mesh->mFaces[f];
+            printf(" Indexs triangle %u: ", f);
+
+            for (unsigned int j = 0; j < face.mNumIndices; j++) {
+                printf("%u ", face.mIndices[j]);
+            }
+
+            printf("\n");
+        }
+    }
+    aiReleaseImport(scene);
+    return 0;
+}
 
 
 static void display_func() {
@@ -283,7 +321,9 @@ static void display_func() {
 	//draw_prism(vec3(0.0, 0.0, 0.0), 2.0, 2.0, 1.0);
 	//draw_pyramid(vec3(0.0, 0.0, 0.0), 1.0);
 	//draw_tetrahedron(vec3(0.0, 0.0, 0.0), 1.0);
-	draw_octahedron(vec3(0.0, 0.0, 0.0), 1.0);
+	//draw_octahedron(vec3(0.0, 0.0, 0.0), 1.0);
+   
+    //draw_fbx("cube.fbx");
 
     // Forzar el renderizado
     glFlush();
@@ -316,6 +356,7 @@ int main(int argc, char** argv) {
 
 	init_openGL();
 
+    draw_fbx("cube.fbx");
 
 	while (processEvents()) {
 		const auto t0 = hrclock::now();
@@ -326,5 +367,6 @@ int main(int argc, char** argv) {
 		if(dt<FRAME_DT) this_thread::sleep_for(FRAME_DT - dt);
 	}
 
-	return 0;
+
+    return 0;
 }

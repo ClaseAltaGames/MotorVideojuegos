@@ -1,7 +1,9 @@
-Package: imgui
-Feature: sdl2-binding
-Depends: sdl2
+Package: rapidjson
+Version: 2023-07-17
+Port-Version: 1
+Depends: vcpkg-cmake, vcpkg-cmake-config
 Architecture: x64-windows
 Multi-Arch: same
-Description: Make available SDL2 binding
+Abi: c00b34bd35652c598b39561bccbc5631fb9890b0f4831da98639026f7f6d3e5f
+Description: A fast JSON parser/generator for C++ with both SAX/DOM style API <http://rapidjson.org/>
 Status: install ok installed

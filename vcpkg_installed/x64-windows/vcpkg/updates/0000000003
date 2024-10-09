@@ -1,6 +1,8 @@
-Package: imgui
-Feature: opengl3-binding
+Package: utfcpp
+Version: 4.0.5
+Depends: vcpkg-cmake, vcpkg-cmake-config
 Architecture: x64-windows
 Multi-Arch: same
-Description: Make available OpenGL3/ES/ES2 (modern) binding
-Status: install ok half-installed
+Abi: 2d861ae984273c02a5e50b6dfed8e1664a67008f0f90fa4c01cba992390f0d71
+Description: UTF-8 with C++ in a Portable Way
+Status: install ok installed

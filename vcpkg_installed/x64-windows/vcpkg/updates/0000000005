@@ -1,8 +1,8 @@
-Package: imgui
-Version: 1.91.0
-Depends: vcpkg-cmake, vcpkg-cmake-config
+Package: stb
+Version: 2024-07-29
+Port-Version: 1
 Architecture: x64-windows
 Multi-Arch: same
-Abi: 5c2e517a80190c97f5cfb5d94515dc9856011e969438097c099d23f5f0a94fbb
-Description: Bloat-free Immediate Mode Graphical User interface for C++ with minimal dependencies.
+Abi: c4bde70a8a92c50a03c5b7bfca88b3493c7d1252483c64c4a2a350ef03055804
+Description: public domain header-only libraries
 Status: install ok installed

@@ -1,7 +1,8 @@
-Package: imgui
-Feature: sdl2-binding
-Depends: sdl2
+Package: stb
+Version: 2024-07-29
+Port-Version: 1
 Architecture: x64-windows
 Multi-Arch: same
-Description: Make available SDL2 binding
+Abi: c4bde70a8a92c50a03c5b7bfca88b3493c7d1252483c64c4a2a350ef03055804
+Description: public domain header-only libraries
 Status: install ok half-installed

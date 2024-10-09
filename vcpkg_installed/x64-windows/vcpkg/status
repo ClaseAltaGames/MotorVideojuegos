@@ -74,7 +74,22 @@ Version: 1.91.0
 Depends: vcpkg-cmake, vcpkg-cmake-config
 Architecture: x64-windows
 Multi-Arch: same
-Abi: 94d7a64596e5186fcc24eac8411455e0dee1b39aa8cb4e4cdd8f1b231071d530
+Abi: 5c2e517a80190c97f5cfb5d94515dc9856011e969438097c099d23f5f0a94fbb
 Description: Bloat-free Immediate Mode Graphical User interface for C++ with minimal dependencies.
+Status: install ok installed
+
+Package: imgui
+Feature: opengl3-binding
+Architecture: x64-windows
+Multi-Arch: same
+Description: Make available OpenGL3/ES/ES2 (modern) binding
+Status: install ok installed
+
+Package: imgui
+Feature: sdl2-binding
+Depends: sdl2
+Architecture: x64-windows
+Multi-Arch: same
+Description: Make available SDL2 binding
 Status: install ok installed
 

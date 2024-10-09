@@ -1,0 +1,8 @@
+Package: kubazip
+Version: 0.2.6
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: e69195920b46033238b4f55fa5892513d38b7b3047f72c341d777646797d0155
+Description: A portable, simple zip library written in C
+Status: install ok half-installed
