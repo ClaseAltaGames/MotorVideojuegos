@@ -33,6 +33,7 @@ static void init_openGL() {
 
 void set3dView(GLdouble angle) {
     // Configurar la matriz de proyección
+    GLdouble yView = 50.0;
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
     gluPerspective(angle, 1.0, 0.1, 200.0);  // Perspectiva con campo de visión de 45 grados
@@ -40,7 +41,15 @@ void set3dView(GLdouble angle) {
     // Configuración de la cámara
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
-    gluLookAt(5.0, 5.0, 5.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0);  // La cámara se posiciona en (3, 3, 3)
+    //if mouse wheel up
+    if (SDL_SCANCODE_UP) {
+        yView += 10;
+	}
+    if (SDL_SCANCODE_DOWN) {
+        yView -= 10;
+    }
+
+    gluLookAt(100.0, yView, 100.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0);  // La cámara se posiciona en (3, 3, 3)
 
 }
 
@@ -276,13 +285,13 @@ static void draw_octahedron(const vec3& center, double size) {
     glEnd();
 }
 static int draw_fbx(const char *file) {
-    set3dView(45);
+    set3dView(75);
     const struct aiScene* scene = aiImportFile(file, aiProcess_Triangulate);
     if (!scene) {
         fprintf(stderr, "Error en carregar el fitxer: %s\n", aiGetErrorString());
         return -1;
     }
-    printf("Numero de malles: %u\n", scene->mNumMeshes);
+    //printf("Numero de malles: %u\n", scene->mNumMeshes);
     for (unsigned int i = 0; i < scene->mNumMeshes; i++) {
         aiMesh* mesh = scene->mMeshes[i];
         printf("\nMalla %u:\n", i);
@@ -305,6 +314,16 @@ static int draw_fbx(const char *file) {
 
             printf("\n");
         }
+        //pasar los arrays a openGL
+        glBegin(GL_TRIANGLES);
+        for (unsigned int f = 0; f < mesh->mNumFaces; f++) {
+			aiFace face = mesh->mFaces[f];
+            for (unsigned int j = 0; j < face.mNumIndices; j++) {
+				aiVector3D vertex = mesh->mVertices[face.mIndices[j]];
+				glVertex3f(vertex.x, vertex.y, vertex.z);
+			}
+		}
+        glEnd();
     }
     aiReleaseImport(scene);
     return 0;
@@ -323,7 +342,7 @@ static void display_func() {
 	//draw_tetrahedron(vec3(0.0, 0.0, 0.0), 1.0);
 	//draw_octahedron(vec3(0.0, 0.0, 0.0), 1.0);
    
-    //draw_fbx("cube.fbx");
+    draw_fbx("halo2.fbx");
 
     // Forzar el renderizado
     glFlush();
@@ -356,7 +375,7 @@ int main(int argc, char** argv) {
 
 	init_openGL();
 
-    draw_fbx("cube.fbx");
+    //draw_fbx("cube.fbx");
 
 	while (processEvents()) {
 		const auto t0 = hrclock::now();

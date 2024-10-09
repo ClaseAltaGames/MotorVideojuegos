@@ -1,252 +1,252 @@
 ﻿C:\Users\edgar\AppData\Local\vcpkg\vcpkg.user.props(3,3): warning MSB4011: "C:\Users\edgar\temp\vcpkg\scripts\buildsystems\msbuild\vcpkg.props" no se puede volver a importar. Ya se importó en "C:\Users\edgar\temp\Directory.Build.props (8,3)". Lo más probable es que se trate de un error al crear la compilación. Se omitirá esta importación. [C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\sdl2_simple_example.vcxproj]
 C:\Users\edgar\AppData\Local\vcpkg\vcpkg.user.targets(3,3): warning MSB4011: "C:\Users\edgar\temp\vcpkg\scripts\buildsystems\msbuild\vcpkg.targets" no se puede volver a importar. Ya se importó en "C:\Users\edgar\temp\Directory.Build.targets (11,3)". Lo más probable es que se trate de un error al crear la compilación. Se omitirá esta importación. [C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\sdl2_simple_example.vcxproj]
   main.cpp
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(153,36): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(153,36): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(153,44): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(153,44): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(153,54): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(153,54): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(154,36): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(154,36): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(154,43): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(154,43): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(154,53): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(154,53): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(155,36): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(155,36): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(155,44): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(155,44): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(155,53): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(155,53): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(156,36): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(156,36): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(156,45): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(156,45): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(156,54): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(156,54): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(157,36): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(157,36): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(157,44): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(157,44): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(157,53): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(157,53): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(158,36): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(158,36): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(158,43): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(158,43): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(158,52): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(158,52): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(159,36): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(159,36): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(159,44): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(159,44): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(159,52): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(159,52): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(160,36): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(160,36): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(160,45): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(160,45): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(160,53): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(160,53): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(201,43): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(201,43): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(202,36): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(202,36): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(202,43): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(202,43): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(202,51): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(202,51): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(203,36): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(203,36): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(203,42): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(203,42): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(203,50): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(203,50): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(204,42): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(204,42): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(204,49): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(204,49): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(231,42): warning C4838: la conversión de 'const T' en 'const GLfloat' requiere una conversión de restricción
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(231,42): warning C4838:         with
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(231,42): warning C4838:         [
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(231,42): warning C4838:             T=glm::f64
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(231,42): warning C4838:         ]
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(231,42): warning C4244: 'inicializando': conversión de 'const T' a 'const GLfloat'; posible pérdida de datos
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(231,42): warning C4244:         with
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(231,42): warning C4244:         [
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(231,42): warning C4244:             T=glm::f64
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(231,42): warning C4244:         ]
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(231,55): warning C4838: la conversión de 'T' en 'const GLfloat' requiere una conversión de restricción
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(231,55): warning C4838:         with
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(231,55): warning C4838:         [
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(231,55): warning C4838:             T=glm::f64
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(231,55): warning C4838:         ]
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(231,55): warning C4244: 'inicializando': conversión de 'T' a 'const GLfloat'; posible pérdida de datos
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(231,55): warning C4244:         with
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(231,55): warning C4244:         [
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(231,55): warning C4244:             T=glm::f64
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(231,55): warning C4244:         ]
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(231,69): warning C4838: la conversión de 'const T' en 'const GLfloat' requiere una conversión de restricción
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(231,69): warning C4838:         with
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(231,69): warning C4838:         [
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(231,69): warning C4838:             T=glm::f64
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(231,69): warning C4838:         ]
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(231,69): warning C4244: 'inicializando': conversión de 'const T' a 'const GLfloat'; posible pérdida de datos
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(231,69): warning C4244:         with
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(231,69): warning C4244:         [
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(231,69): warning C4244:             T=glm::f64
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(231,69): warning C4244:         ]
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(232,45): warning C4838: la conversión de 'T' en 'const GLfloat' requiere una conversión de restricción
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(232,45): warning C4838:         with
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(232,45): warning C4838:         [
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(232,45): warning C4838:             T=glm::f64
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(232,45): warning C4838:         ]
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(232,45): warning C4244: 'inicializando': conversión de 'T' a 'const GLfloat'; posible pérdida de datos
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(232,45): warning C4244:         with
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(232,45): warning C4244:         [
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(232,45): warning C4244:             T=glm::f64
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(232,45): warning C4244:         ]
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(232,59): warning C4838: la conversión de 'const T' en 'const GLfloat' requiere una conversión de restricción
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(232,59): warning C4838:         with
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(232,59): warning C4838:         [
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(232,59): warning C4838:             T=glm::f64
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(232,59): warning C4838:         ]
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(232,59): warning C4244: 'inicializando': conversión de 'const T' a 'const GLfloat'; posible pérdida de datos
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(232,59): warning C4244:         with
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(232,59): warning C4244:         [
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(232,59): warning C4244:             T=glm::f64
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(232,59): warning C4244:         ]
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(232,72): warning C4838: la conversión de 'T' en 'const GLfloat' requiere una conversión de restricción
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(232,72): warning C4838:         with
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(232,72): warning C4838:         [
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(232,72): warning C4838:             T=glm::f64
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(232,72): warning C4838:         ]
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(232,72): warning C4244: 'inicializando': conversión de 'T' a 'const GLfloat'; posible pérdida de datos
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(232,72): warning C4244:         with
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(232,72): warning C4244:         [
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(232,72): warning C4244:             T=glm::f64
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(232,72): warning C4244:         ]
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(233,45): warning C4838: la conversión de 'T' en 'const GLfloat' requiere una conversión de restricción
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(233,45): warning C4838:         with
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(233,45): warning C4838:         [
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(233,45): warning C4838:             T=glm::f64
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(233,45): warning C4838:         ]
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(233,45): warning C4244: 'inicializando': conversión de 'T' a 'const GLfloat'; posible pérdida de datos
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(233,45): warning C4244:         with
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(233,45): warning C4244:         [
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(233,45): warning C4244:             T=glm::f64
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(233,45): warning C4244:         ]
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(233,59): warning C4838: la conversión de 'const T' en 'const GLfloat' requiere una conversión de restricción
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(233,59): warning C4838:         with
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(233,59): warning C4838:         [
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(233,59): warning C4838:             T=glm::f64
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(233,59): warning C4838:         ]
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(233,59): warning C4244: 'inicializando': conversión de 'const T' a 'const GLfloat'; posible pérdida de datos
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(233,59): warning C4244:         with
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(233,59): warning C4244:         [
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(233,59): warning C4244:             T=glm::f64
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(233,59): warning C4244:         ]
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(233,72): warning C4838: la conversión de 'T' en 'const GLfloat' requiere una conversión de restricción
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(233,72): warning C4838:         with
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(233,72): warning C4838:         [
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(233,72): warning C4838:             T=glm::f64
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(233,72): warning C4838:         ]
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(233,72): warning C4244: 'inicializando': conversión de 'T' a 'const GLfloat'; posible pérdida de datos
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(233,72): warning C4244:         with
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(233,72): warning C4244:         [
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(233,72): warning C4244:             T=glm::f64
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(233,72): warning C4244:         ]
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(234,45): warning C4838: la conversión de 'T' en 'const GLfloat' requiere una conversión de restricción
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(234,45): warning C4838:         with
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(234,45): warning C4838:         [
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(234,45): warning C4838:             T=glm::f64
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(234,45): warning C4838:         ]
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(234,45): warning C4244: 'inicializando': conversión de 'T' a 'const GLfloat'; posible pérdida de datos
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(234,45): warning C4244:         with
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(234,45): warning C4244:         [
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(234,45): warning C4244:             T=glm::f64
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(234,45): warning C4244:         ]
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(234,59): warning C4838: la conversión de 'const T' en 'const GLfloat' requiere una conversión de restricción
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(234,59): warning C4838:         with
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(234,59): warning C4838:         [
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(234,59): warning C4838:             T=glm::f64
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(234,59): warning C4838:         ]
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(234,59): warning C4244: 'inicializando': conversión de 'const T' a 'const GLfloat'; posible pérdida de datos
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(234,59): warning C4244:         with
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(234,59): warning C4244:         [
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(234,59): warning C4244:             T=glm::f64
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(234,59): warning C4244:         ]
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(234,72): warning C4838: la conversión de 'T' en 'const GLfloat' requiere una conversión de restricción
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(234,72): warning C4838:         with
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(234,72): warning C4838:         [
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(234,72): warning C4838:             T=glm::f64
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(234,72): warning C4838:         ]
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(234,72): warning C4244: 'inicializando': conversión de 'T' a 'const GLfloat'; posible pérdida de datos
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(234,72): warning C4244:         with
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(234,72): warning C4244:         [
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(234,72): warning C4244:             T=glm::f64
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(234,72): warning C4244:         ]
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(235,45): warning C4838: la conversión de 'T' en 'const GLfloat' requiere una conversión de restricción
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(235,45): warning C4838:         with
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(235,45): warning C4838:         [
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(235,45): warning C4838:             T=glm::f64
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(235,45): warning C4838:         ]
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(235,45): warning C4244: 'inicializando': conversión de 'T' a 'const GLfloat'; posible pérdida de datos
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(235,45): warning C4244:         with
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(235,45): warning C4244:         [
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(235,45): warning C4244:             T=glm::f64
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(235,45): warning C4244:         ]
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(235,59): warning C4838: la conversión de 'const T' en 'const GLfloat' requiere una conversión de restricción
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(235,59): warning C4838:         with
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(235,59): warning C4838:         [
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(235,59): warning C4838:             T=glm::f64
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(235,59): warning C4838:         ]
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(235,59): warning C4244: 'inicializando': conversión de 'const T' a 'const GLfloat'; posible pérdida de datos
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(235,59): warning C4244:         with
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(235,59): warning C4244:         [
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(235,59): warning C4244:             T=glm::f64
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(235,59): warning C4244:         ]
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(235,72): warning C4838: la conversión de 'T' en 'const GLfloat' requiere una conversión de restricción
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(235,72): warning C4838:         with
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(235,72): warning C4838:         [
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(235,72): warning C4838:             T=glm::f64
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(235,72): warning C4838:         ]
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(235,72): warning C4244: 'inicializando': conversión de 'T' a 'const GLfloat'; posible pérdida de datos
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(235,72): warning C4244:         with
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(235,72): warning C4244:         [
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(235,72): warning C4244:             T=glm::f64
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(235,72): warning C4244:         ]
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(236,42): warning C4838: la conversión de 'const T' en 'const GLfloat' requiere una conversión de restricción
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(236,42): warning C4838:         with
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(236,42): warning C4838:         [
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(236,42): warning C4838:             T=glm::f64
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(236,42): warning C4838:         ]
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(236,42): warning C4244: 'inicializando': conversión de 'const T' a 'const GLfloat'; posible pérdida de datos
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(236,42): warning C4244:         with
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(236,42): warning C4244:         [
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(236,42): warning C4244:             T=glm::f64
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(236,42): warning C4244:         ]
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(236,55): warning C4838: la conversión de 'T' en 'const GLfloat' requiere una conversión de restricción
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(236,55): warning C4838:         with
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(236,55): warning C4838:         [
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(236,55): warning C4838:             T=glm::f64
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(236,55): warning C4838:         ]
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(236,55): warning C4244: 'inicializando': conversión de 'T' a 'const GLfloat'; posible pérdida de datos
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(236,55): warning C4244:         with
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(236,55): warning C4244:         [
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(236,55): warning C4244:             T=glm::f64
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(236,55): warning C4244:         ]
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(236,69): warning C4838: la conversión de 'const T' en 'const GLfloat' requiere una conversión de restricción
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(236,69): warning C4838:         with
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(236,69): warning C4838:         [
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(236,69): warning C4838:             T=glm::f64
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(236,69): warning C4838:         ]
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(236,69): warning C4244: 'inicializando': conversión de 'const T' a 'const GLfloat'; posible pérdida de datos
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(236,69): warning C4244:         with
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(236,69): warning C4244:         [
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(236,69): warning C4244:             T=glm::f64
-C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(236,69): warning C4244:         ]
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(162,36): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(162,36): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(162,44): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(162,44): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(162,54): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(162,54): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(163,36): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(163,36): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(163,43): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(163,43): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(163,53): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(163,53): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(164,36): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(164,36): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(164,44): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(164,44): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(164,53): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(164,53): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(165,36): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(165,36): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(165,45): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(165,45): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(165,54): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(165,54): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(166,36): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(166,36): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(166,44): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(166,44): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(166,53): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(166,53): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(167,36): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(167,36): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(167,43): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(167,43): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(167,52): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(167,52): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(168,36): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(168,36): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(168,44): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(168,44): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(168,52): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(168,52): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(169,36): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(169,36): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(169,45): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(169,45): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(169,53): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(169,53): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(210,43): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(210,43): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(211,36): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(211,36): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(211,43): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(211,43): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(211,51): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(211,51): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(212,36): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(212,36): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(212,42): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(212,42): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(212,50): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(212,50): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(213,42): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(213,42): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(213,49): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(213,49): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(240,42): warning C4838: la conversión de 'const T' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(240,42): warning C4838:         with
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(240,42): warning C4838:         [
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(240,42): warning C4838:             T=glm::f64
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(240,42): warning C4838:         ]
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(240,42): warning C4244: 'inicializando': conversión de 'const T' a 'const GLfloat'; posible pérdida de datos
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(240,42): warning C4244:         with
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(240,42): warning C4244:         [
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(240,42): warning C4244:             T=glm::f64
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(240,42): warning C4244:         ]
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(240,55): warning C4838: la conversión de 'T' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(240,55): warning C4838:         with
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(240,55): warning C4838:         [
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(240,55): warning C4838:             T=glm::f64
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(240,55): warning C4838:         ]
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(240,55): warning C4244: 'inicializando': conversión de 'T' a 'const GLfloat'; posible pérdida de datos
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(240,55): warning C4244:         with
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(240,55): warning C4244:         [
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(240,55): warning C4244:             T=glm::f64
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(240,55): warning C4244:         ]
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(240,69): warning C4838: la conversión de 'const T' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(240,69): warning C4838:         with
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(240,69): warning C4838:         [
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(240,69): warning C4838:             T=glm::f64
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(240,69): warning C4838:         ]
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(240,69): warning C4244: 'inicializando': conversión de 'const T' a 'const GLfloat'; posible pérdida de datos
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(240,69): warning C4244:         with
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(240,69): warning C4244:         [
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(240,69): warning C4244:             T=glm::f64
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(240,69): warning C4244:         ]
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(241,45): warning C4838: la conversión de 'T' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(241,45): warning C4838:         with
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(241,45): warning C4838:         [
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(241,45): warning C4838:             T=glm::f64
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(241,45): warning C4838:         ]
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(241,45): warning C4244: 'inicializando': conversión de 'T' a 'const GLfloat'; posible pérdida de datos
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(241,45): warning C4244:         with
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(241,45): warning C4244:         [
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(241,45): warning C4244:             T=glm::f64
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(241,45): warning C4244:         ]
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(241,59): warning C4838: la conversión de 'const T' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(241,59): warning C4838:         with
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(241,59): warning C4838:         [
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(241,59): warning C4838:             T=glm::f64
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(241,59): warning C4838:         ]
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(241,59): warning C4244: 'inicializando': conversión de 'const T' a 'const GLfloat'; posible pérdida de datos
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(241,59): warning C4244:         with
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(241,59): warning C4244:         [
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(241,59): warning C4244:             T=glm::f64
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(241,59): warning C4244:         ]
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(241,72): warning C4838: la conversión de 'T' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(241,72): warning C4838:         with
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(241,72): warning C4838:         [
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(241,72): warning C4838:             T=glm::f64
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(241,72): warning C4838:         ]
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(241,72): warning C4244: 'inicializando': conversión de 'T' a 'const GLfloat'; posible pérdida de datos
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(241,72): warning C4244:         with
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(241,72): warning C4244:         [
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(241,72): warning C4244:             T=glm::f64
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(241,72): warning C4244:         ]
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(242,45): warning C4838: la conversión de 'T' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(242,45): warning C4838:         with
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(242,45): warning C4838:         [
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(242,45): warning C4838:             T=glm::f64
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(242,45): warning C4838:         ]
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(242,45): warning C4244: 'inicializando': conversión de 'T' a 'const GLfloat'; posible pérdida de datos
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(242,45): warning C4244:         with
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(242,45): warning C4244:         [
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(242,45): warning C4244:             T=glm::f64
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(242,45): warning C4244:         ]
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(242,59): warning C4838: la conversión de 'const T' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(242,59): warning C4838:         with
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(242,59): warning C4838:         [
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(242,59): warning C4838:             T=glm::f64
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(242,59): warning C4838:         ]
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(242,59): warning C4244: 'inicializando': conversión de 'const T' a 'const GLfloat'; posible pérdida de datos
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(242,59): warning C4244:         with
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(242,59): warning C4244:         [
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(242,59): warning C4244:             T=glm::f64
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(242,59): warning C4244:         ]
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(242,72): warning C4838: la conversión de 'T' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(242,72): warning C4838:         with
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(242,72): warning C4838:         [
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(242,72): warning C4838:             T=glm::f64
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(242,72): warning C4838:         ]
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(242,72): warning C4244: 'inicializando': conversión de 'T' a 'const GLfloat'; posible pérdida de datos
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(242,72): warning C4244:         with
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(242,72): warning C4244:         [
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(242,72): warning C4244:             T=glm::f64
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(242,72): warning C4244:         ]
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(243,45): warning C4838: la conversión de 'T' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(243,45): warning C4838:         with
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(243,45): warning C4838:         [
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(243,45): warning C4838:             T=glm::f64
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(243,45): warning C4838:         ]
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(243,45): warning C4244: 'inicializando': conversión de 'T' a 'const GLfloat'; posible pérdida de datos
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(243,45): warning C4244:         with
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(243,45): warning C4244:         [
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(243,45): warning C4244:             T=glm::f64
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(243,45): warning C4244:         ]
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(243,59): warning C4838: la conversión de 'const T' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(243,59): warning C4838:         with
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(243,59): warning C4838:         [
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(243,59): warning C4838:             T=glm::f64
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(243,59): warning C4838:         ]
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(243,59): warning C4244: 'inicializando': conversión de 'const T' a 'const GLfloat'; posible pérdida de datos
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(243,59): warning C4244:         with
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(243,59): warning C4244:         [
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(243,59): warning C4244:             T=glm::f64
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(243,59): warning C4244:         ]
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(243,72): warning C4838: la conversión de 'T' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(243,72): warning C4838:         with
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(243,72): warning C4838:         [
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(243,72): warning C4838:             T=glm::f64
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(243,72): warning C4838:         ]
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(243,72): warning C4244: 'inicializando': conversión de 'T' a 'const GLfloat'; posible pérdida de datos
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(243,72): warning C4244:         with
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(243,72): warning C4244:         [
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(243,72): warning C4244:             T=glm::f64
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(243,72): warning C4244:         ]
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(244,45): warning C4838: la conversión de 'T' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(244,45): warning C4838:         with
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(244,45): warning C4838:         [
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(244,45): warning C4838:             T=glm::f64
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(244,45): warning C4838:         ]
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(244,45): warning C4244: 'inicializando': conversión de 'T' a 'const GLfloat'; posible pérdida de datos
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(244,45): warning C4244:         with
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(244,45): warning C4244:         [
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(244,45): warning C4244:             T=glm::f64
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(244,45): warning C4244:         ]
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(244,59): warning C4838: la conversión de 'const T' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(244,59): warning C4838:         with
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(244,59): warning C4838:         [
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(244,59): warning C4838:             T=glm::f64
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(244,59): warning C4838:         ]
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(244,59): warning C4244: 'inicializando': conversión de 'const T' a 'const GLfloat'; posible pérdida de datos
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(244,59): warning C4244:         with
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(244,59): warning C4244:         [
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(244,59): warning C4244:             T=glm::f64
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(244,59): warning C4244:         ]
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(244,72): warning C4838: la conversión de 'T' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(244,72): warning C4838:         with
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(244,72): warning C4838:         [
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(244,72): warning C4838:             T=glm::f64
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(244,72): warning C4838:         ]
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(244,72): warning C4244: 'inicializando': conversión de 'T' a 'const GLfloat'; posible pérdida de datos
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(244,72): warning C4244:         with
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(244,72): warning C4244:         [
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(244,72): warning C4244:             T=glm::f64
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(244,72): warning C4244:         ]
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(245,42): warning C4838: la conversión de 'const T' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(245,42): warning C4838:         with
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(245,42): warning C4838:         [
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(245,42): warning C4838:             T=glm::f64
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(245,42): warning C4838:         ]
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(245,42): warning C4244: 'inicializando': conversión de 'const T' a 'const GLfloat'; posible pérdida de datos
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(245,42): warning C4244:         with
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(245,42): warning C4244:         [
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(245,42): warning C4244:             T=glm::f64
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(245,42): warning C4244:         ]
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(245,55): warning C4838: la conversión de 'T' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(245,55): warning C4838:         with
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(245,55): warning C4838:         [
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(245,55): warning C4838:             T=glm::f64
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(245,55): warning C4838:         ]
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(245,55): warning C4244: 'inicializando': conversión de 'T' a 'const GLfloat'; posible pérdida de datos
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(245,55): warning C4244:         with
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(245,55): warning C4244:         [
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(245,55): warning C4244:             T=glm::f64
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(245,55): warning C4244:         ]
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(245,69): warning C4838: la conversión de 'const T' en 'const GLfloat' requiere una conversión de restricción
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(245,69): warning C4838:         with
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(245,69): warning C4838:         [
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(245,69): warning C4838:             T=glm::f64
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(245,69): warning C4838:         ]
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(245,69): warning C4244: 'inicializando': conversión de 'const T' a 'const GLfloat'; posible pérdida de datos
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(245,69): warning C4244:         with
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(245,69): warning C4244:         [
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(245,69): warning C4244:             T=glm::f64
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(245,69): warning C4244:         ]
   sdl2_simple_example.vcxproj -> C:\Users\edgar\temp\sdl2_simple_example\x64\Debug\sdl2_simple_example.exe
   "pwsh.exe" no se reconoce como un comando interno o externo,
   programa o archivo por lotes ejecutable.
