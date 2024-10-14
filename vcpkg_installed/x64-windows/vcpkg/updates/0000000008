@@ -1,8 +1,10 @@
-Package: pugixml
-Version: 1.14
+Package: tiff
+Version: 4.6.0
+Port-Version: 5
 Depends: vcpkg-cmake, vcpkg-cmake-config
 Architecture: x64-windows
 Multi-Arch: same
-Abi: 65295b454aaf0074c21c719b737e01f6b238b99214817b54b1cb7e4ae9e1f0fc
-Description: Light-weight, simple and fast XML parser for C++ with XPath support
-Status: install ok half-installed
+Abi: 8f9b9314b667e93aabcc2fcdc0803168f4add9434aab93e334ee39c197bc5055
+Description: A library that supports the manipulation of TIFF image files
+Default-Features: jpeg, lzma, zip
+Status: install ok installed

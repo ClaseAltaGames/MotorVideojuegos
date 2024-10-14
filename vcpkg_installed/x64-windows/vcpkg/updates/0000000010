@@ -1,9 +1,7 @@
-Package: polyclipping
-Version: 6.4.2
-Port-Version: 12
-Depends: vcpkg-cmake, vcpkg-cmake-config
+Package: tiff
+Feature: lzma
+Depends: liblzma
 Architecture: x64-windows
 Multi-Arch: same
-Abi: a747b20f9e22d98987e594470656e2906239adef414c5b31d198f67c55f9d7a6
-Description: The Clipper library performs clipping and offsetting for both lines and polygons. All four boolean clipping operations are supported - intersection, union, difference and exclusive-or. Polygons can be of any shape including self-intersecting polygons.
-Status: install ok half-installed
+Description: Support LZMA compression in TIFF image files
+Status: install ok installed

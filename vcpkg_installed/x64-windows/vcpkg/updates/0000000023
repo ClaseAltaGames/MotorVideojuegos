@@ -1,8 +1,8 @@
-Package: assimp
-Version: 5.4.2
-Depends: draco, jhasse-poly2tri, kubazip, minizip, polyclipping, pugixml, rapidjson, stb, utfcpp, vcpkg-cmake, vcpkg-cmake-config, zlib
+Package: imath
+Version: 3.1.11
+Depends: vcpkg-cmake, vcpkg-cmake-config
 Architecture: x64-windows
 Multi-Arch: same
-Abi: 076352a12152da77a6e8c992bb9c250837640eaf956a4fe9d58b8c5656ef9585
-Description: The Open Asset import library
+Abi: fca3347bf93878b257829dfa5f0c69f6bf6e1788fa0b76f33c93c86b2c3811e0
+Description: Imath is a C++ and Python library of 2D and 3D vector, matrix, and math operations for computer graphics.
 Status: install ok installed

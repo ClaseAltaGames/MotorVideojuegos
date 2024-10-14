@@ -1,7 +1,9 @@
-Package: vcpkg-cmake-get-vars
-Version: 2023-12-31
-Depends: vcpkg-cmake
+Package: libdeflate
+Version: 1.21
+Depends: vcpkg-cmake, vcpkg-cmake-config
 Architecture: x64-windows
 Multi-Arch: same
-Abi: 85b82df09f5736f582a71385b2421860b1111a27bc831d7ad24a4cab4297785e
+Abi: 60c764ea085280f4cd6a9fee7553135cb1b91e9a7fd172b15e3f646ef7c153e8
+Description: libdeflate is a library for fast, whole-buffer DEFLATE-based compression and decompression.
+Default-Features: compression, decompression, gzip, zlib
 Status: install ok half-installed

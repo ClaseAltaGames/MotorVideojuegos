@@ -1,8 +1,9 @@
-Package: kubazip
-Version: 0.2.6
+Package: libdeflate
+Version: 1.21
 Depends: vcpkg-cmake, vcpkg-cmake-config
 Architecture: x64-windows
 Multi-Arch: same
-Abi: e69195920b46033238b4f55fa5892513d38b7b3047f72c341d777646797d0155
-Description: A portable, simple zip library written in C
+Abi: 60c764ea085280f4cd6a9fee7553135cb1b91e9a7fd172b15e3f646ef7c153e8
+Description: libdeflate is a library for fast, whole-buffer DEFLATE-based compression and decompression.
+Default-Features: compression, decompression, gzip, zlib
 Status: install ok installed

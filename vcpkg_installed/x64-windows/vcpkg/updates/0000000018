@@ -1,8 +1,6 @@
-Package: jhasse-poly2tri
-Version: 2023-12-27
-Depends: vcpkg-cmake, vcpkg-cmake-config
+Package: libdeflate
+Feature: compression
 Architecture: x64-windows
 Multi-Arch: same
-Abi: 762e2c2138e8a4dba9a3659c88504afdfb795cd014bfc9be78d844c93f75a708
-Description: Sweep-line algorithm for constrained Delaunay triangulation
-Status: install ok half-installed
+Description: Support compression
+Status: install ok installed

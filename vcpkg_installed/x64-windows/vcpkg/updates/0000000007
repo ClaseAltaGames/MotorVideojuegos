@@ -1,9 +1,7 @@
-Package: rapidjson
-Version: 2023-07-17
-Port-Version: 1
-Depends: vcpkg-cmake, vcpkg-cmake-config
+Package: tiff
+Feature: zip
+Depends: zlib
 Architecture: x64-windows
 Multi-Arch: same
-Abi: c00b34bd35652c598b39561bccbc5631fb9890b0f4831da98639026f7f6d3e5f
-Description: A fast JSON parser/generator for C++ with both SAX/DOM style API <http://rapidjson.org/>
-Status: install ok installed
+Description: Support ZIP/deflate compression in TIFF image files
+Status: install ok half-installed

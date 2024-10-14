@@ -1,8 +1,6 @@
-Package: draco
-Version: 1.5.7
-Depends: vcpkg-cmake, vcpkg-cmake-config
+Package: libdeflate
+Feature: zlib
 Architecture: x64-windows
 Multi-Arch: same
-Abi: 30b4d5943e8f079494b27df2ac418310b37e98cd03137eec67c72f48a17a80fd
-Description: A library for compressing and decompressing 3D geometric meshes and point clouds. It is intended to improve the storage and transmission of 3D graphics.
+Description: Support the zlib format
 Status: install ok installed

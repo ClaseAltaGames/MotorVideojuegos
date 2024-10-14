@@ -1,5 +1,458 @@
 ﻿C:\Users\edgar\AppData\Local\vcpkg\vcpkg.user.props(3,3): warning MSB4011: "C:\Users\edgar\temp\vcpkg\scripts\buildsystems\msbuild\vcpkg.props" no se puede volver a importar. Ya se importó en "C:\Users\edgar\temp\Directory.Build.props (8,3)". Lo más probable es que se trate de un error al crear la compilación. Se omitirá esta importación. [C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\sdl2_simple_example.vcxproj]
 C:\Users\edgar\AppData\Local\vcpkg\vcpkg.user.targets(3,3): warning MSB4011: "C:\Users\edgar\temp\vcpkg\scripts\buildsystems\msbuild\vcpkg.targets" no se puede volver a importar. Ya se importó en "C:\Users\edgar\temp\Directory.Build.targets (11,3)". Lo más probable es que se trate de un error al crear la compilación. Se omitirá esta importación. [C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\sdl2_simple_example.vcxproj]
+  Installing vcpkg dependencies to C:\Users\edgar\temp\vcpkg_installed\x64-windows\
+  "C:\Users\edgar\temp\vcpkg\vcpkg.exe" install  --x-wait-for-lock --triplet "x64-windows" --vcpkg-root "C:\Users\edgar\temp\vcpkg\\" "--x-manifest-root=C:\Users\edgar\temp\\" "--x-install-root=C:\Users\edgar\temp\vcpkg_installed\x64-windows\\" 
+  Detectando hash del compilador para el triplete x64-windows...
+  Se encontró el compilador: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.38.33130/bin/Hostx64/x64/cl.exe
+  Se compilarán e instalarán los siguientes paquetes:
+      devil[core,jasper,lcms,libjpeg,libpng,openexr,tiff]:x64-windows@1.8.0#13
+    * freeglut:x64-windows@3.4.0#3
+    * imath:x64-windows@3.1.11
+    * jasper[core,default-features,opengl]:x64-windows@4.2.1
+    * lcms:x64-windows@2.14
+    * libdeflate[compression,core,decompression,gzip,zlib]:x64-windows@1.21
+    * libjpeg-turbo:x64-windows@3.0.4
+    * liblzma:x64-windows@5.6.2
+    * libpng:x64-windows@1.6.43#3
+    * openexr:x64-windows@3.2.4
+    * tiff[core,jpeg,lzma,zip]:x64-windows@4.6.0#5
+  Se modificarán paquetes adicionales (*) para completar esta operación.
+  Se restauraron 0 paquetes de C:\Users\edgar\AppData\Local\vcpkg\archives en 1.76 ms. Use --debug para ver más detalles.
+  Instalando 1/11 liblzma:x64-windows@5.6.2...
+  Compilando liblzma:x64-windows@5.6.2...
+  -- Downloading https://github.com/tukaani-project/xz/archive/v5.6.2.tar.gz -> tukaani-project-xz-v5.6.2.tar.gz...
+  -- Extracting source C:/Users/edgar/temp/vcpkg/downloads/tukaani-project-xz-v5.6.2.tar.gz
+  -- Applying patch win_output_name.patch
+  -- Applying patch build-tools.patch
+  -- Using source at C:/Users/edgar/temp/vcpkg/buildtrees/liblzma/src/v5.6.2-7484848813.clean
+  -- Found external ninja('1.11.0').
+  -- Configuring x64-windows
+  -- Building x64-windows-dbg
+  -- Building x64-windows-rel
+  CMake Warning at scripts/cmake/vcpkg_copy_pdbs.cmake:44 (message):
+    Could not find a matching pdb file for:
+  
+        C:/Users/edgar/temp/vcpkg/packages/liblzma_x64-windows/bin/liblzma.dll
+        C:/Users/edgar/temp/vcpkg/packages/liblzma_x64-windows/debug/bin/liblzma.dll
+  
+  Call Stack (most recent call first):
+    ports/liblzma/portfile.cmake:38 (vcpkg_copy_pdbs)
+    scripts/ports.cmake:192 (include)
+  
+  
+  -- Fixing pkgconfig file: C:/Users/edgar/temp/vcpkg/packages/liblzma_x64-windows/lib/pkgconfig/liblzma.pc
+  -- Using cached msys2-mingw-w64-x86_64-pkgconf-1~2.2.0-1-any.pkg.tar.zst.
+  -- Using cached msys2-msys2-runtime-3.5.3-3-x86_64.pkg.tar.zst.
+  -- Using msys root at C:/Users/edgar/temp/vcpkg/downloads/tools/msys2/1e74ca60daa10104
+  -- Fixing pkgconfig file: C:/Users/edgar/temp/vcpkg/packages/liblzma_x64-windows/debug/lib/pkgconfig/liblzma.pc
+  -- Installing: C:/Users/edgar/temp/vcpkg/packages/liblzma_x64-windows/share/liblzma/copyright
+  -- Realizando la validación posterior a la compilación
+  Archivos binarios almacenados en 1 destinos en 282 ms.
+  Tiempo transcurrido para controlar liblzma:x64-windows: 1.2 min
+  ABI del paquete liblzma:x64-windows: 3b0ad833ed3902d033332b0aa84d0c83e4051e203e6ce57e035fe250531fb358
+  Instalando 2/11 libjpeg-turbo:x64-windows@3.0.4...
+  Compilando libjpeg-turbo:x64-windows@3.0.4...
+  -- Downloading https://github.com/libjpeg-turbo/libjpeg-turbo/archive/3.0.4.tar.gz -> libjpeg-turbo-libjpeg-turbo-3.0.4.tar.gz...
+  -- Extracting source C:/Users/edgar/temp/vcpkg/downloads/libjpeg-turbo-libjpeg-turbo-3.0.4.tar.gz
+  -- Applying patch add-options-for-exes-docs-headers.patch
+  -- Applying patch workaround_cmake_system_processor.patch
+  -- Using source at C:/Users/edgar/temp/vcpkg/buildtrees/libjpeg-turbo/src/3.0.4-7f221bad90.clean
+  -- Downloading https://www.nasm.us/pub/nasm/releasebuilds/2.16.01/win64/nasm-2.16.01-win64.zip;https://gstreamer.freedesktop.org/src/mirror/nasm-2.16.01-win64.zip;https://vcpkg.github.io/assets/nasm/nasm-2.16.01-win64.zip -> nasm-2.16.01-win64.zip...
+  -- Found external ninja('1.11.0').
+  -- Configuring x64-windows
+  -- Building x64-windows-dbg
+  -- Building x64-windows-rel
+  CMake Warning at scripts/cmake/vcpkg_copy_pdbs.cmake:44 (message):
+    Could not find a matching pdb file for:
+  
+        C:/Users/edgar/temp/vcpkg/packages/libjpeg-turbo_x64-windows/bin/jpeg62.dll
+        C:/Users/edgar/temp/vcpkg/packages/libjpeg-turbo_x64-windows/bin/turbojpeg.dll
+        C:/Users/edgar/temp/vcpkg/packages/libjpeg-turbo_x64-windows/debug/bin/jpeg62.dll
+        C:/Users/edgar/temp/vcpkg/packages/libjpeg-turbo_x64-windows/debug/bin/turbojpeg.dll
+  
+  Call Stack (most recent call first):
+    ports/libjpeg-turbo/portfile.cmake:61 (vcpkg_copy_pdbs)
+    scripts/ports.cmake:192 (include)
+  
+  
+  -- Fixing pkgconfig file: C:/Users/edgar/temp/vcpkg/packages/libjpeg-turbo_x64-windows/lib/pkgconfig/libjpeg.pc
+  -- Fixing pkgconfig file: C:/Users/edgar/temp/vcpkg/packages/libjpeg-turbo_x64-windows/lib/pkgconfig/libturbojpeg.pc
+  -- Using cached msys2-mingw-w64-x86_64-pkgconf-1~2.2.0-1-any.pkg.tar.zst.
+  -- Using cached msys2-msys2-runtime-3.5.3-3-x86_64.pkg.tar.zst.
+  -- Using msys root at C:/Users/edgar/temp/vcpkg/downloads/tools/msys2/1e74ca60daa10104
+  -- Fixing pkgconfig file: C:/Users/edgar/temp/vcpkg/packages/libjpeg-turbo_x64-windows/debug/lib/pkgconfig/libjpeg.pc
+  -- Fixing pkgconfig file: C:/Users/edgar/temp/vcpkg/packages/libjpeg-turbo_x64-windows/debug/lib/pkgconfig/libturbojpeg.pc
+  -- Installing: C:/Users/edgar/temp/vcpkg/packages/libjpeg-turbo_x64-windows/share/libjpeg-turbo/copyright
+  -- Realizando la validación posterior a la compilación
+  Archivos binarios almacenados en 1 destinos en 1.2 s.
+  Tiempo transcurrido para controlar libjpeg-turbo:x64-windows: 1.5 min
+  ABI del paquete libjpeg-turbo:x64-windows: 0d9e6436cd9d880f4cf96228a0271b346b23439793cf61a79c3ef9c1685f5235
+  Instalando 3/11 tiff[core,jpeg,lzma,zip]:x64-windows@4.6.0#5...
+  Compilando tiff[core,jpeg,lzma,zip]:x64-windows@4.6.0#5...
+  -- Downloading https://gitlab.com/libtiff/libtiff/-/archive/v4.6.0/libtiff-v4.6.0.tar.gz -> libtiff-libtiff-v4.6.0.tar.gz...
+  -- Extracting source C:/Users/edgar/temp/vcpkg/downloads/libtiff-libtiff-v4.6.0.tar.gz
+  -- Applying patch FindCMath.patch
+  -- Applying patch prefer-config.diff
+  -- Applying patch requires-lerc.patch
+  -- Using source at C:/Users/edgar/temp/vcpkg/buildtrees/tiff/src/v4.6.0-54d9b8be55.clean
+  -- Found external ninja('1.11.0').
+  -- Configuring x64-windows
+  -- Building x64-windows-dbg
+  -- Building x64-windows-rel
+  -- Fixing pkgconfig file: C:/Users/edgar/temp/vcpkg/packages/tiff_x64-windows/lib/pkgconfig/libtiff-4.pc
+  -- Using cached msys2-mingw-w64-x86_64-pkgconf-1~2.2.0-1-any.pkg.tar.zst.
+  -- Using cached msys2-msys2-runtime-3.5.3-3-x86_64.pkg.tar.zst.
+  -- Using msys root at C:/Users/edgar/temp/vcpkg/downloads/tools/msys2/1e74ca60daa10104
+  -- Fixing pkgconfig file: C:/Users/edgar/temp/vcpkg/packages/tiff_x64-windows/debug/lib/pkgconfig/libtiff-4.pc
+  CMake Warning at scripts/cmake/vcpkg_copy_pdbs.cmake:44 (message):
+    Could not find a matching pdb file for:
+  
+        C:/Users/edgar/temp/vcpkg/packages/tiff_x64-windows/bin/tiff.dll
+        C:/Users/edgar/temp/vcpkg/packages/tiff_x64-windows/debug/bin/tiffd.dll
+  
+  Call Stack (most recent call first):
+    ports/tiff/portfile.cmake:86 (vcpkg_copy_pdbs)
+    scripts/ports.cmake:192 (include)
+  
+  
+  -- Installing: C:/Users/edgar/temp/vcpkg/packages/tiff_x64-windows/share/tiff/copyright
+  -- Realizando la validación posterior a la compilación
+  Archivos binarios almacenados en 1 destinos en 240 ms.
+  Tiempo transcurrido para controlar tiff:x64-windows: 1 min
+  ABI del paquete tiff:x64-windows: 8f9b9314b667e93aabcc2fcdc0803168f4add9434aab93e334ee39c197bc5055
+  Instalando 4/11 libdeflate[compression,core,decompression,gzip,zlib]:x64-windows@1.21...
+  Compilando libdeflate[compression,core,decompression,gzip,zlib]:x64-windows@1.21...
+  -- Downloading https://github.com/ebiggers/libdeflate/archive/v1.21.tar.gz -> ebiggers-libdeflate-v1.21.tar.gz...
+  -- Extracting source C:/Users/edgar/temp/vcpkg/downloads/ebiggers-libdeflate-v1.21.tar.gz
+  -- Applying patch remove_wrong_c_flags_modification.diff
+  -- Using source at C:/Users/edgar/temp/vcpkg/buildtrees/libdeflate/src/v1.21-9f072c60e7.clean
+  -- Found external ninja('1.11.0').
+  -- Configuring x64-windows
+  -- Building x64-windows-dbg
+  -- Building x64-windows-rel
+  -- Fixing pkgconfig file: C:/Users/edgar/temp/vcpkg/packages/libdeflate_x64-windows/lib/pkgconfig/libdeflate.pc
+  -- Using cached msys2-mingw-w64-x86_64-pkgconf-1~2.2.0-1-any.pkg.tar.zst.
+  -- Using cached msys2-msys2-runtime-3.5.3-3-x86_64.pkg.tar.zst.
+  -- Using msys root at C:/Users/edgar/temp/vcpkg/downloads/tools/msys2/1e74ca60daa10104
+  -- Fixing pkgconfig file: C:/Users/edgar/temp/vcpkg/packages/libdeflate_x64-windows/debug/lib/pkgconfig/libdeflate.pc
+  -- Installing: C:/Users/edgar/temp/vcpkg/packages/libdeflate_x64-windows/share/libdeflate/copyright
+  -- Installing: C:/Users/edgar/temp/vcpkg/packages/libdeflate_x64-windows/share/libdeflate/usage
+  -- Realizando la validación posterior a la compilación
+  Archivos binarios almacenados en 1 destinos en 91.4 ms.
+  Tiempo transcurrido para controlar libdeflate:x64-windows: 9.9 s
+  ABI del paquete libdeflate:x64-windows: 60c764ea085280f4cd6a9fee7553135cb1b91e9a7fd172b15e3f646ef7c153e8
+  Instalando 5/11 imath:x64-windows@3.1.11...
+  Compilando imath:x64-windows@3.1.11...
+  -- Downloading https://github.com/AcademySoftwareFoundation/Imath/archive/v3.1.11.tar.gz -> AcademySoftwareFoundation-Imath-v3.1.11.tar.gz...
+  -- Extracting source C:/Users/edgar/temp/vcpkg/downloads/AcademySoftwareFoundation-Imath-v3.1.11.tar.gz
+  -- Using source at C:/Users/edgar/temp/vcpkg/buildtrees/imath/src/v3.1.11-70a082b9c8.clean
+  -- Found external ninja('1.11.0').
+  -- Configuring x64-windows
+  -- Building x64-windows-dbg
+  -- Building x64-windows-rel
+  CMake Warning at scripts/cmake/vcpkg_copy_pdbs.cmake:44 (message):
+    Could not find a matching pdb file for:
+  
+        C:/Users/edgar/temp/vcpkg/packages/imath_x64-windows/bin/Imath-3_1.dll
+        C:/Users/edgar/temp/vcpkg/packages/imath_x64-windows/debug/bin/Imath-3_1_d.dll
+  
+  Call Stack (most recent call first):
+    ports/imath/portfile.cmake:19 (vcpkg_copy_pdbs)
+    scripts/ports.cmake:192 (include)
+  
+  
+  -- Fixing pkgconfig file: C:/Users/edgar/temp/vcpkg/packages/imath_x64-windows/lib/pkgconfig/Imath.pc
+  -- Using cached msys2-mingw-w64-x86_64-pkgconf-1~2.2.0-1-any.pkg.tar.zst.
+  -- Using cached msys2-msys2-runtime-3.5.3-3-x86_64.pkg.tar.zst.
+  -- Using msys root at C:/Users/edgar/temp/vcpkg/downloads/tools/msys2/1e74ca60daa10104
+  -- Fixing pkgconfig file: C:/Users/edgar/temp/vcpkg/packages/imath_x64-windows/debug/lib/pkgconfig/Imath.pc
+  -- Installing: C:/Users/edgar/temp/vcpkg/packages/imath_x64-windows/share/imath/copyright
+  -- Realizando la validación posterior a la compilación
+  Archivos binarios almacenados en 1 destinos en 144 ms.
+  Tiempo transcurrido para controlar imath:x64-windows: 13 s
+  ABI del paquete imath:x64-windows: fca3347bf93878b257829dfa5f0c69f6bf6e1788fa0b76f33c93c86b2c3811e0
+  Instalando 6/11 openexr:x64-windows@3.2.4...
+  Compilando openexr:x64-windows@3.2.4...
+  -- Downloading https://github.com/AcademySoftwareFoundation/openexr/archive/v3.2.4.tar.gz -> AcademySoftwareFoundation-openexr-v3.2.4.tar.gz...
+  -- Extracting source C:/Users/edgar/temp/vcpkg/downloads/AcademySoftwareFoundation-openexr-v3.2.4.tar.gz
+  -- Using source at C:/Users/edgar/temp/vcpkg/buildtrees/openexr/src/v3.2.4-b0032649a0.clean
+  -- Found external ninja('1.11.0').
+  -- Configuring x64-windows
+  -- Building x64-windows-dbg
+  -- Building x64-windows-rel
+  CMake Warning at scripts/cmake/vcpkg_copy_pdbs.cmake:44 (message):
+    Could not find a matching pdb file for:
+  
+        C:/Users/edgar/temp/vcpkg/packages/openexr_x64-windows/bin/Iex-3_2.dll
+        C:/Users/edgar/temp/vcpkg/packages/openexr_x64-windows/bin/IlmThread-3_2.dll
+        C:/Users/edgar/temp/vcpkg/packages/openexr_x64-windows/bin/OpenEXR-3_2.dll
+        C:/Users/edgar/temp/vcpkg/packages/openexr_x64-windows/bin/OpenEXRCore-3_2.dll
+        C:/Users/edgar/temp/vcpkg/packages/openexr_x64-windows/bin/OpenEXRUtil-3_2.dll
+        C:/Users/edgar/temp/vcpkg/packages/openexr_x64-windows/debug/bin/Iex-3_2_d.dll
+        C:/Users/edgar/temp/vcpkg/packages/openexr_x64-windows/debug/bin/IlmThread-3_2_d.dll
+        C:/Users/edgar/temp/vcpkg/packages/openexr_x64-windows/debug/bin/OpenEXR-3_2_d.dll
+        C:/Users/edgar/temp/vcpkg/packages/openexr_x64-windows/debug/bin/OpenEXRCore-3_2_d.dll
+        C:/Users/edgar/temp/vcpkg/packages/openexr_x64-windows/debug/bin/OpenEXRUtil-3_2_d.dll
+  
+  Call Stack (most recent call first):
+    ports/openexr/portfile.cmake:28 (vcpkg_copy_pdbs)
+    scripts/ports.cmake:192 (include)
+  
+  
+  -- Fixing pkgconfig file: C:/Users/edgar/temp/vcpkg/packages/openexr_x64-windows/lib/pkgconfig/OpenEXR.pc
+  -- Using cached msys2-mingw-w64-x86_64-pkgconf-1~2.2.0-1-any.pkg.tar.zst.
+  -- Using cached msys2-msys2-runtime-3.5.3-3-x86_64.pkg.tar.zst.
+  -- Using msys root at C:/Users/edgar/temp/vcpkg/downloads/tools/msys2/1e74ca60daa10104
+  -- Fixing pkgconfig file: C:/Users/edgar/temp/vcpkg/packages/openexr_x64-windows/debug/lib/pkgconfig/OpenEXR.pc
+  -- Installing: C:/Users/edgar/temp/vcpkg/packages/openexr_x64-windows/share/openexr/usage
+  -- Installing: C:/Users/edgar/temp/vcpkg/packages/openexr_x64-windows/share/openexr/copyright
+  -- Realizando la validación posterior a la compilación
+  Archivos binarios almacenados en 1 destinos en 1.5 s.
+  Tiempo transcurrido para controlar openexr:x64-windows: 7.6 min
+  ABI del paquete openexr:x64-windows: afc4d798e28c0b99b7f267d282487244355027ff9ac0bf127f47342475079174
+  Instalando 7/11 libpng:x64-windows@1.6.43#3...
+  Compilando libpng:x64-windows@1.6.43#3...
+  -- Downloading https://github.com/glennrp/libpng/archive/v1.6.43.tar.gz -> glennrp-libpng-v1.6.43.tar.gz...
+  -- Extracting source C:/Users/edgar/temp/vcpkg/downloads/glennrp-libpng-v1.6.43.tar.gz
+  -- Applying patch cmake.patch
+  -- Applying patch fix-export-targets.patch
+  -- Applying patch libm.patch
+  -- Applying patch pkgconfig.patch
+  -- Applying patch fix-msa-support-for-mips.patch
+  -- Using source at C:/Users/edgar/temp/vcpkg/buildtrees/libpng/src/v1.6.43-e957a32120.clean
+  -- Found external ninja('1.11.0').
+  -- Configuring x64-windows
+  -- Building x64-windows-dbg
+  -- Building x64-windows-rel
+  -- Installing: C:/Users/edgar/temp/vcpkg/packages/libpng_x64-windows/share/png/vcpkg-cmake-wrapper.cmake
+  -- Fixing pkgconfig file: C:/Users/edgar/temp/vcpkg/packages/libpng_x64-windows/lib/pkgconfig/libpng16.pc
+  -- Using cached msys2-mingw-w64-x86_64-pkgconf-1~2.2.0-1-any.pkg.tar.zst.
+  -- Using cached msys2-msys2-runtime-3.5.3-3-x86_64.pkg.tar.zst.
+  -- Using msys root at C:/Users/edgar/temp/vcpkg/downloads/tools/msys2/1e74ca60daa10104
+  -- Fixing pkgconfig file: C:/Users/edgar/temp/vcpkg/packages/libpng_x64-windows/debug/lib/pkgconfig/libpng16.pc
+  -- Installing: C:/Users/edgar/temp/vcpkg/packages/libpng_x64-windows/debug/lib/pkgconfig/libpng.pc
+  -- Installing: C:/Users/edgar/temp/vcpkg/packages/libpng_x64-windows/lib/pkgconfig/libpng.pc
+  CMake Warning at scripts/cmake/vcpkg_copy_pdbs.cmake:44 (message):
+    Could not find a matching pdb file for:
+  
+        C:/Users/edgar/temp/vcpkg/packages/libpng_x64-windows/bin/libpng16.dll
+        C:/Users/edgar/temp/vcpkg/packages/libpng_x64-windows/debug/bin/libpng16d.dll
+  
+  Call Stack (most recent call first):
+    ports/libpng/portfile.cmake:105 (vcpkg_copy_pdbs)
+    scripts/ports.cmake:192 (include)
+  
+  
+  -- Installing: C:/Users/edgar/temp/vcpkg/packages/libpng_x64-windows/share/libpng/usage
+  -- Installing: C:/Users/edgar/temp/vcpkg/packages/libpng_x64-windows/share/libpng/copyright
+  -- Realizando la validación posterior a la compilación
+  Archivos binarios almacenados en 1 destinos en 146 ms.
+  Tiempo transcurrido para controlar libpng:x64-windows: 24 s
+  ABI del paquete libpng:x64-windows: b2ff6526361e4f5ab618bbfff60b2fe7526d0a7a5418002c571f6c36cf92351a
+  Instalando 8/11 lcms:x64-windows@2.14...
+  Compilando lcms:x64-windows@2.14...
+  -- Downloading https://github.com/mm2/Little-CMS/archive/lcms2.14.tar.gz -> mm2-Little-CMS-lcms2.14.tar.gz...
+  -- Extracting source C:/Users/edgar/temp/vcpkg/downloads/mm2-Little-CMS-lcms2.14.tar.gz
+  -- Applying patch remove_library_directive.patch
+  -- Applying patch fix-shared-library.patch
+  -- Applying patch remove-register.patch
+  -- Using source at C:/Users/edgar/temp/vcpkg/buildtrees/lcms/src/lcms2.14-a594fc797e.clean
+  -- Found external ninja('1.11.0').
+  -- Configuring x64-windows
+  -- Building x64-windows-dbg
+  -- Building x64-windows-rel
+  CMake Warning at scripts/cmake/vcpkg_copy_pdbs.cmake:44 (message):
+    Could not find a matching pdb file for:
+  
+        C:/Users/edgar/temp/vcpkg/packages/lcms_x64-windows/bin/lcms2.dll
+        C:/Users/edgar/temp/vcpkg/packages/lcms_x64-windows/debug/bin/lcms2.dll
+  
+  Call Stack (most recent call first):
+    ports/lcms/portfile.cmake:24 (vcpkg_copy_pdbs)
+    scripts/ports.cmake:192 (include)
+  
+  
+  -- Fixing pkgconfig file: C:/Users/edgar/temp/vcpkg/packages/lcms_x64-windows/lib/pkgconfig/lcms2.pc
+  -- Using cached msys2-mingw-w64-x86_64-pkgconf-1~2.2.0-1-any.pkg.tar.zst.
+  -- Using cached msys2-msys2-runtime-3.5.3-3-x86_64.pkg.tar.zst.
+  -- Using msys root at C:/Users/edgar/temp/vcpkg/downloads/tools/msys2/1e74ca60daa10104
+  -- Fixing pkgconfig file: C:/Users/edgar/temp/vcpkg/packages/lcms_x64-windows/debug/lib/pkgconfig/lcms2.pc
+  -- Installing: C:/Users/edgar/temp/vcpkg/packages/lcms_x64-windows/share/lcms/copyright
+  -- Installing: C:/Users/edgar/temp/vcpkg/packages/lcms_x64-windows/share/lcms/usage
+  -- Realizando la validación posterior a la compilación
+  Archivos binarios almacenados en 1 destinos en 180 ms.
+  Tiempo transcurrido para controlar lcms:x64-windows: 29 s
+  ABI del paquete lcms:x64-windows: 64b18da1ea2b879a0165064ce96747765d6cc77b19c2c7c0e8cb65511ab3b258
+  Instalando 9/11 freeglut:x64-windows@3.4.0#3...
+  Compilando freeglut:x64-windows@3.4.0#3...
+  -- Downloading https://github.com/FreeGLUTProject/freeglut/archive/v3.4.0.tar.gz -> FreeGLUTProject-freeglut-v3.4.0.tar.gz...
+  -- Extracting source C:/Users/edgar/temp/vcpkg/downloads/FreeGLUTProject-freeglut-v3.4.0.tar.gz
+  -- Applying patch android.patch
+  -- Applying patch gles.patch
+  -- Applying patch x11-dependencies-export.patch
+  -- Applying patch fix-debug-macro.patch
+  -- Applying patch no_x64_enforcement.patch
+  -- Applying patch windows-output-name.patch
+  -- Using source at C:/Users/edgar/temp/vcpkg/buildtrees/freeglut/src/v3.4.0-a667d9a2c9.clean
+  -- Found external ninja('1.11.0').
+  -- Configuring x64-windows
+  -- Building x64-windows-dbg
+  -- Building x64-windows-rel
+  CMake Warning at scripts/cmake/vcpkg_copy_pdbs.cmake:44 (message):
+    Could not find a matching pdb file for:
+  
+        C:/Users/edgar/temp/vcpkg/packages/freeglut_x64-windows/bin/freeglut.dll
+        C:/Users/edgar/temp/vcpkg/packages/freeglut_x64-windows/debug/bin/freeglutd.dll
+  
+  Call Stack (most recent call first):
+    ports/freeglut/portfile.cmake:35 (vcpkg_copy_pdbs)
+    scripts/ports.cmake:192 (include)
+  
+  
+  -- Fixing pkgconfig file: C:/Users/edgar/temp/vcpkg/packages/freeglut_x64-windows/lib/pkgconfig/glut.pc
+  -- Using cached msys2-mingw-w64-x86_64-pkgconf-1~2.2.0-1-any.pkg.tar.zst.
+  -- Using cached msys2-msys2-runtime-3.5.3-3-x86_64.pkg.tar.zst.
+  -- Using msys root at C:/Users/edgar/temp/vcpkg/downloads/tools/msys2/1e74ca60daa10104
+  -- Fixing pkgconfig file: C:/Users/edgar/temp/vcpkg/packages/freeglut_x64-windows/debug/lib/pkgconfig/glut.pc
+  -- Installing: C:/Users/edgar/temp/vcpkg/packages/freeglut_x64-windows/share/glut/vcpkg-cmake-wrapper.cmake
+  -- Installing: C:/Users/edgar/temp/vcpkg/packages/freeglut_x64-windows/share/freeglut/usage
+  -- Installing: C:/Users/edgar/temp/vcpkg/packages/freeglut_x64-windows/share/freeglut/copyright
+  -- Realizando la validación posterior a la compilación
+  Archivos binarios almacenados en 1 destinos en 110 ms.
+  Tiempo transcurrido para controlar freeglut:x64-windows: 26 s
+  ABI del paquete freeglut:x64-windows: da80cc07990c90eb6c56991be50a296d557e301ac0e01635d352b0b1bd3c2d17
+  Instalando 10/11 jasper[core,default-features,opengl]:x64-windows@4.2.1...
+  Compilando jasper[core,default-features,opengl]:x64-windows@4.2.1...
+  -- Downloading https://github.com/jasper-software/jasper/archive/version-4.2.1.tar.gz -> jasper-software-jasper-version-4.2.1.tar.gz...
+  -- Extracting source C:/Users/edgar/temp/vcpkg/downloads/jasper-software-jasper-version-4.2.1.tar.gz
+  -- Applying patch no_stdc_check.patch
+  -- Applying patch fix-library-name.patch
+  -- Using source at C:/Users/edgar/temp/vcpkg/buildtrees/jasper/src/sion-4.2.1-8404b64315.clean
+  -- Found external ninja('1.11.0').
+  -- Configuring x64-windows
+  -- Building x64-windows-dbg
+  -- Building x64-windows-rel
+  CMake Warning at scripts/cmake/vcpkg_copy_pdbs.cmake:44 (message):
+    Could not find a matching pdb file for:
+  
+        C:/Users/edgar/temp/vcpkg/packages/jasper_x64-windows/bin/jasper.dll
+        C:/Users/edgar/temp/vcpkg/packages/jasper_x64-windows/debug/bin/jasperd.dll
+  
+  Call Stack (most recent call first):
+    ports/jasper/portfile.cmake:39 (vcpkg_copy_pdbs)
+    scripts/ports.cmake:192 (include)
+  
+  
+  -- Fixing pkgconfig file: C:/Users/edgar/temp/vcpkg/packages/jasper_x64-windows/lib/pkgconfig/jasper.pc
+  -- Using cached msys2-mingw-w64-x86_64-pkgconf-1~2.2.0-1-any.pkg.tar.zst.
+  -- Using cached msys2-msys2-runtime-3.5.3-3-x86_64.pkg.tar.zst.
+  -- Using msys root at C:/Users/edgar/temp/vcpkg/downloads/tools/msys2/1e74ca60daa10104
+  -- Fixing pkgconfig file: C:/Users/edgar/temp/vcpkg/packages/jasper_x64-windows/debug/lib/pkgconfig/jasper.pc
+  -- Installing: C:/Users/edgar/temp/vcpkg/packages/jasper_x64-windows/share/jasper/copyright
+  -- Realizando la validación posterior a la compilación
+  Archivos binarios almacenados en 1 destinos en 185 ms.
+  Tiempo transcurrido para controlar jasper:x64-windows: 1.2 min
+  ABI del paquete jasper:x64-windows: bceddcce3e104f05fdf2aa02876048fb023753333a1eb6ceda4283aae709e871
+  Instalando 11/11 devil[core,jasper,lcms,libjpeg,libpng,openexr,tiff]:x64-windows@1.8.0#13...
+  Compilando devil[core,jasper,lcms,libjpeg,libpng,openexr,tiff]:x64-windows@1.8.0#13...
+  -- Downloading https://github.com/DentonW/DevIL/archive/v1.8.0.tar.gz -> DentonW-DevIL-v1.8.0.tar.gz...
+  -- Extracting source C:/Users/edgar/temp/vcpkg/downloads/DentonW-DevIL-v1.8.0.tar.gz
+  -- Applying patch 0001_fix-encoding.patch
+  -- Applying patch 0002_fix-missing-mfc-includes.patch
+  -- Applying patch 0003_fix-openexr.patch
+  -- Applying patch enable-static.patch
+  -- Applying patch 0004_compatible-jasper-2-0-20.patch
+  -- Applying patch 0005-fix-pkgconfig.patch
+  -- Applying patch 0006-fix-ilut-header.patch
+  -- Applying patch jasper-4.patch
+  -- Applying patch 0007-remove_register_keyword_cpp17.patch
+  -- Using source at C:/Users/edgar/temp/vcpkg/buildtrees/devil/src/v1.8.0-c7d44c3635.clean
+  -- Found external ninja('1.11.0').
+  -- Configuring x64-windows-dbg
+  -- Configuring x64-windows-rel
+  -- Building x64-windows-dbg
+  -- Building x64-windows-rel
+  CMake Warning at scripts/cmake/vcpkg_copy_pdbs.cmake:44 (message):
+    Could not find a matching pdb file for:
+  
+        C:/Users/edgar/temp/vcpkg/packages/devil_x64-windows/bin/DevIL.dll
+        C:/Users/edgar/temp/vcpkg/packages/devil_x64-windows/bin/ILU.dll
+        C:/Users/edgar/temp/vcpkg/packages/devil_x64-windows/bin/ILUT.dll
+        C:/Users/edgar/temp/vcpkg/packages/devil_x64-windows/debug/bin/DevIL.dll
+        C:/Users/edgar/temp/vcpkg/packages/devil_x64-windows/debug/bin/ILU.dll
+        C:/Users/edgar/temp/vcpkg/packages/devil_x64-windows/debug/bin/ILUT.dll
+  
+  Call Stack (most recent call first):
+    ports/devil/portfile.cmake:43 (vcpkg_copy_pdbs)
+    scripts/ports.cmake:192 (include)
+  
+  
+  -- Fixing pkgconfig file: C:/Users/edgar/temp/vcpkg/packages/devil_x64-windows/lib/pkgconfig/DevIL.pc
+  -- Fixing pkgconfig file: C:/Users/edgar/temp/vcpkg/packages/devil_x64-windows/lib/pkgconfig/ILU.pc
+  -- Fixing pkgconfig file: C:/Users/edgar/temp/vcpkg/packages/devil_x64-windows/lib/pkgconfig/ILUT.pc
+  -- Using cached msys2-mingw-w64-x86_64-pkgconf-1~2.2.0-1-any.pkg.tar.zst.
+  -- Using cached msys2-msys2-runtime-3.5.3-3-x86_64.pkg.tar.zst.
+  -- Using msys root at C:/Users/edgar/temp/vcpkg/downloads/tools/msys2/1e74ca60daa10104
+  -- Fixing pkgconfig file: C:/Users/edgar/temp/vcpkg/packages/devil_x64-windows/debug/lib/pkgconfig/DevIL.pc
+  -- Fixing pkgconfig file: C:/Users/edgar/temp/vcpkg/packages/devil_x64-windows/debug/lib/pkgconfig/ILU.pc
+  -- Fixing pkgconfig file: C:/Users/edgar/temp/vcpkg/packages/devil_x64-windows/debug/lib/pkgconfig/ILUT.pc
+  -- Installing: C:/Users/edgar/temp/vcpkg/packages/devil_x64-windows/share/devil/copyright
+  -- Realizando la validación posterior a la compilación
+  Archivos binarios almacenados en 1 destinos en 185 ms.
+  Tiempo transcurrido para controlar devil:x64-windows: 1.5 min
+  ABI del paquete devil:x64-windows: b0f9c79c7bfef8774341912f965645cf22dfdec830613506977e1675a7dd2a0e
+  Tiempo total de instalación: 16 min
+  assimp proporciona destinos de CMake:
+  
+    # esto se genera de forma heurística y puede que no sea correcto
+    find_package(assimp CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE assimp::assimp)
+  
+  assimp proporciona módulos de pkg-config:
+  
+    # Import various well-known 3D model formats in an uniform manner.
+    assimp
+  
+  devil proporciona módulos de pkg-config:
+  
+    # Developer's Image Library - DevIL part (just image load/save)
+    DevIL
+  
+    # Developer's Image Library - ILU part (image library utilities)
+    ILU
+  
+    # Developer's Image Library - ILUT part (connection to higher level libraries)
+    ILUT
+  
+  The package glew is compatible with built-in CMake targets:
+  
+      find_package(GLEW REQUIRED)
+      target_link_libraries(main PRIVATE GLEW::GLEW)
+  
+  The package glm provides CMake targets:
+  
+      find_package(glm CONFIG REQUIRED)
+      target_link_libraries(main PRIVATE glm::glm)
+  
+      # Or use the header-only version
+      find_package(glm CONFIG REQUIRED)
+      target_link_libraries(main PRIVATE glm::glm-header-only)
+  
+  sdl2 provides CMake targets:
+  
+      find_package(SDL2 CONFIG REQUIRED)
+      target_link_libraries(main
+          PRIVATE
+          $<TARGET_NAME_IF_EXISTS:SDL2::SDL2main>
+          $<IF:$<TARGET_EXISTS:SDL2::SDL2>,SDL2::SDL2,SDL2::SDL2-static>
+      )
+  
+  imgui proporciona destinos de CMake:
+  
+    # esto se genera de forma heurística y puede que no sea correcto
+    find_package(imgui CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE imgui::imgui)
+  
   main.cpp
 C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(162,36): warning C4838: la conversión de 'double' en 'const GLfloat' requiere una conversión de restricción
 C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\main.cpp(162,36): warning C4244: 'inicializando': conversión de 'double' a 'const GLfloat'; posible pérdida de datos

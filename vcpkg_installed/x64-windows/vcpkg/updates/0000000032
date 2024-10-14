@@ -1,0 +1,9 @@
+Package: jasper
+Version: 4.2.1
+Depends: libjpeg-turbo, vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: bceddcce3e104f05fdf2aa02876048fb023753333a1eb6ceda4283aae709e871
+Description: Open source implementation of the JPEG-2000 Part-1 standard
+Default-Features: default-features
+Status: install ok half-installed
