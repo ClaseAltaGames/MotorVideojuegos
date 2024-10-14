@@ -294,25 +294,21 @@ static int draw_fbx(const char *file) {
     //printf("Numero de malles: %u\n", scene->mNumMeshes);
     for (unsigned int i = 0; i < scene->mNumMeshes; i++) {
         aiMesh* mesh = scene->mMeshes[i];
-        printf("\nMalla %u:\n", i);
-        printf(" Numero de vertexs: %u\n", mesh->mNumVertices);
-        printf(" Numero de triangles: %u\n", mesh->mNumFaces);
         // Vèrtexs
         for (unsigned int v = 0; v < mesh->mNumVertices; v++) {
             aiVector3D vertex = mesh->mVertices[v];
-            printf(" Vertex %u: (%f, %f, %f)\n", v, vertex.x, vertex.y, vertex.z);
+           
         }
         // Índexs de triangles (3 per triangle)
         for (unsigned int f = 0; f < mesh->mNumFaces; f++) {
 
             aiFace face = mesh->mFaces[f];
-            printf(" Indexs triangle %u: ", f);
+            
 
             for (unsigned int j = 0; j < face.mNumIndices; j++) {
-                printf("%u ", face.mIndices[j]);
+                
             }
 
-            printf("\n");
         }
         //pasar los arrays a openGL
         glBegin(GL_TRIANGLES);
