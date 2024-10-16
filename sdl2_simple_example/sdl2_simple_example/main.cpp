@@ -13,6 +13,8 @@
 #include <assimp/postprocess.h>
 #include <stdio.h>
 
+#define CHECKERS_WIDTH 64
+#define CHECKERS_HEIGHT 64
 using namespace std;
 
 using hrclock = chrono::high_resolution_clock;
@@ -28,15 +30,16 @@ static void init_openGL() {
 	glewInit();
 	if (!GLEW_VERSION_3_0) throw exception("OpenGL 3.0 API is not available.");
 	glEnable(GL_DEPTH_TEST);
+    glEnable(GL_TEXTURE_2D);
 	glClearColor(0.5, 0.5, 0.5, 1.0);
 }
 
-void set3dView(GLdouble angle) {
+void set3dView(GLdouble fov) {
     // Configurar la matriz de proyección
     GLdouble yView = 50.0;
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
-    gluPerspective(angle, 1.0, 0.1, 200.0);  // Perspectiva con campo de visión de 45 grados
+    gluPerspective(fov, 1.0, 0.1, 200.0);  // Perspectiva con campo de visión de 45 grados
 
     // Configuración de la cámara
     glMatrixMode(GL_MODELVIEW);
@@ -317,6 +320,8 @@ static int draw_fbx(const char *file) {
             for (unsigned int j = 0; j < face.mNumIndices; j++) {
 				aiVector3D vertex = mesh->mVertices[face.mIndices[j]];
 				glVertex3f(vertex.x, vertex.y, vertex.z);
+				aiVector3D uv = mesh->mTextureCoords[0][face.mIndices[j]];
+				glTexCoord2f(uv.x, uv.y);
 			}
 		}
         glEnd();
@@ -325,6 +330,29 @@ static int draw_fbx(const char *file) {
     return 0;
 }
 
+GLubyte checkerImage[CHECKERS_HEIGHT][CHECKERS_WIDTH][4];
+GLuint textureID;
+static void generate_textures()
+{
+    for (int i = 0; i < CHECKERS_HEIGHT; i++) {
+        for (int j = 0; j < CHECKERS_WIDTH; j++) {
+            int c = ((((i & 0x8) == 0) ^ (((j & 0x8)) == 0))) * 255;
+            checkerImage[i][j][0] = (GLubyte)c;
+            checkerImage[i][j][1] = (GLubyte)c;
+            checkerImage[i][j][2] = (GLubyte)c;
+            checkerImage[i][j][3] = (GLubyte)255;
+        }
+    }
+    glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
+    glGenTextures(1, &textureID);
+    glBindTexture(GL_TEXTURE_2D, textureID);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, CHECKERS_WIDTH, CHECKERS_HEIGHT, 0,
+        GL_RGBA, GL_UNSIGNED_BYTE, checkerImage);
+}
 
 static void display_func() {
     // Limpiar el buffer de color y profundidad
@@ -339,6 +367,7 @@ static void display_func() {
 	//draw_octahedron(vec3(0.0, 0.0, 0.0), 1.0);
    
     draw_fbx("halo2.fbx");
+	generate_textures();
 
     // Forzar el renderizado
     glFlush();
