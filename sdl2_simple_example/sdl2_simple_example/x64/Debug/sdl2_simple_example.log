@@ -1,8 +1,16 @@
 ﻿C:\Users\edgar\AppData\Local\vcpkg\vcpkg.user.props(3,3): warning MSB4011: "C:\Users\edgar\temp\vcpkg\scripts\buildsystems\msbuild\vcpkg.props" no se puede volver a importar. Ya se importó en "C:\Users\edgar\temp\Directory.Build.props (8,3)". Lo más probable es que se trate de un error al crear la compilación. Se omitirá esta importación. [C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\sdl2_simple_example.vcxproj]
 C:\Users\edgar\AppData\Local\vcpkg\vcpkg.user.targets(3,3): warning MSB4011: "C:\Users\edgar\temp\vcpkg\scripts\buildsystems\msbuild\vcpkg.targets" no se puede volver a importar. Ya se importó en "C:\Users\edgar\temp\Directory.Build.targets (11,3)". Lo más probable es que se trate de un error al crear la compilación. Se omitirá esta importación. [C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\sdl2_simple_example.vcxproj]
-  ImporterFBX.cpp
+  App.cpp
   main.cpp
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\App.h(4,10): error C1083: No se puede abrir el archivo incluir: 'Module.h': No such file or directory
+  (compilando archivo de origen "App.cpp")
+  
+  PerfTimer.cpp
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\PerfTimer.h(4,10): error C1083: No se puede abrir el archivo incluir: 'Defs.h': No such file or directory
+  (compilando archivo de origen "PerfTimer.cpp")
+  
+  Timer.cpp
+C:\Users\edgar\temp\sdl2_simple_example\sdl2_simple_example\Timer.h(4,10): error C1083: No se puede abrir el archivo incluir: 'Defs.h': No such file or directory
+  (compilando archivo de origen "Timer.cpp")
+  
   Generando código...
-  sdl2_simple_example.vcxproj -> C:\Users\edgar\temp\sdl2_simple_example\x64\Debug\sdl2_simple_example.exe
-  "pwsh.exe" no se reconoce como un comando interno o externo,
-  programa o archivo por lotes ejecutable.
