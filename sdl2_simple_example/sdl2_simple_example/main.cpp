@@ -113,6 +113,7 @@ static int draw_fbx(const char *file) {
     }
     //printf("Numero de malles: %u\n", scene->mNumMeshes);
     for (unsigned int i = 0; i < scene->mNumMeshes; i++) {
+        //actualizar la posicion de la camara
         aiMesh* mesh = scene->mMeshes[i];
         // Vèrtexs
         for (unsigned int v = 0; v < mesh->mNumVertices; v++) {
@@ -187,20 +188,14 @@ static void movimientoCamara() {
 	}
 }
 
+
 static void display_func() {
     // Limpiar el buffer de color y profundidad
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-
-	//draw_triangle(u8vec4(255, 0, 0, 255), vec3(0.0, 0.0, 0.0), 1.0);
-	//draw_lines(u8vec4(0, 255, 0, 255), vec3(0.0, 0.0, 0.0), 1.0);
 	//draw_cube(vec3(0.0, 0.0, 0.0), 1.0);
-	//draw_prism(vec3(0.0, 0.0, 0.0), 2.0, 2.0, 1.0);
-	//draw_pyramid(vec3(0.0, 0.0, 0.0), 1.0);
-	//draw_tetrahedron(vec3(0.0, 0.0, 0.0), 1.0);
-	//draw_octahedron(vec3(0.0, 0.0, 0.0), 1.0);
    movimientoCamara();
-    draw_fbx("halo2.fbx");
-	generate_textures();
+   // draw_fbx("halo2.fbx");
+	//generate_textures();
 
     // Forzar el renderizado
     glFlush();
