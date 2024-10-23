@@ -13,6 +13,7 @@
 #include <assimp/postprocess.h>
 #include <stdio.h>
 #include "ImporterFBX.h"
+using namespace std;
 
 #define CHECKERS_WIDTH 64
 #define CHECKERS_HEIGHT 64
@@ -197,18 +198,19 @@ static void display_func() {
     // Limpiar el buffer de color y profundidad
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	//draw_cube(vec3(0.0, 0.0, 0.0), 1.0);
-   movimientoCamara();
-   // draw_fbx("halo2.fbx");
-	//generate_textures();
-     // Generar los arrays de vértices y UVs
-   std::vector<std::vector<aiVector3D>> vertices;
-   std::vector<std::vector<aiVector3D>> uvs;
+   //movimientoCamara();
+   //draw_fbx(FBX_FILE);
+    //generate_textures();
+    // Generar los arrays de vértices y UVs
+    vector<vector<aiVector3D>> vertices;
+    vector<vector<aiVector3D>> uvs;
 
-   // Cargar el archivo FBX y pasar los arrays por referencia
-   importer->Load_FBX(FBX_FILE, vertices, uvs);
+    // Cargar el archivo FBX y pasar los arrays por referencia
+    importer->Load_FBX(FBX_FILE, vertices, uvs);
 
-   // Dibujar el modelo FBX usando los datos cargados
-   importer->Draw_FBX(vertices, uvs);
+    // Dibujar el modelo FBX usando los datos cargados
+    importer->Draw_FBX(vertices, uvs);
+	set3dView(5);
     // Forzar el renderizado
     glFlush();
     
