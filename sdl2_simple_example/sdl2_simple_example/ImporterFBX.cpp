@@ -2,66 +2,71 @@
 #include <iostream>
 #include <GL/glew.h>
 
+
 //////////////////////////////////////////
-#define FBX_FILE "Assets/cube.fbx"
+#define FBX_FILE "Assets/halo2.fbx"
 //////////////////////////////////////////
 ImporterFBX::ImporterFBX()
-{
+{    
+   
 }
 
 ImporterFBX::~ImporterFBX()
 {
+
 }
 
-int ImporterFBX::Draw_FBX(const char* file) {
+int ImporterFBX::Load_FBX(const char* file, std::vector<std::vector<aiVector3D>>& vertices, std::vector<std::vector<aiVector3D>>& uvs) {
     const struct aiScene* scene = aiImportFile(file, aiProcess_Triangulate);
     if (!scene) {
         fprintf(stderr, "Error en carregar el fitxer: %s\n", aiGetErrorString());
         return -1;
     }
-    //printf("Numero de malles: %u\n", scene->mNumMeshes);
+
     for (unsigned int i = 0; i < scene->mNumMeshes; i++) {
-        //actualizar la posicion de la camara
         aiMesh* mesh = scene->mMeshes[i];
-        // Vèrtexs
+
+        std::vector<aiVector3D> meshVertices;
+        std::vector<aiVector3D> meshUVs;
+
+        // Vértices
         for (unsigned int v = 0; v < mesh->mNumVertices; v++) {
-            aiVector3D vertex = mesh->mVertices[v];
-
+            meshVertices.push_back(mesh->mVertices[v]);
         }
-        // Índexs de triangles (3 per triangle)
-        for (unsigned int f = 0; f < mesh->mNumFaces; f++) {
 
-            aiFace face = mesh->mFaces[f];
-
-
-            for (unsigned int j = 0; j < face.mNumIndices; j++) {
-
-            }
-
-        }
-        //pasar los arrays a openGL
-        glBegin(GL_TRIANGLES);
-        for (unsigned int f = 0; f < mesh->mNumFaces; f++) {
-            aiFace face = mesh->mFaces[f];
-            for (unsigned int j = 0; j < face.mNumIndices; j++) {
-                aiVector3D vertex = mesh->mVertices[face.mIndices[j]];
-                glVertex3f(vertex.x, vertex.y, vertex.z);
-                aiVector3D uv = mesh->mTextureCoords[0][face.mIndices[j]];
-                glTexCoord2f(uv.x, uv.y);
+        // Índices de caras (para obtener las UV correspondientes)
+        if (mesh->HasTextureCoords(0)) {
+            for (unsigned int f = 0; f < mesh->mNumFaces; f++) {
+                aiFace face = mesh->mFaces[f];
+                for (unsigned int j = 0; j < face.mNumIndices; j++) {
+                    meshUVs.push_back(mesh->mTextureCoords[0][face.mIndices[j]]);
+                }
             }
         }
-        glEnd();
+
+        vertices.push_back(meshVertices);
+        uvs.push_back(meshUVs);
     }
+
     aiReleaseImport(scene);
     return 0;
 }
-bool ImporterFBX::Start() {
-	return true;
+
+void ImporterFBX::Draw_FBX(const std::vector<std::vector<aiVector3D>>& vertices, const std::vector<std::vector<aiVector3D>>& uvs) {
+    for (size_t i = 0; i < vertices.size(); i++) {
+        glBegin(GL_TRIANGLES);
+
+        for (size_t j = 0; j < vertices[i].size(); j++) {
+            const aiVector3D& vertex = vertices[i][j];
+            glVertex3f(vertex.x, vertex.y, vertex.z);
+
+            if (i < uvs.size() && j < uvs[i].size()) {
+                const aiVector3D& uv = uvs[i][j];
+                glTexCoord2f(uv.x, uv.y);
+            }
+        }
+
+        glEnd();
+    }
 }
-bool ImporterFBX::Update() {
-    Draw_FBX(FBX_FILE);
-	return true;
-}
-bool ImporterFBX::CleanUp() {
-	return true;
-}
+

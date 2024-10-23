@@ -7,6 +7,21 @@
       "RelativeMoniker": "D:0:0:{58145ABE-1438-4332-BECA-65D74173C2B7}|sdl2_simple_example\\sdl2_simple_example.vcxproj|solutionrelative:sdl2_simple_example\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{58145ABE-1438-4332-BECA-65D74173C2B7}|sdl2_simple_example\\sdl2_simple_example.vcxproj|C:\\Users\\paumt\\Documents\\GitHub\\MotorVideojuegos\\sdl2_simple_example\\sdl2_simple_example\\ImporterFBX.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{58145ABE-1438-4332-BECA-65D74173C2B7}|sdl2_simple_example\\sdl2_simple_example.vcxproj|solutionrelative:sdl2_simple_example\\ImporterFBX.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58145ABE-1438-4332-BECA-65D74173C2B7}|sdl2_simple_example\\sdl2_simple_example.vcxproj|C:\\Users\\paumt\\Documents\\GitHub\\MotorVideojuegos\\sdl2_simple_example\\sdl2_simple_example\\ImporterFBX.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{58145ABE-1438-4332-BECA-65D74173C2B7}|sdl2_simple_example\\sdl2_simple_example.vcxproj|solutionrelative:sdl2_simple_example\\ImporterFBX.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58145ABE-1438-4332-BECA-65D74173C2B7}|sdl2_simple_example\\sdl2_simple_example.vcxproj|C:\\Users\\paumt\\Documents\\GitHub\\MotorVideojuegos\\sdl2_simple_example\\sdl2_simple_example\\MyWindow.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{58145ABE-1438-4332-BECA-65D74173C2B7}|sdl2_simple_example\\sdl2_simple_example.vcxproj|solutionrelative:sdl2_simple_example\\MyWindow.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59367A4B-9E87-4A2E-8518-778A9F8E4863}|Solution Items{59367A4B-9E87-4A2E-8518-778A9F8E4863}|C:\\Users\\paumt\\Documents\\GitHub\\MotorVideojuegos\\vcpkg.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{58145ABE-1438-4332-BECA-65D74173C2B7}|sdl2_simple_example\\sdl2_simple_example.vcxproj|C:\\Users\\paumt\\Documents\\GitHub\\MotorVideojuegos\\sdl2_simple_example\\sdl2_simple_example\\MyWindow.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{58145ABE-1438-4332-BECA-65D74173C2B7}|sdl2_simple_example\\sdl2_simple_example.vcxproj|solutionrelative:sdl2_simple_example\\MyWindow.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -21,11 +36,63 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "vcpkg.json",
+              "DocumentMoniker": "C:\\Users\\paumt\\Documents\\GitHub\\MotorVideojuegos\\vcpkg.json",
+              "RelativeDocumentMoniker": "..\\vcpkg.json",
+              "ToolTip": "C:\\Users\\paumt\\Documents\\GitHub\\MotorVideojuegos\\vcpkg.json",
+              "RelativeToolTip": "..\\vcpkg.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-10-23T09:25:13.837Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MyWindow.h",
+              "DocumentMoniker": "C:\\Users\\paumt\\Documents\\GitHub\\MotorVideojuegos\\sdl2_simple_example\\sdl2_simple_example\\MyWindow.h",
+              "RelativeDocumentMoniker": "sdl2_simple_example\\MyWindow.h",
+              "ToolTip": "C:\\Users\\paumt\\Documents\\GitHub\\MotorVideojuegos\\sdl2_simple_example\\sdl2_simple_example\\MyWindow.h",
+              "RelativeToolTip": "sdl2_simple_example\\MyWindow.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-10-23T09:00:53.895Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "ImporterFBX.cpp",
+              "DocumentMoniker": "C:\\Users\\paumt\\Documents\\GitHub\\MotorVideojuegos\\sdl2_simple_example\\sdl2_simple_example\\ImporterFBX.cpp",
+              "RelativeDocumentMoniker": "sdl2_simple_example\\ImporterFBX.cpp",
+              "ToolTip": "C:\\Users\\paumt\\Documents\\GitHub\\MotorVideojuegos\\sdl2_simple_example\\sdl2_simple_example\\ImporterFBX.cpp",
+              "RelativeToolTip": "sdl2_simple_example\\ImporterFBX.cpp",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAAAAoAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-10-23T08:58:40.278Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ImporterFBX.h",
+              "DocumentMoniker": "C:\\Users\\paumt\\Documents\\GitHub\\MotorVideojuegos\\sdl2_simple_example\\sdl2_simple_example\\ImporterFBX.h",
+              "RelativeDocumentMoniker": "sdl2_simple_example\\ImporterFBX.h",
+              "ToolTip": "C:\\Users\\paumt\\Documents\\GitHub\\MotorVideojuegos\\sdl2_simple_example\\sdl2_simple_example\\ImporterFBX.h",
+              "RelativeToolTip": "sdl2_simple_example\\ImporterFBX.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-10-23T08:58:35.306Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "imgui_impl_sdl2.cpp",
               "DocumentMoniker": "C:\\Users\\edgar\\temp\\vcpkg\\buildtrees\\imgui\\src\\v1.91.0-51846a2755.clean\\backends\\imgui_impl_sdl2.cpp",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\edgar\\temp\\vcpkg\\buildtrees\\imgui\\src\\v1.91.0-51846a2755.clean\\backends\\imgui_impl_sdl2.cpp",
@@ -43,14 +110,14 @@
               "RelativeDocumentMoniker": "sdl2_simple_example\\main.cpp",
               "ToolTip": "C:\\Users\\paumt\\Documents\\GitHub\\MotorVideojuegos\\sdl2_simple_example\\sdl2_simple_example\\main.cpp",
               "RelativeToolTip": "sdl2_simple_example\\main.cpp",
-              "ViewState": "AgIAAPMAAAAAAAAAAAAAAOkAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAPkAAAAAAAAAAAAAAAYBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-10-07T10:54:08.949Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "MyWindow.cpp",
               "DocumentMoniker": "C:\\Users\\paumt\\Documents\\GitHub\\MotorVideojuegos\\sdl2_simple_example\\sdl2_simple_example\\MyWindow.cpp",
               "RelativeDocumentMoniker": "sdl2_simple_example\\MyWindow.cpp",

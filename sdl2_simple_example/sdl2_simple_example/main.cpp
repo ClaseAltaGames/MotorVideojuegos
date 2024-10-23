@@ -16,6 +16,7 @@
 
 #define CHECKERS_WIDTH 64
 #define CHECKERS_HEIGHT 64
+#define FBX_FILE "Assets/halo2.fbx"
 using namespace std;
 
 using hrclock = chrono::high_resolution_clock;
@@ -26,6 +27,8 @@ using vec3 = glm::dvec3;
 static const ivec2 WINDOW_SIZE(512, 512);
 static const unsigned int FPS = 60;
 static const auto FRAME_DT = 1.0s / FPS;
+
+ImporterFBX* importer = new ImporterFBX();
 
 static void init_openGL() {
 	glewInit();
@@ -197,7 +200,15 @@ static void display_func() {
    movimientoCamara();
    // draw_fbx("halo2.fbx");
 	//generate_textures();
+     // Generar los arrays de vértices y UVs
+   std::vector<std::vector<aiVector3D>> vertices;
+   std::vector<std::vector<aiVector3D>> uvs;
 
+   // Cargar el archivo FBX y pasar los arrays por referencia
+   importer->Load_FBX(FBX_FILE, vertices, uvs);
+
+   // Dibujar el modelo FBX usando los datos cargados
+   importer->Draw_FBX(vertices, uvs);
     // Forzar el renderizado
     glFlush();
     
@@ -225,7 +236,12 @@ static bool processEvents() {
 }
 
 int main(int argc, char** argv) {
-	MyWindow window("SDL2 Simple Example", WINDOW_SIZE.x, WINDOW_SIZE.y);
+	
+    
+
+
+    
+    MyWindow window("SDL2 Simple Example", WINDOW_SIZE.x, WINDOW_SIZE.y);
 
 
 	init_openGL();
