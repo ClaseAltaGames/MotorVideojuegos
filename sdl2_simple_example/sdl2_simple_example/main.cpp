@@ -15,9 +15,12 @@
 #include "ImporterFBX.h"
 using namespace std;
 
+#define STB_IMAGE_IMPLEMENTATION
+#include "stb_image.h"
 #define CHECKERS_WIDTH 64
 #define CHECKERS_HEIGHT 64
-#define FBX_FILE "Assets/halo2.fbx"
+#define FBX_FILE "Assets/BakerHouse.fbx"
+#define TEXTURE_FILE "Assets/Baker_house.png"
 
 using hrclock = chrono::high_resolution_clock;
 using u8vec4 = glm::u8vec4;
@@ -31,18 +34,21 @@ static const auto FRAME_DT = 1.0s / FPS;
 ImporterFBX* importer = new ImporterFBX();
 
 // Variables globales para la posición y orientación de la cámara
-GLdouble cameraPosX = 100.0, cameraPosY = 50.0, cameraPosZ = 100.0;
+GLdouble cameraPosX = 5.0, cameraPosY = 5.0, cameraPosZ = 5.0;
 GLdouble cameraDirX = 0.0, cameraDirY = 0.0, cameraDirZ = 0.0;
 GLdouble cameraUpX = 0.0, cameraUpY = 1.0, cameraUpZ = 0.0;
 
 // Variables para near y far
-GLdouble nearPlane = 0.1;
-GLdouble farPlane = 200.0;
+GLdouble nearPlane = 0.01;
+GLdouble farPlane = 2000.0;
 
 void init_openGL() {
-    // Inicialización de OpenGL y otras configuraciones.
-    glEnable(GL_DEPTH_TEST); // Activar la prueba de profundidad
-    glEnable(GL_TEXTURE_2D); // Activar texturas
+    glewInit();
+    if (!GLEW_VERSION_3_0) throw exception("OpenGL 3.0 API is not available.");
+    glEnable(GL_DEPTH_TEST);
+    glEnable(GL_TEXTURE_2D);
+    glClearColor(0.5, 0.5, 0.5, 1.0);
+
 }
 
 void set3dView() {
@@ -103,7 +109,7 @@ static void movimientoCamara() {
     }
 
     // Ajustar near y far planes según la posición de la cámara
-    nearPlane = 0.1; // Asegurarse de que el plano cercano no sea demasiado pequeño
+    nearPlane = 0.01; // Asegurarse de que el plano cercano no sea demasiado pequeño
     farPlane = 2000.0; // Ajustar el plano lejano
 }
 
@@ -158,25 +164,27 @@ static void draw_cube(const vec3& center, double size) {
 GLubyte checkerImage[CHECKERS_HEIGHT][CHECKERS_WIDTH][4];
 GLuint textureID;
 
-static void generate_textures() {
-    for (int i = 0; i < CHECKERS_HEIGHT; i++) {
-        for (int j = 0; j < CHECKERS_WIDTH; j++) {
-            int c = ((((i & 0x8) == 0) ^ (((j & 0x8)) == 0))) * 255;
-            checkerImage[i][j][0] = (GLubyte)c;
-            checkerImage[i][j][1] = (GLubyte)c;
-            checkerImage[i][j][2] = (GLubyte)c;
-            checkerImage[i][j][3] = (GLubyte)255;
-        }
+static void generate_textures(const char* filePath) {
+    int width, height, channels;
+    unsigned char* data = stbi_load(filePath, &width, &height, &channels, 4);
+
+    if (data) {
+        glGenTextures(1, &textureID);
+        glBindTexture(GL_TEXTURE_2D, textureID);
+
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+
+        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, data);
+        glGenerateMipmap(GL_TEXTURE_2D);
+
+        stbi_image_free(data);
     }
-    glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
-    glGenTextures(1, &textureID);
-    glBindTexture(GL_TEXTURE_2D, textureID);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, CHECKERS_WIDTH, CHECKERS_HEIGHT, 0,
-        GL_RGBA, GL_UNSIGNED_BYTE, checkerImage);
+    else {
+        fprintf(stderr, "Failed to load texture: %s\n", filePath);
+    }
 }
 
 static void display_func() {
@@ -190,7 +198,7 @@ static void display_func() {
 
     set3dView();
     movimientoCamara();
-	generate_textures();
+	generate_textures(TEXTURE_FILE);
     // Forzar el renderizado
     glFlush();
 }
@@ -206,17 +214,17 @@ static bool processEvents() {
             if (event.key.keysym.sym == SDLK_ESCAPE) return false;
             if (event.key.keysym.sym == SDLK_f) {
                 // Reiniciar parámetros a los iniciales
-                cameraPosX = 100.0;
-                cameraPosY = 50.0;
-                cameraPosZ = 100.0;
+                cameraPosX = 5.0;
+                cameraPosY = 5.0;
+                cameraPosZ = 5.0;
                 cameraDirX = 0.0;
                 cameraDirY = 0.0;
                 cameraDirZ = 0.0;
                 cameraUpX = 0.0;
                 cameraUpY = 1.0;
                 cameraUpZ = 0.0;
-                nearPlane = 0.1;
-                farPlane = 200.0;
+                nearPlane = 0.01;
+                farPlane = 2000.0;
             }
             break;
         default: {
