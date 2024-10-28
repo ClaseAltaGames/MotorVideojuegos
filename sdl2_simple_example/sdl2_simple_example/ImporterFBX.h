@@ -5,19 +5,17 @@
 #include <GL/glew.h>
 #include <iostream>
 
-class ImporterFBX
-{
+class ImporterFBX {
 public:
-	ImporterFBX();
-	~ImporterFBX();
+    ImporterFBX();
+    ~ImporterFBX();
 
-	bool Start();
-	bool Update(float dt);
-	bool CleanUp();
+    // Cargar y dibujar archivo FBX
+    int draw_fbx(const char* file);
 
-	// Función para cargar el archivo FBX y extraer los datos
-	int Load_FBX(const char* file, std::vector<std::vector<aiVector3D>>& vertices, std::vector<std::vector<aiVector3D>>& uvs);
-
-	// Función para dibujar las mallas cargadas con OpenGL
-	void Draw_FBX(const std::vector<std::vector<aiVector3D>>& vertices, const std::vector<std::vector<aiVector3D>>& uvs);
+private:
+    // Función auxiliar para cargar el archivo FBX
+    const aiScene* load_fbx(const char* file);
+    // Función auxiliar para renderizar la escena cargada
+    void render_fbx(const aiScene* scene);
 };
