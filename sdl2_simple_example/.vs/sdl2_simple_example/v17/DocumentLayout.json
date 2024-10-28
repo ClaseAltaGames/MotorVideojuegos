@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{58145ABE-1438-4332-BECA-65D74173C2B7}|sdl2_simple_example\\sdl2_simple_example.vcxproj|solutionrelative:sdl2_simple_example\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{58145ABE-1438-4332-BECA-65D74173C2B7}|sdl2_simple_example\\sdl2_simple_example.vcxproj|C:\\Users\\paumt\\Documents\\GitHub\\MotorVideojuegos\\sdl2_simple_example\\sdl2_simple_example\\MyWindow.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{58145ABE-1438-4332-BECA-65D74173C2B7}|sdl2_simple_example\\sdl2_simple_example.vcxproj|solutionrelative:sdl2_simple_example\\MyWindow.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{58145ABE-1438-4332-BECA-65D74173C2B7}|sdl2_simple_example\\sdl2_simple_example.vcxproj|C:\\Users\\paumt\\Documents\\GitHub\\MotorVideojuegos\\sdl2_simple_example\\sdl2_simple_example\\ImporterFBX.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{58145ABE-1438-4332-BECA-65D74173C2B7}|sdl2_simple_example\\sdl2_simple_example.vcxproj|solutionrelative:sdl2_simple_example\\ImporterFBX.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -20,10 +24,6 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{59367A4B-9E87-4A2E-8518-778A9F8E4863}|Solution Items{59367A4B-9E87-4A2E-8518-778A9F8E4863}|C:\\Users\\paumt\\Documents\\GitHub\\MotorVideojuegos\\vcpkg.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{58145ABE-1438-4332-BECA-65D74173C2B7}|sdl2_simple_example\\sdl2_simple_example.vcxproj|C:\\Users\\paumt\\Documents\\GitHub\\MotorVideojuegos\\sdl2_simple_example\\sdl2_simple_example\\MyWindow.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{58145ABE-1438-4332-BECA-65D74173C2B7}|sdl2_simple_example\\sdl2_simple_example.vcxproj|solutionrelative:sdl2_simple_example\\MyWindow.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -37,7 +37,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "vcpkg.json",
               "DocumentMoniker": "C:\\Users\\paumt\\Documents\\GitHub\\MotorVideojuegos\\vcpkg.json",
               "RelativeDocumentMoniker": "..\\vcpkg.json",
@@ -49,7 +49,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "MyWindow.h",
               "DocumentMoniker": "C:\\Users\\paumt\\Documents\\GitHub\\MotorVideojuegos\\sdl2_simple_example\\sdl2_simple_example\\MyWindow.h",
               "RelativeDocumentMoniker": "sdl2_simple_example\\MyWindow.h",
@@ -57,12 +57,11 @@
               "RelativeToolTip": "sdl2_simple_example\\MyWindow.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-10-23T09:00:53.895Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-23T09:00:53.895Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "ImporterFBX.cpp",
               "DocumentMoniker": "C:\\Users\\paumt\\Documents\\GitHub\\MotorVideojuegos\\sdl2_simple_example\\sdl2_simple_example\\ImporterFBX.cpp",
               "RelativeDocumentMoniker": "sdl2_simple_example\\ImporterFBX.cpp",
@@ -70,12 +69,11 @@
               "RelativeToolTip": "sdl2_simple_example\\ImporterFBX.cpp",
               "ViewState": "AgIAABUAAAAAAAAAAAAkwBsAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-10-23T08:58:40.278Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-23T08:58:40.278Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "ImporterFBX.h",
               "DocumentMoniker": "C:\\Users\\paumt\\Documents\\GitHub\\MotorVideojuegos\\sdl2_simple_example\\sdl2_simple_example\\ImporterFBX.h",
               "RelativeDocumentMoniker": "sdl2_simple_example\\ImporterFBX.h",
@@ -83,8 +81,7 @@
               "RelativeToolTip": "sdl2_simple_example\\ImporterFBX.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-10-23T08:58:35.306Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-23T08:58:35.306Z"
             },
             {
               "$type": "Document",
@@ -94,14 +91,14 @@
               "RelativeDocumentMoniker": "sdl2_simple_example\\main.cpp",
               "ToolTip": "C:\\Users\\paumt\\Documents\\GitHub\\MotorVideojuegos\\sdl2_simple_example\\sdl2_simple_example\\main.cpp",
               "RelativeToolTip": "sdl2_simple_example\\main.cpp",
-              "ViewState": "AgIAAKcAAAAAAAAAAAAowLcAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAUwFQAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-10-07T10:54:08.949Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "MyWindow.cpp",
               "DocumentMoniker": "C:\\Users\\paumt\\Documents\\GitHub\\MotorVideojuegos\\sdl2_simple_example\\sdl2_simple_example\\MyWindow.cpp",
               "RelativeDocumentMoniker": "sdl2_simple_example\\MyWindow.cpp",
@@ -109,7 +106,8 @@
               "RelativeToolTip": "sdl2_simple_example\\MyWindow.cpp",
               "ViewState": "AgIAACkAAAAAAAAAAAAAADQAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-10-07T10:54:08.996Z"
+              "WhenOpened": "2024-10-07T10:54:08.996Z",
+              "EditorCaption": ""
             }
           ]
         }

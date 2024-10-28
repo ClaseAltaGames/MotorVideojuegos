@@ -38,28 +38,76 @@ static void init_openGL() {
 	glClearColor(0.5, 0.5, 0.5, 1.0);
 }
 
-void set3dView(GLdouble fov) {
+// Variables globales para la posición y orientación de la cámara
+GLdouble cameraPosX = 100.0, cameraPosY = 50.0, cameraPosZ = 100.0;
+GLdouble cameraDirX = 0.0, cameraDirY = 0.0, cameraDirZ = 0.0;
+GLdouble cameraUpX = 0.0, cameraUpY = 1.0, cameraUpZ = 0.0;
+
+// Variables para near y far
+GLdouble nearPlane = 0.1;
+GLdouble farPlane = 200.0;
+
+void set3dView() {
+    // Fija el campo de visión a 45 grados
+    const GLdouble fov = 45.0;
+
     // Configurar la matriz de proyección
-    GLdouble yView = 50.0;
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
-    gluPerspective(fov, 1.0, 0.1, 200.0);  // Perspectiva con campo de visión de 45 grados
+    gluPerspective(fov, 1.0, nearPlane, farPlane);
 
     // Configuración de la cámara
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
-    //if mouse wheel up
-    if (SDL_SCANCODE_UP) {
-        yView += 10;
-	}
-    if (SDL_SCANCODE_DOWN) {
-        yView -= 10;
-    }
-
-    gluLookAt(100.0, yView, 100.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0);  // La cámara se posiciona en (3, 3, 3)
-
+    gluLookAt(cameraPosX, cameraPosY, cameraPosZ,
+        cameraDirX, cameraDirY, cameraDirZ,
+        cameraUpX, cameraUpY, cameraUpZ);
 }
 
+static void movimientoCamara() {
+    // Control de velocidad de movimiento y rotación
+    const double moveSpeed = 2.0;
+    const double rotationSpeed = 0.05;
+
+    // Actualizar posición de la cámara con teclas de dirección
+    const Uint8* state = SDL_GetKeyboardState(NULL);
+    if (state[SDL_SCANCODE_W]) {
+        cameraPosX += moveSpeed * (cameraDirX - cameraPosX) * 0.1; // Ajustar el movimiento
+        cameraPosZ += moveSpeed * (cameraDirZ - cameraPosZ) * 0.1; // Ajustar el movimiento
+    }
+    if (state[SDL_SCANCODE_S]) {
+        cameraPosX -= moveSpeed * (cameraDirX - cameraPosX) * 0.1; // Ajustar el movimiento
+        cameraPosZ -= moveSpeed * (cameraDirZ - cameraPosZ) * 0.1; // Ajustar el movimiento
+    }
+    if (state[SDL_SCANCODE_A]) {
+        cameraPosX -= moveSpeed * (cameraDirZ - cameraPosZ) * 0.1; // Ajustar el movimiento
+        cameraPosZ += moveSpeed * (cameraDirX - cameraPosX) * 0.1; // Ajustar el movimiento
+    }
+    if (state[SDL_SCANCODE_D]) {
+        cameraPosX += moveSpeed * (cameraDirZ - cameraPosZ) * 0.1; // Ajustar el movimiento
+        cameraPosZ -= moveSpeed * (cameraDirX - cameraPosX) * 0.1; // Ajustar el movimiento
+    }
+
+    // Rotar vista con teclas de flecha
+    if (state[SDL_SCANCODE_LEFT]) {
+        cameraDirX = cameraPosX + cos(rotationSpeed) * (cameraDirX - cameraPosX) - sin(rotationSpeed) * (cameraDirZ - cameraPosZ);
+        cameraDirZ = cameraPosZ + sin(rotationSpeed) * (cameraDirX - cameraPosX) + cos(rotationSpeed) * (cameraDirZ - cameraPosZ);
+    }
+    if (state[SDL_SCANCODE_RIGHT]) {
+        cameraDirX = cameraPosX + cos(-rotationSpeed) * (cameraDirX - cameraPosX) - sin(-rotationSpeed) * (cameraDirZ - cameraPosZ);
+        cameraDirZ = cameraPosZ + sin(-rotationSpeed) * (cameraDirX - cameraPosX) + cos(-rotationSpeed) * (cameraDirZ - cameraPosZ);
+    }
+    if (state[SDL_SCANCODE_UP]) {
+        cameraPosY += moveSpeed;
+    }
+    if (state[SDL_SCANCODE_DOWN]) {
+        cameraPosY -= moveSpeed;
+    }
+
+    // Ajustar near y far planes según la posición de la cámara
+    nearPlane = max(0.1, cameraPosY / 10.0); // Asegurarse de que el plano cercano no sea demasiado pequeño
+    farPlane = max(200.0, cameraPosZ); // Ajustar el plano lejano
+}
 
 static void draw_cube(const vec3& center, double size) {
     // Vértices del cubo
@@ -72,7 +120,7 @@ static void draw_cube(const vec3& center, double size) {
     static const GLfloat v6[3] = { 1.0f,  1.0f, -1.0f };
     static const GLfloat v7[3] = { -1.0f,  1.0f, -1.0f };
 
-	set3dView(45);
+	set3dView();
 
     glBegin(GL_TRIANGLES);  // Dibujar el cubo con triángulos
 
@@ -108,49 +156,6 @@ static void draw_cube(const vec3& center, double size) {
 
     glEnd();
 }
-static int draw_fbx(const char *file) {
-    set3dView(75);
-    const struct aiScene* scene = aiImportFile(file, aiProcess_Triangulate);
-    if (!scene) {
-        fprintf(stderr, "Error en carregar el fitxer: %s\n", aiGetErrorString());
-        return -1;
-    }
-    //printf("Numero de malles: %u\n", scene->mNumMeshes);
-    for (unsigned int i = 0; i < scene->mNumMeshes; i++) {
-        //actualizar la posicion de la camara
-        aiMesh* mesh = scene->mMeshes[i];
-        // Vèrtexs
-        for (unsigned int v = 0; v < mesh->mNumVertices; v++) {
-            aiVector3D vertex = mesh->mVertices[v];
-           
-        }
-        // Índexs de triangles (3 per triangle)
-        for (unsigned int f = 0; f < mesh->mNumFaces; f++) {
-
-            aiFace face = mesh->mFaces[f];
-            
-
-            for (unsigned int j = 0; j < face.mNumIndices; j++) {
-                
-            }
-
-        }
-        //pasar los arrays a openGL
-        glBegin(GL_TRIANGLES);
-        for (unsigned int f = 0; f < mesh->mNumFaces; f++) {
-			aiFace face = mesh->mFaces[f];
-            for (unsigned int j = 0; j < face.mNumIndices; j++) {
-				aiVector3D vertex = mesh->mVertices[face.mIndices[j]];
-				glVertex3f(vertex.x, vertex.y, vertex.z);
-				aiVector3D uv = mesh->mTextureCoords[0][face.mIndices[j]];
-				glTexCoord2f(uv.x, uv.y);
-			}
-		}
-        glEnd();
-    }
-    aiReleaseImport(scene);
-    return 0;
-}
 
 GLubyte checkerImage[CHECKERS_HEIGHT][CHECKERS_WIDTH][4];
 GLuint textureID;
@@ -175,38 +180,18 @@ static void generate_textures()
     glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, CHECKERS_WIDTH, CHECKERS_HEIGHT, 0,
         GL_RGBA, GL_UNSIGNED_BYTE, checkerImage);
 }
-static void movimientoCamara() {
-	//if mouse wheel up
-    if (SDL_SCANCODE_UP) {
-		glTranslatef(0.0, 0.0, 10.0);
-    
-	}
-    if (SDL_SCANCODE_DOWN) {
-		glTranslatef(0.0, 0.0, -10.0);
-	}
-    if (SDL_SCANCODE_LEFT) {
-		glTranslatef(10.0, 0.0, 0.0);
-	}
-    if (SDL_SCANCODE_RIGHT) {
-		glTranslatef(-10.0, 0.0, 0.0);
-	}
-}
-
-
 static void display_func() {
     // Limpiar el buffer de color y profundidad
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-	//draw_cube(vec3(0.0, 0.0, 0.0), 1.0);
-   //movimientoCamara();
-   //draw_fbx(FBX_FILE);
-   //generate_textures();
+
 
     // Dibujar el modelo FBX
     if (importer) {
         importer->draw_fbx(FBX_FILE);  // Llama a la función de la instancia de ImporterFBX para renderizar
     }
 
-	set3dView(75);
+    set3dView();
+    movimientoCamara();
     // Forzar el renderizado
     glFlush();
     
@@ -214,13 +199,15 @@ static void display_func() {
 
 
 static bool processEvents() {
-	
 
 	SDL_Event event;
 	while (SDL_PollEvent(&event)) {
 		switch (event.type) {
 		case SDL_QUIT:
 			return false;
+			break;
+		case SDL_KEYDOWN:
+			if (event.key.keysym.sym == SDLK_ESCAPE) return false;
 			break;
 		default: {
 			ImGui_ImplSDL2_ProcessEvent(&event);
