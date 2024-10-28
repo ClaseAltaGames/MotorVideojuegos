@@ -30,14 +30,6 @@ static const auto FRAME_DT = 1.0s / FPS;
 
 ImporterFBX* importer = new ImporterFBX();
 
-static void init_openGL() {
-	glewInit();
-	if (!GLEW_VERSION_3_0) throw exception("OpenGL 3.0 API is not available.");
-	glEnable(GL_DEPTH_TEST);
-    glEnable(GL_TEXTURE_2D);
-	glClearColor(0.5, 0.5, 0.5, 1.0);
-}
-
 // Variables globales para la posición y orientación de la cámara
 GLdouble cameraPosX = 100.0, cameraPosY = 50.0, cameraPosZ = 100.0;
 GLdouble cameraDirX = 0.0, cameraDirY = 0.0, cameraDirZ = 0.0;
@@ -46,6 +38,12 @@ GLdouble cameraUpX = 0.0, cameraUpY = 1.0, cameraUpZ = 0.0;
 // Variables para near y far
 GLdouble nearPlane = 0.1;
 GLdouble farPlane = 200.0;
+
+void init_openGL() {
+    // Inicialización de OpenGL y otras configuraciones.
+    glEnable(GL_DEPTH_TEST); // Activar la prueba de profundidad
+    glEnable(GL_TEXTURE_2D); // Activar texturas
+}
 
 void set3dView() {
     // Fija el campo de visión a 45 grados
@@ -105,8 +103,8 @@ static void movimientoCamara() {
     }
 
     // Ajustar near y far planes según la posición de la cámara
-    nearPlane = max(0.1, cameraPosY / 10.0); // Asegurarse de que el plano cercano no sea demasiado pequeño
-    farPlane = max(200.0, cameraPosZ); // Ajustar el plano lejano
+    nearPlane = 0.1; // Asegurarse de que el plano cercano no sea demasiado pequeño
+    farPlane = 2000.0; // Ajustar el plano lejano
 }
 
 static void draw_cube(const vec3& center, double size) {
@@ -120,7 +118,7 @@ static void draw_cube(const vec3& center, double size) {
     static const GLfloat v6[3] = { 1.0f,  1.0f, -1.0f };
     static const GLfloat v7[3] = { -1.0f,  1.0f, -1.0f };
 
-	set3dView();
+    set3dView();
 
     glBegin(GL_TRIANGLES);  // Dibujar el cubo con triángulos
 
@@ -159,8 +157,8 @@ static void draw_cube(const vec3& center, double size) {
 
 GLubyte checkerImage[CHECKERS_HEIGHT][CHECKERS_WIDTH][4];
 GLuint textureID;
-static void generate_textures()
-{
+
+static void generate_textures() {
     for (int i = 0; i < CHECKERS_HEIGHT; i++) {
         for (int j = 0; j < CHECKERS_WIDTH; j++) {
             int c = ((((i & 0x8) == 0) ^ (((j & 0x8)) == 0))) * 255;
@@ -180,10 +178,10 @@ static void generate_textures()
     glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, CHECKERS_WIDTH, CHECKERS_HEIGHT, 0,
         GL_RGBA, GL_UNSIGNED_BYTE, checkerImage);
 }
+
 static void display_func() {
     // Limpiar el buffer de color y profundidad
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-
 
     // Dibujar el modelo FBX
     if (importer) {
@@ -192,51 +190,57 @@ static void display_func() {
 
     set3dView();
     movimientoCamara();
+	generate_textures();
     // Forzar el renderizado
     glFlush();
-    
 }
 
-
 static bool processEvents() {
-
-	SDL_Event event;
-	while (SDL_PollEvent(&event)) {
-		switch (event.type) {
-		case SDL_QUIT:
-			return false;
-			break;
-		case SDL_KEYDOWN:
-			if (event.key.keysym.sym == SDLK_ESCAPE) return false;
-			break;
-		default: {
-			ImGui_ImplSDL2_ProcessEvent(&event);
-			break;
-			}
-		}
-		
-	}
-
-	return true;
+    SDL_Event event;
+    while (SDL_PollEvent(&event)) {
+        switch (event.type) {
+        case SDL_QUIT:
+            return false;
+            break;
+        case SDL_KEYDOWN:
+            if (event.key.keysym.sym == SDLK_ESCAPE) return false;
+            if (event.key.keysym.sym == SDLK_f) {
+                // Reiniciar parámetros a los iniciales
+                cameraPosX = 100.0;
+                cameraPosY = 50.0;
+                cameraPosZ = 100.0;
+                cameraDirX = 0.0;
+                cameraDirY = 0.0;
+                cameraDirZ = 0.0;
+                cameraUpX = 0.0;
+                cameraUpY = 1.0;
+                cameraUpZ = 0.0;
+                nearPlane = 0.1;
+                farPlane = 200.0;
+            }
+            break;
+        default: {
+            ImGui_ImplSDL2_ProcessEvent(&event);
+            break;
+        }
+        }
+    }
+    return true;
 }
 
 int main(int argc, char** argv) {
-	
     MyWindow window("SDL2 Simple Example", WINDOW_SIZE.x, WINDOW_SIZE.y);
 
-	init_openGL();
+    init_openGL();
 
-    //draw_fbx("cube.fbx");
-
-	while (processEvents()) {
-		const auto t0 = hrclock::now();
-		display_func();
-		window.swapBuffers();
-		const auto t1 = hrclock::now();
-		const auto dt = t1 - t0;
-		if(dt<FRAME_DT) this_thread::sleep_for(FRAME_DT - dt);
-	}
-
+    while (processEvents()) {
+        const auto t0 = hrclock::now();
+        display_func();
+        window.swapBuffers();
+        const auto t1 = hrclock::now();
+        const auto dt = t1 - t0;
+        if (dt < FRAME_DT) this_thread::sleep_for(FRAME_DT - dt);
+    }
 
     return 0;
 }
