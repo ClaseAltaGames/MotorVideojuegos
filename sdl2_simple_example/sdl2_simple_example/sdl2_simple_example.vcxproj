@@ -127,11 +127,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BasicForms.cpp" />
     <ClCompile Include="ImporterFBX.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MyWindow.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BasicForms.h" />
     <ClInclude Include="ImporterFBX.h" />
     <ClInclude Include="MyWindow.h" />
   </ItemGroup>

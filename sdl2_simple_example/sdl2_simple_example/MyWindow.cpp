@@ -38,48 +38,29 @@ MyWindow::~MyWindow() {
 }
 
 void MyWindow::swapBuffers() const {
-
-
     ImGui_ImplOpenGL3_NewFrame();
     ImGui_ImplSDL2_NewFrame();
     ImGui::NewFrame();
     if (ImGui::BeginMainMenuBar()) {
         if (ImGui::BeginMenu("Menu")) {
             if (ImGui::MenuItem("Adios")) {
-                // ... codi activació
                 SDL_Event quit_event;
                 quit_event.type = SDL_QUIT;
                 SDL_PushEvent(&quit_event);
             }
-
-			
             ImGui::EndMenu();
         }
         if (ImGui::BeginMenu("Objetos 3D")) {
             if (ImGui::MenuItem("Cubo")) {
-                SDL_Event cube_event;
-                cube_event.type = SDL_USEREVENT;
-                cube_event.user.code = 1;
-                SDL_PushEvent(&cube_event);
+				basicForms->draw_Cube(vec3(0.0, 0.0, 0.0), 1.0);
             }
-
             ImGui::EndMenu();
         }
         ImGui::EndMainMenuBar();
     }
-    
-    //inspector
-	/*ImGui::Begin("Inspector");
-	ImGui::Text("Inspector");*/
-
     ImGui::Render();
     ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
-
-
-
-
     SDL_GL_SwapWindow(static_cast<SDL_Window*>(_window));
-
 }
 
 

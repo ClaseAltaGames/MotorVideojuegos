@@ -13,6 +13,7 @@
 #include <assimp/postprocess.h>
 #include <stdio.h>
 #include "ImporterFBX.h"
+#include "BasicForms.h"
 #include <IL/il.h>
 #include <IL/ilu.h>
 #include <IL/ilut.h>
@@ -43,6 +44,7 @@ static const unsigned int FPS = 60;
 static const auto FRAME_DT = 1.0s / FPS;
 
 ImporterFBX* importer = new ImporterFBX();
+BasicForms* basicForms = new BasicForms();
 
 // Variables globales para la posición y orientación de la cámara
 GLdouble cameraPosX = 5.0, cameraPosY = 5.0, cameraPosZ = 5.0;
@@ -53,7 +55,6 @@ GLdouble cameraUpX = 0.0, cameraUpY = 1.0, cameraUpZ = 0.0;
 GLdouble nearPlane = 0.01;
 GLdouble farPlane = 2000.0;
 
-bool cubeActive = false;
 
 void init_openGL() {
     glewInit();
@@ -88,6 +89,7 @@ void set3dView() {
 }
 
 static void movimientoCamara() {
+	set3dView();
     // Control de velocidad de movimiento y rotación
     const double moveSpeed = 2.0;
     const double rotationSpeed = 0.05;
@@ -262,12 +264,10 @@ static void display_func() {
     if (importer) {
         importer->draw_fbx(FBX_FILE);  // Llama a la función de la instancia de ImporterFBX para renderizar
     }
-    if (cubeActive) {
-        draw_cube(vec3(0.0, 0.0, 0.0), 1.0);
-    }
-    set3dView();
+	basicForms->cambiarFormas(CUBO);
+   
     movimientoCamara();
-	generate_textures(TEXTURE_FILE);
+	//generate_textures(TEXTURE_FILE);
     // Forzar el renderizado
     glFlush();
 }
@@ -296,9 +296,6 @@ static bool processEvents() {
                 farPlane = 2000.0;
             }
             break;
-		case SDL_USEREVENT:
-			cubeActive = true;
-			break;
         default: {
             ImGui_ImplSDL2_ProcessEvent(&event);
             break;

@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include "BasicForms.h"
 
 struct SDL_Window;
 
@@ -20,5 +21,8 @@ public:
 	~MyWindow();
 
 	void swapBuffers() const;
+
+
+	BasicForms* basicForms = new BasicForms();
 
 };
