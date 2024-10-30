@@ -53,6 +53,8 @@ GLdouble cameraUpX = 0.0, cameraUpY = 1.0, cameraUpZ = 0.0;
 GLdouble nearPlane = 0.01;
 GLdouble farPlane = 2000.0;
 
+bool cubeActive = false;
+
 void init_openGL() {
     glewInit();
     if (!GLEW_VERSION_3_0) throw exception("OpenGL 3.0 API is not available.");
@@ -260,7 +262,9 @@ static void display_func() {
     if (importer) {
         importer->draw_fbx(FBX_FILE);  // Llama a la función de la instancia de ImporterFBX para renderizar
     }
-
+    if (cubeActive) {
+        draw_cube(vec3(0.0, 0.0, 0.0), 1.0);
+    }
     set3dView();
     movimientoCamara();
 	generate_textures(TEXTURE_FILE);
@@ -293,7 +297,7 @@ static bool processEvents() {
             }
             break;
 		case SDL_USEREVENT:
-			draw_cube(vec3(0.0, 0.0, 0.0), 1.0);
+			cubeActive = true;
 			break;
         default: {
             ImGui_ImplSDL2_ProcessEvent(&event);

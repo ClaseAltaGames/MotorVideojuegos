@@ -68,6 +68,9 @@ void MyWindow::swapBuffers() const {
         ImGui::EndMainMenuBar();
     }
     
+    //inspector
+	/*ImGui::Begin("Inspector");
+	ImGui::Text("Inspector");*/
 
     ImGui::Render();
     ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
