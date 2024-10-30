@@ -9,6 +9,15 @@
    
   
   The variable '$LASTEXITCODE' cannot be retrieved because it has not been set.
+  Telemetry
+  ---------
+  vcpkg collects usage data in order to help us improve your experience.
+  The data collected by Microsoft is anonymous.
+  You can opt-out of telemetry by re-running the bootstrap-vcpkg script with -disableMetrics,
+  passing --disable-metrics to vcpkg on the command line,
+  or by setting the VCPKG_DISABLE_METRICS environment variable.
+  
+  Read more about vcpkg telemetry at docs/about/privacy.md
   At C:\Users\edgar\Documents\GitHub\MotorVideojuegos\vcpkg\scripts\bootstrap.ps1:60 char:5
   + if ($LASTEXITCODE -ne 0)
   +     ~~~~~~~~~~~~~
@@ -24,16 +33,7 @@
       + CategoryInfo          : ObjectNotFound: (C:\Users\edgar\...vcpkg\vcpkg.exe:String) [], CommandNotFoundException
       + FullyQualifiedErrorId : CommandNotFoundException
    
-  Telemetry
-  ---------
-  vcpkg collects usage data in order to help us improve your experience.
-  The data collected by Microsoft is anonymous.
-  You can opt-out of telemetry by re-running the bootstrap-vcpkg script with -disableMetrics,
-  passing --disable-metrics to vcpkg on the command line,
-  or by setting the VCPKG_DISABLE_METRICS environment variable.
-  
-  Read more about vcpkg telemetry at docs/about/privacy.md
-  ImporterFBX.cpp
+  MyWindow.cpp
   sdl2_simple_example.vcxproj -> C:\Users\edgar\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\x64\Debug\sdl2_simple_example.exe
   'pwsh.exe' is not recognized as an internal or external command,
   operable program or batch file.
