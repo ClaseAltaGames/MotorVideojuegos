@@ -292,6 +292,9 @@ static bool processEvents() {
                 farPlane = 2000.0;
             }
             break;
+		case SDL_USEREVENT:
+			draw_cube(vec3(0.0, 0.0, 0.0), 1.0);
+			break;
         default: {
             ImGui_ImplSDL2_ProcessEvent(&event);
             break;

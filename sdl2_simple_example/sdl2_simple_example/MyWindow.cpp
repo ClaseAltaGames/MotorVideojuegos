@@ -52,15 +52,17 @@ void MyWindow::swapBuffers() const {
                 SDL_PushEvent(&quit_event);
             }
 
-			if (ImGui::BeginMenu("Objetos 3D")) {
-				if (ImGui::MenuItem("Cubo")) {
-					/*SDL_Event cube_event;
-					cube_event.type = SDL_USEREVENT;
-					cube_event.user.code = 1;
-					SDL_PushEvent(&cube_event);*/
-				}
+			
+            ImGui::EndMenu();
+        }
+        if (ImGui::BeginMenu("Objetos 3D")) {
+            if (ImGui::MenuItem("Cubo")) {
+                SDL_Event cube_event;
+                cube_event.type = SDL_USEREVENT;
+                cube_event.user.code = 1;
+                SDL_PushEvent(&cube_event);
+            }
 
-			}
             ImGui::EndMenu();
         }
         ImGui::EndMainMenuBar();
