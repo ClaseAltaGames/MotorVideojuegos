@@ -13,6 +13,12 @@
 #include <assimp/postprocess.h>
 #include <stdio.h>
 #include "ImporterFBX.h"
+#include <IL/il.h>
+#include <IL/ilu.h>
+#include <IL/ilut.h>
+#include <codecvt>
+#include <locale>
+
 using namespace std;
 
 #define STB_IMAGE_IMPLEMENTATION
@@ -21,6 +27,11 @@ using namespace std;
 #define CHECKERS_HEIGHT 64
 #define FBX_FILE "Assets/BakerHouse.fbx"
 #define TEXTURE_FILE "Assets/Baker_house.png"
+
+std::wstring charToWstring(const char* text) {
+    std::wstring_convert<std::codecvt_utf8<wchar_t>> converter;
+    return converter.from_bytes(text);
+}
 
 using hrclock = chrono::high_resolution_clock;
 using u8vec4 = glm::u8vec4;
@@ -49,6 +60,12 @@ void init_openGL() {
     glEnable(GL_TEXTURE_2D);
     glClearColor(0.5, 0.5, 0.5, 1.0);
 
+}
+void init_devil() {
+	ilInit();
+	iluInit();
+	ilutInit();
+	ilutRenderer(ILUT_OPENGL);
 }
 
 void set3dView() {
@@ -165,10 +182,22 @@ GLubyte checkerImage[CHECKERS_HEIGHT][CHECKERS_WIDTH][4];
 GLuint textureID;
 
 static void generate_textures(const char* filePath) {
-    int width, height, channels;
-    unsigned char* data = stbi_load(filePath, &width, &height, &channels, 4);
+    ILuint imageID;
 
-    if (data) {
+    // Inicializa DevIL (esto debe hacerse solo una vez en el programa)
+    ilInit();
+
+    // Genera y enlaza un identificador de imagen de DevIL
+    ilGenImages(1, &imageID);
+    ilBindImage(imageID);
+
+    // Convertir const char* a const wchar_t*
+    //std::wstring wideFilePath = charToWstring(filePath);
+
+    // Carga la imagen con DevIL
+
+    if (ilLoadImage((const wchar_t *) filePath)) {
+        // Configura parámetros de la textura en OpenGL
         glGenTextures(1, &textureID);
         glBindTexture(GL_TEXTURE_2D, textureID);
 
@@ -177,13 +206,20 @@ static void generate_textures(const char* filePath) {
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 
-        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, data);
+        // Transferencia de datos de imagen de DevIL a OpenGL
+        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, ilGetInteger(IL_IMAGE_WIDTH), ilGetInteger(IL_IMAGE_HEIGHT),
+            0, ilGetInteger(IL_IMAGE_FORMAT), GL_UNSIGNED_BYTE, ilGetData());
         glGenerateMipmap(GL_TEXTURE_2D);
 
-        stbi_image_free(data);
+        // Borra la imagen de DevIL de la memoria
+        ilDeleteImages(1, &imageID);
     }
     else {
-        fprintf(stderr, "Failed to load texture: %s\n", filePath);
+        // Imprimir el error de DevIL
+        ILenum error = ilGetError();
+        std::cerr << "DevIL error: " << iluErrorString(error) << "\n";
+        std::cerr << "Failed to load texture: " << filePath << "\n";
+        std::cerr << "DevIL error: " << iluErrorString(error) << "\n";
     }
 }
 
@@ -240,6 +276,7 @@ int main(int argc, char** argv) {
     MyWindow window("SDL2 Simple Example", WINDOW_SIZE.x, WINDOW_SIZE.y);
 
     init_openGL();
+	init_devil();
 
     while (processEvents()) {
         const auto t0 = hrclock::now();
