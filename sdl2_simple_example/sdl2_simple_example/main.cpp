@@ -14,6 +14,7 @@
 #include <stdio.h>
 #include "ImporterFBX.h"
 #include "BasicForms.h"
+#include "DisplayFunc.h"
 #include <IL/il.h>
 #include <IL/ilu.h>
 #include <IL/ilut.h>
@@ -22,17 +23,8 @@
 
 using namespace std;
 
-#define STB_IMAGE_IMPLEMENTATION
-#include "stb_image.h"
 #define CHECKERS_WIDTH 64
 #define CHECKERS_HEIGHT 64
-#define FBX_FILE "Assets/BakerHouse.fbx"
-#define TEXTURE_FILE "Assets/Baker_house.png"
-
-std::wstring charToWstring(const char* text) {
-    std::wstring_convert<std::codecvt_utf8<wchar_t>> converter;
-    return converter.from_bytes(text);
-}
 
 using hrclock = chrono::high_resolution_clock;
 using u8vec4 = glm::u8vec4;
@@ -43,17 +35,8 @@ static const ivec2 WINDOW_SIZE(512, 512);
 static const unsigned int FPS = 60;
 static const auto FRAME_DT = 1.0s / FPS;
 
-ImporterFBX* importer = new ImporterFBX();
-BasicForms* basicForms = new BasicForms();
+DisplayFunc* displayFunc = new DisplayFunc();
 
-// Variables globales para la posición y orientación de la cámara
-GLdouble cameraPosX = 5.0, cameraPosY = 5.0, cameraPosZ = 5.0;
-GLdouble cameraDirX = 0.0, cameraDirY = 0.0, cameraDirZ = 0.0;
-GLdouble cameraUpX = 0.0, cameraUpY = 1.0, cameraUpZ = 0.0;
-
-// Variables para near y far
-GLdouble nearPlane = 0.01;
-GLdouble farPlane = 2000.0;
 
 
 void init_openGL() {
@@ -71,69 +54,6 @@ void init_devil() {
 	ilutRenderer(ILUT_OPENGL);
 }
 
-void set3dView() {
-    // Fija el campo de visión a 45 grados
-    const GLdouble fov = 45.0;
-
-    // Configurar la matriz de proyección
-    glMatrixMode(GL_PROJECTION);
-    glLoadIdentity();
-    gluPerspective(fov, 1.0, nearPlane, farPlane);
-
-    // Configuración de la cámara
-    glMatrixMode(GL_MODELVIEW);
-    glLoadIdentity();
-    gluLookAt(cameraPosX, cameraPosY, cameraPosZ,
-        cameraDirX, cameraDirY, cameraDirZ,
-        cameraUpX, cameraUpY, cameraUpZ);
-}
-
-static void movimientoCamara() {
-	set3dView();
-    // Control de velocidad de movimiento y rotación
-    const double moveSpeed = 2.0;
-    const double rotationSpeed = 0.05;
-
-    // Actualizar posición de la cámara con teclas de dirección
-    const Uint8* state = SDL_GetKeyboardState(NULL);
-    if (state[SDL_SCANCODE_W]) {
-        cameraPosX += moveSpeed * (cameraDirX - cameraPosX) * 0.1; // Ajustar el movimiento
-        cameraPosZ += moveSpeed * (cameraDirZ - cameraPosZ) * 0.1; // Ajustar el movimiento
-    }
-    if (state[SDL_SCANCODE_S]) {
-        cameraPosX -= moveSpeed * (cameraDirX - cameraPosX) * 0.1; // Ajustar el movimiento
-        cameraPosZ -= moveSpeed * (cameraDirZ - cameraPosZ) * 0.1; // Ajustar el movimiento
-    }
-    if (state[SDL_SCANCODE_A]) {
-        cameraPosX -= moveSpeed * (cameraDirZ - cameraPosZ) * 0.1; // Ajustar el movimiento
-        cameraPosZ += moveSpeed * (cameraDirX - cameraPosX) * 0.1; // Ajustar el movimiento
-    }
-    if (state[SDL_SCANCODE_D]) {
-        cameraPosX += moveSpeed * (cameraDirZ - cameraPosZ) * 0.1; // Ajustar el movimiento
-        cameraPosZ -= moveSpeed * (cameraDirX - cameraPosX) * 0.1; // Ajustar el movimiento
-    }
-
-    // Rotar vista con teclas de flecha
-    if (state[SDL_SCANCODE_LEFT]) {
-        cameraDirX = cameraPosX + cos(rotationSpeed) * (cameraDirX - cameraPosX) - sin(rotationSpeed) * (cameraDirZ - cameraPosZ);
-        cameraDirZ = cameraPosZ + sin(rotationSpeed) * (cameraDirX - cameraPosX) + cos(rotationSpeed) * (cameraDirZ - cameraPosZ);
-    }
-    if (state[SDL_SCANCODE_RIGHT]) {
-        cameraDirX = cameraPosX + cos(-rotationSpeed) * (cameraDirX - cameraPosX) - sin(-rotationSpeed) * (cameraDirZ - cameraPosZ);
-        cameraDirZ = cameraPosZ + sin(-rotationSpeed) * (cameraDirX - cameraPosX) + cos(-rotationSpeed) * (cameraDirZ - cameraPosZ);
-    }
-    if (state[SDL_SCANCODE_UP]) {
-        cameraPosY += moveSpeed;
-    }
-    if (state[SDL_SCANCODE_DOWN]) {
-        cameraPosY -= moveSpeed;
-    }
-
-    // Ajustar near y far planes según la posición de la cámara
-    nearPlane = 0.01; // Asegurarse de que el plano cercano no sea demasiado pequeño
-    farPlane = 2000.0; // Ajustar el plano lejano
-}
-
 static void draw_cube(const vec3& center, double size) {
     // Vértices del cubo
     static const GLfloat v0[3] = { -1.0f, -1.0f,  1.0f };
@@ -144,8 +64,6 @@ static void draw_cube(const vec3& center, double size) {
     static const GLfloat v5[3] = { 1.0f, -1.0f, -1.0f };
     static const GLfloat v6[3] = { 1.0f,  1.0f, -1.0f };
     static const GLfloat v7[3] = { -1.0f,  1.0f, -1.0f };
-
-    set3dView();
 
     glBegin(GL_TRIANGLES);  // Dibujar el cubo con triángulos
 
@@ -188,7 +106,7 @@ static void draw_pyramid(const vec3& center, double size) {
     static const GLfloat v2[3] = { 1.0f, -1.0f, -1.0f }; // base superior derecha
     static const GLfloat v3[3] = { -1.0f, -1.0f, -1.0f }; // base superior izquierda
     static const GLfloat top[3] = { 0.0f,  1.0f,  0.0f }; // vértice superior
-    set3dView();
+
     glBegin(GL_TRIANGLES);  // Dibujar la pirámide con triángulos
     // Cara frontal (v0, v1, top) - Color: Rojo
     glColor4ub(255, 0, 0, 255);
@@ -256,21 +174,6 @@ static void generate_textures(const char* filePath) {
     }
 }
 
-static void display_func() {
-    // Limpiar el buffer de color y profundidad
-    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-
-    // Dibujar el modelo FBX
-    if (importer) {
-        importer->draw_fbx(FBX_FILE);  // Llama a la función de la instancia de ImporterFBX para renderizar
-    }
-	basicForms->cambiarFormas(CUBO);
-   
-    movimientoCamara();
-	//generate_textures(TEXTURE_FILE);
-    // Forzar el renderizado
-    glFlush();
-}
 
 static bool processEvents() {
     SDL_Event event;
@@ -281,20 +184,6 @@ static bool processEvents() {
             break;
         case SDL_KEYDOWN:
             if (event.key.keysym.sym == SDLK_ESCAPE) return false;
-            if (event.key.keysym.sym == SDLK_f) {
-                // Reiniciar parámetros a los iniciales
-                cameraPosX = 5.0;
-                cameraPosY = 5.0;
-                cameraPosZ = 5.0;
-                cameraDirX = 0.0;
-                cameraDirY = 0.0;
-                cameraDirZ = 0.0;
-                cameraUpX = 0.0;
-                cameraUpY = 1.0;
-                cameraUpZ = 0.0;
-                nearPlane = 0.01;
-                farPlane = 2000.0;
-            }
             break;
         default: {
             ImGui_ImplSDL2_ProcessEvent(&event);
@@ -313,7 +202,7 @@ int main(int argc, char** argv) {
 
     while (processEvents()) {
         const auto t0 = hrclock::now();
-        display_func();
+		displayFunc->DisplayALL();
         window.swapBuffers();
         const auto t1 = hrclock::now();
         const auto dt = t1 - t0;

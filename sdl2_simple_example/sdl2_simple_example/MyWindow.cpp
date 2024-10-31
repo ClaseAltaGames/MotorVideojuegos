@@ -53,6 +53,7 @@ void MyWindow::swapBuffers() const {
         if (ImGui::BeginMenu("Objetos 3D")) {
             if (ImGui::MenuItem("Cubo")) {
 				basicForms->draw_Cube(vec3(0.0, 0.0, 0.0), 1.0);
+
             }
             ImGui::EndMenu();
         }
