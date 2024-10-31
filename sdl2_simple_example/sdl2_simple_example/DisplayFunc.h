@@ -9,5 +9,8 @@ public:
 
 	void DisplayALL();
 
+	bool cubeActive = false;
+	bool pyramidActive = false;
+
 };
 

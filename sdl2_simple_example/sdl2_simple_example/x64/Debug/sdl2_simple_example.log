@@ -7,9 +7,9 @@
       + CategoryInfo          : ObjectNotFound: (C:\Users\Pau Me...12-download.exe:String) [], CommandNotFoundException
       + FullyQualifiedErrorId : CommandNotFoundException
    
-  
   La variable '$LASTEXITCODE' no se puede recuperar porque no se ha establecido.
   En C:\Users\Pau Mena\Documents\GitHub\MotorVideojuegos\vcpkg\scripts\bootstrap.ps1: 60 Carácter: 5
+  
   + if ($LASTEXITCODE -ne 0)
   +     ~~~~~~~~~~~~~
       + CategoryInfo          : InvalidOperation: (LASTEXITCODE:String) [], RuntimeException
@@ -33,9 +33,4 @@
   or by setting the VCPKG_DISABLE_METRICS environment variable.
   
   Read more about vcpkg telemetry at docs/about/privacy.md
-  Camera.cpp
-  DisplayFunc.cpp
-  Generando código...
   sdl2_simple_example.vcxproj -> C:\Users\Pau Mena\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\x64\Debug\sdl2_simple_example.exe
-  "pwsh.exe" no se reconoce como un comando interno o externo,
-  programa o archivo por lotes ejecutable.

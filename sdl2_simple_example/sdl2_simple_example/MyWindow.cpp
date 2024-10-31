@@ -52,9 +52,12 @@ void MyWindow::swapBuffers() const {
         }
         if (ImGui::BeginMenu("Objetos 3D")) {
             if (ImGui::MenuItem("Cubo")) {
-				basicForms->draw_Cube(vec3(0.0, 0.0, 0.0), 1.0);
-
+				displayFunc->cubeActive = true;
             }
+			if (ImGui::MenuItem("Pyramid")) {
+				displayFunc->pyramidActive = true;
+			}
+
             ImGui::EndMenu();
         }
         ImGui::EndMainMenuBar();

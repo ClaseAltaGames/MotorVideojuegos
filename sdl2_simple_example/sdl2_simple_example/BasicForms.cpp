@@ -16,14 +16,11 @@ void BasicForms::cambiarFormas(Formas forma)
     switch (forma)
     {
     case CUBO:
-        if(cubeActive == true)
-        {
-            draw_Cube(vec3(0.0, 0.0, 0.0), 1.0);
-			cubeActive = false;
-		}
+        draw_Cube(vec3(0.0, 0.0, 0.0), 1.0);
         break;
     case PIRAMIDE:
         // Vértices de la pirámide
+
         
         break;
     }
@@ -72,5 +69,33 @@ void BasicForms::draw_Cube(const vec3& center, double size) {
     glVertex3fv(v4); glVertex3fv(v5); glVertex3fv(v1);  // Primer triángulo
     glVertex3fv(v1); glVertex3fv(v0); glVertex3fv(v4);  // Segundo triángulo
 
+    glEnd();
+}
+
+void BasicForms::draw_Pyramid(const vec3& center, double size) {
+    // Vértices de la pirámide
+    static const GLfloat v0[3] = { -1.0f, -1.0f,  1.0f }; // base inferior izquierda
+    static const GLfloat v1[3] = { 1.0f, -1.0f,  1.0f }; // base inferior derecha
+    static const GLfloat v2[3] = { 1.0f, -1.0f, -1.0f }; // base superior derecha
+    static const GLfloat v3[3] = { -1.0f, -1.0f, -1.0f }; // base superior izquierda
+    static const GLfloat top[3] = { 0.0f,  1.0f,  0.0f }; // vértice superior
+
+    glBegin(GL_TRIANGLES);  // Dibujar la pirámide con triángulos
+    // Cara frontal (v0, v1, top) - Color: Rojo
+    glColor4ub(255, 0, 0, 255);
+    glVertex3fv(v0); glVertex3fv(v1); glVertex3fv(top);
+    // Cara derecha (v1, v2, top) - Color: Verde
+    glColor4ub(0, 255, 0, 255);
+    glVertex3fv(v1); glVertex3fv(v2); glVertex3fv(top);
+    // Cara trasera (v2, v3, top) - Color: Azul
+    glColor4ub(0, 0, 255, 255);
+    glVertex3fv(v2); glVertex3fv(v3); glVertex3fv(top);
+    // Cara izquierda (v3, v0, top) - Color: Amarillo
+    glColor4ub(255, 255, 0, 255);
+    glVertex3fv(v3); glVertex3fv(v0); glVertex3fv(top);
+    // Base cuadrada (v0, v1, v2, v3) - Color: Cian
+    glColor4ub(0, 255, 255, 255);
+    glVertex3fv(v0); glVertex3fv(v1); glVertex3fv(v2); // Primer triángulo
+    glVertex3fv(v2); glVertex3fv(v3); glVertex3fv(v0); // Segundo triángulo
     glEnd();
 }

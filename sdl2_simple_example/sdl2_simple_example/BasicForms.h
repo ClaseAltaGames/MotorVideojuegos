@@ -9,8 +9,6 @@ enum Formas {
 	VACIO
 };
 
-
-
 class BasicForms
 {
 public:
@@ -21,6 +19,7 @@ public:
 
 	void draw_Cube(const vec3& center, double size);
 
-	bool cubeActive = false;
+	void draw_Pyramid(const vec3& center, double size);	
+
 };
 

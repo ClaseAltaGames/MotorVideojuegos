@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
 #include "BasicForms.h"
+#include "DisplayFunc.h"
 
 struct SDL_Window;
 
@@ -24,5 +25,6 @@ public:
 
 
 	BasicForms* basicForms = new BasicForms();
+	DisplayFunc* displayFunc = new DisplayFunc();
 
 };

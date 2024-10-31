@@ -26,7 +26,13 @@ void DisplayFunc::DisplayALL()
 
 	importerFBX->draw_fbx(FBX_FILE);
 	camera->CameraMovement();
-	basicForms->cambiarFormas(Formas::CUBO);
+	if (cubeActive == true) {
+
+		basicForms->draw_Cube(vec3(0.0, 0.0, 0.0), 1.0);
+	}
+	if (pyramidActive == true) {
+		basicForms->draw_Pyramid(vec3(0.0, 0.0, 0.0), 1.0);
+	}
 
 	// Forzar el renderizado
 	glFlush();
