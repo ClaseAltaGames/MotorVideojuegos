@@ -256,21 +256,15 @@ static void generate_textures(const char* filePath) {
     }
 }
 
-static void display_func() {
-    // Limpiar el buffer de color y profundidad
-    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+static string currentFBXFile = FBX_FILE;
 
-    // Dibujar el modelo FBX
-    if (importer) {
-        importer->draw_fbx(FBX_FILE);  // Llama a la función de la instancia de ImporterFBX para renderizar
-    }
-	basicForms->cambiarFormas(CUBO);
-   
+static void display_func() {
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     movimientoCamara();
-	//generate_textures(TEXTURE_FILE);
-    // Forzar el renderizado
+    importer->draw_fbx(currentFBXFile.c_str());  // Llama a `draw_fbx` con el archivo actual
     glFlush();
 }
+
 
 static bool processEvents() {
     SDL_Event event;
@@ -296,13 +290,13 @@ static bool processEvents() {
                 farPlane = 2000.0;
             }
             break;
-		case SDL_DROPFILE: {
-			// Cargar el archivo FBX
-			importer->draw_fbx(event.drop.file);
-            printf("%s\n", event.drop.file);
-			SDL_free(event.drop.file);
-			break;
-		}
+        case SDL_DROPFILE: {
+            // Cargar el archivo FBX arrastrado
+            currentFBXFile = event.drop.file;
+            importer->draw_fbx(currentFBXFile.c_str());
+            SDL_free(event.drop.file);
+            break;
+        }
         default: {
             ImGui_ImplSDL2_ProcessEvent(&event);
             break;

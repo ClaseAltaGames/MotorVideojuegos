@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\edgar\\Documents\\GitHub\\MotorVideojuegos\\sdl2_simple_example\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{58145ABE-1438-4332-BECA-65D74173C2B7}|sdl2_simple_example\\sdl2_simple_example.vcxproj|C:\\Users\\edgar\\Documents\\GitHub\\MotorVideojuegos\\sdl2_simple_example\\sdl2_simple_example\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{58145ABE-1438-4332-BECA-65D74173C2B7}|sdl2_simple_example\\sdl2_simple_example.vcxproj|solutionrelative:sdl2_simple_example\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{58145ABE-1438-4332-BECA-65D74173C2B7}|sdl2_simple_example\\sdl2_simple_example.vcxproj|C:\\Users\\edgar\\Documents\\GitHub\\MotorVideojuegos\\sdl2_simple_example\\sdl2_simple_example\\ImporterFBX.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{58145ABE-1438-4332-BECA-65D74173C2B7}|sdl2_simple_example\\sdl2_simple_example.vcxproj|solutionrelative:sdl2_simple_example\\ImporterFBX.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58145ABE-1438-4332-BECA-65D74173C2B7}|sdl2_simple_example\\sdl2_simple_example.vcxproj|C:\\Users\\edgar\\Documents\\GitHub\\MotorVideojuegos\\sdl2_simple_example\\sdl2_simple_example\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{58145ABE-1438-4332-BECA-65D74173C2B7}|sdl2_simple_example\\sdl2_simple_example.vcxproj|solutionrelative:sdl2_simple_example\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{58145ABE-1438-4332-BECA-65D74173C2B7}|sdl2_simple_example\\sdl2_simple_example.vcxproj|C:\\Users\\edgar\\Documents\\GitHub\\MotorVideojuegos\\sdl2_simple_example\\sdl2_simple_example\\ImporterFBX.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -41,7 +41,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
@@ -82,13 +82,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "ImporterFBX.cpp",
               "DocumentMoniker": "C:\\Users\\edgar\\Documents\\GitHub\\MotorVideojuegos\\sdl2_simple_example\\sdl2_simple_example\\ImporterFBX.cpp",
               "RelativeDocumentMoniker": "sdl2_simple_example\\ImporterFBX.cpp",
               "ToolTip": "C:\\Users\\edgar\\Documents\\GitHub\\MotorVideojuegos\\sdl2_simple_example\\sdl2_simple_example\\ImporterFBX.cpp",
               "RelativeToolTip": "sdl2_simple_example\\ImporterFBX.cpp",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAUwCUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABwAAAAAAAAAAADwvyAAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-10-23T08:58:40.278Z",
               "EditorCaption": ""
@@ -120,13 +120,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "main.cpp",
               "DocumentMoniker": "C:\\Users\\edgar\\Documents\\GitHub\\MotorVideojuegos\\sdl2_simple_example\\sdl2_simple_example\\main.cpp",
               "RelativeDocumentMoniker": "sdl2_simple_example\\main.cpp",
-              "ToolTip": "C:\\Users\\edgar\\Documents\\GitHub\\MotorVideojuegos\\sdl2_simple_example\\sdl2_simple_example\\main.cpp*",
-              "RelativeToolTip": "sdl2_simple_example\\main.cpp*",
-              "ViewState": "AgIAACABAAAAAAAAAADgvy0BAAAsAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\edgar\\Documents\\GitHub\\MotorVideojuegos\\sdl2_simple_example\\sdl2_simple_example\\main.cpp",
+              "RelativeToolTip": "sdl2_simple_example\\main.cpp",
+              "ViewState": "AgIAAB0BAAAAAAAAAADwvy4BAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-10-07T10:54:08.949Z",
               "EditorCaption": ""

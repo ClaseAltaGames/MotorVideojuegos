@@ -34,6 +34,8 @@
   
   Read more about vcpkg telemetry at docs/about/privacy.md
   ImporterFBX.cpp
+  main.cpp
+  Generating Code...
   sdl2_simple_example.vcxproj -> C:\Users\edgar\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\x64\Debug\sdl2_simple_example.exe
   'pwsh.exe' is not recognized as an internal or external command,
   operable program or batch file.

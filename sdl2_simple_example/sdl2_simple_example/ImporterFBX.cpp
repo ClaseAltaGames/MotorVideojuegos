@@ -15,7 +15,7 @@ ImporterFBX::ImporterFBX() {}
 ImporterFBX::~ImporterFBX() {}
 
 const aiScene* ImporterFBX::load_fbx(const char* file) {
-    const aiScene* scene = aiImportFile(file, aiProcess_Triangulate);
+    const aiScene* scene = aiImportFile(file, aiProcess_Triangulate | aiProcess_GenNormals);
     if (!scene) {
         cerr << "Error al cargar el archivo: " << aiGetErrorString() << endl;
         return nullptr;
@@ -28,6 +28,11 @@ void ImporterFBX::render_fbx(const aiScene* scene) {
         cerr << "Error: escena no cargada" << endl;
         return;
     }
+    //if (mesh->HasTextureCoords(0)) {  // Verifica que haya coordenadas de textura
+    //    glEnable(GL_TEXTURE_2D);
+    //    glBindTexture(GL_TEXTURE_2D, textureID);  // Usar tu `textureID`
+    //}
+
 
     for (unsigned int i = 0; i < scene->mNumMeshes; i++) {
         aiMesh* mesh = scene->mMeshes[i];
