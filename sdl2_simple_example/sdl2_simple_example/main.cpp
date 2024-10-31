@@ -37,6 +37,7 @@ static const unsigned int FPS = 60;
 static const auto FRAME_DT = 1.0s / FPS;
 
 DisplayFunc* displayFunc = new DisplayFunc();
+ImporterFBX* importerFBX = new ImporterFBX();
 
 void init_openGL() {
     glewInit();
@@ -65,6 +66,13 @@ static bool processEvents() {
         case SDL_KEYDOWN:
             if (event.key.keysym.sym == SDLK_ESCAPE) return false;
             break;
+        case SDL_DROPFILE: {
+            // Cargar el archivo FBX arrastrado
+            displayFunc->currentFBXFile = event.drop.file;
+            importerFBX->draw_fbx(displayFunc->currentFBXFile.c_str());
+            SDL_free(event.drop.file);
+            break;
+        }
         default: {
             ImGui_ImplSDL2_ProcessEvent(&event);
             break;
@@ -82,6 +90,7 @@ int main(int argc, char** argv) {
 	init_devil();
 
     while (processEvents()) {
+        SDL_EventState(SDL_DROPFILE, SDL_ENABLE);
         const auto t0 = hrclock::now();
 		displayFunc->DisplayALL();
         window.swapBuffers();

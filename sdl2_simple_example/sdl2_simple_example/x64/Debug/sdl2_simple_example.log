@@ -35,7 +35,7 @@
   Read more about vcpkg telemetry at docs/about/privacy.md
   DisplayFunc.cpp
   main.cpp
-  Textures.cpp
+  MyWindow.cpp
   Generando código...
   sdl2_simple_example.vcxproj -> C:\Users\Pau Mena\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\x64\Debug\sdl2_simple_example.exe
   "pwsh.exe" no se reconoce como un comando interno o externo,

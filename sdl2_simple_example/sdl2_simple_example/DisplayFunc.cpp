@@ -6,9 +6,6 @@
 #include "Textures.h"
 
 
-#define FBX_FILE "Assets/BakerHouse.fbx"
-#define TEXTURE_FILE "Assets/Baker_house.png"
-
 DisplayFunc::DisplayFunc()
 {
 }
@@ -19,6 +16,7 @@ DisplayFunc::~DisplayFunc()
 
 void DisplayFunc::DisplayALL()
 {
+
 	// Limpiar el buffer de color y profundidad
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
@@ -27,7 +25,7 @@ void DisplayFunc::DisplayALL()
 	Camera* camera = new Camera;
 	Textures* textures = new Textures;
 
-	importerFBX->draw_fbx(FBX_FILE);
+	importerFBX->draw_fbx(currentFBXFile.c_str());
 	camera->CameraMovement();
 	if (cubeActive == true) {
 
@@ -36,8 +34,7 @@ void DisplayFunc::DisplayALL()
 	if (pyramidActive == true) {
 		basicForms->draw_Pyramid(vec3(0.0, 0.0, 0.0), 1.0);
 	}
-	textures->DrawTextures(TEXTURE_FILE);
-
+	//textures->DrawTextures(TEXTURE_FILE);
 
 	// Forzar el renderizado
 	glFlush();
