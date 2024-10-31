@@ -1,2 +1,2 @@
-PlatformToolSet=v143:VCToolArchitecture=NativeARM64:VCToolsVersion=14.41.34120:TargetPlatformVersion=10.0.22621.0:VcpkgTriplet=x64-windows:
-Debug|x64|C:\Users\edgar\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\|
+PlatformToolSet=v143:VCToolArchitecture=Native64Bit:VCToolsVersion=14.41.34120:TargetPlatformVersion=10.0.22621.0:VcpkgTriplet=x64-windows:
+Debug|x64|C:\Users\Pau Mena\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\|

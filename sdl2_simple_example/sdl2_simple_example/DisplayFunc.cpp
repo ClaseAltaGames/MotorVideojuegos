@@ -34,7 +34,7 @@ void DisplayFunc::DisplayALL()
 	if (pyramidActive == true) {
 		basicForms->draw_Pyramid(vec3(0.0, 0.0, 0.0), 1.0);
 	}
-	//textures->DrawTextures(TEXTURE_FILE);
+	textures->DrawTextures(TEXTURE_FILE);
 
 	// Forzar el renderizado
 	glFlush();

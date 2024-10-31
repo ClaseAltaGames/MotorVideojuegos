@@ -1,29 +1,29 @@
-﻿  & : The term 'C:\Users\edgar\Documents\GitHub\MotorVideojuegos\vcpkg\scripts/tls12-download-arm64.exe' is not 
-  recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if 
-  a path was included, verify that the path is correct and try again.
-  At C:\Users\edgar\Documents\GitHub\MotorVideojuegos\vcpkg\scripts\bootstrap.ps1:53 char:7
-  +     & "$scriptsDir/tls12-download-arm64.exe" github.com "/microsoft/v ...
-  +       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      + CategoryInfo          : ObjectNotFound: (C:\Users\edgar\...nload-arm64.exe:String) [], CommandNotFoundException
+﻿  & : El término 'C:\Users\Pau Mena\Documents\GitHub\MotorVideojuegos\vcpkg\scripts/tls12-download.exe' no se reconoce 
+  como nombre de un cmdlet, función, archivo de script o programa ejecutable. Compruebe si escribió correctamente el 
+  nombre o, si incluyó una ruta de acceso, compruebe que dicha ruta es correcta e inténtelo de nuevo.
+  En C:\Users\Pau Mena\Documents\GitHub\MotorVideojuegos\vcpkg\scripts\bootstrap.ps1: 55 Carácter: 7
+  +     & "$scriptsDir/tls12-download.exe" github.com "/microsoft/vcpkg-t ...
+  +       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      + CategoryInfo          : ObjectNotFound: (C:\Users\Pau Me...12-download.exe:String) [], CommandNotFoundException
       + FullyQualifiedErrorId : CommandNotFoundException
    
-  The variable '$LASTEXITCODE' cannot be retrieved because it has not been set.
-  At C:\Users\edgar\Documents\GitHub\MotorVideojuegos\vcpkg\scripts\bootstrap.ps1:60 char:5
+  La variable '$LASTEXITCODE' no se puede recuperar porque no se ha establecido.
+  
+  En C:\Users\Pau Mena\Documents\GitHub\MotorVideojuegos\vcpkg\scripts\bootstrap.ps1: 60 Carácter: 5
   + if ($LASTEXITCODE -ne 0)
   +     ~~~~~~~~~~~~~
       + CategoryInfo          : InvalidOperation: (LASTEXITCODE:String) [], RuntimeException
       + FullyQualifiedErrorId : VariableIsUndefined
    
-  & : The term 'C:\Users\edgar\Documents\GitHub\MotorVideojuegos\vcpkg\vcpkg.exe' is not recognized as the name of a 
-  cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify 
-  that the path is correct and try again.
-  At C:\Users\edgar\Documents\GitHub\MotorVideojuegos\vcpkg\scripts\bootstrap.ps1:66 char:3
+  & : El término 'C:\Users\Pau Mena\Documents\GitHub\MotorVideojuegos\vcpkg\vcpkg.exe' no se reconoce como nombre de un 
+  cmdlet, función, archivo de script o programa ejecutable. Compruebe si escribió correctamente el nombre o, si incluyó 
+  una ruta de acceso, compruebe que dicha ruta es correcta e inténtelo de nuevo.
+  En C:\Users\Pau Mena\Documents\GitHub\MotorVideojuegos\vcpkg\scripts\bootstrap.ps1: 66 Carácter: 3
   + & "$vcpkgRootDir\vcpkg.exe" version --disable-metrics
   +   ~~~~~~~~~~~~~~~~~~~~~~~~~
-      + CategoryInfo          : ObjectNotFound: (C:\Users\edgar\...vcpkg\vcpkg.exe:String) [], CommandNotFoundException
+      + CategoryInfo          : ObjectNotFound: (C:\Users\Pau Me...vcpkg\vcpkg.exe:String) [], CommandNotFoundException
       + FullyQualifiedErrorId : CommandNotFoundException
    
-  
   Telemetry
   ---------
   vcpkg collects usage data in order to help us improve your experience.
@@ -33,14 +33,7 @@
   or by setting the VCPKG_DISABLE_METRICS environment variable.
   
   Read more about vcpkg telemetry at docs/about/privacy.md
-  BasicForms.cpp
-  Camera.cpp
   DisplayFunc.cpp
-  ImporterFBX.cpp
-  main.cpp
-  MyWindow.cpp
-  Textures.cpp
-  Generating Code...
-  sdl2_simple_example.vcxproj -> C:\Users\edgar\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\x64\Debug\sdl2_simple_example.exe
-  'pwsh.exe' is not recognized as an internal or external command,
-  operable program or batch file.
+  sdl2_simple_example.vcxproj -> C:\Users\Pau Mena\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\x64\Debug\sdl2_simple_example.exe
+  "pwsh.exe" no se reconoce como un comando interno o externo,
+  programa o archivo por lotes ejecutable.

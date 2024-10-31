@@ -12,6 +12,7 @@ public:
 	Textures();
 	~Textures();
 	void DrawTextures(const char* filepath);
+	void BindTexture();
 
 	GLuint textureID;
 
