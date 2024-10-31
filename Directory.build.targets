@@ -1,7 +1,7 @@
 <Project>
   
   <Target Name="VcPkgBootstrap" BeforeTargets="ClCompile" Condition="!Exists('$(MSBuildThisFileDirectory)vcpkg\vcpkg.exe')">
-    <Exec Command="$(MSBuildThisFileDirectory)vcpkg\bootstrap-vcpkg.bat" />
+	  <Exec Command="&quot;$(MSBuildThisFileDirectory)vcpkg\bootstrap-vcpkg.bat&quot;" />
   </Target>
 
   <Target Name="VcPkgClean" AfterTargets="Clean" Condition="Exists('$(MSBuildThisFileDirectory)vcpkg\vcpkg.exe')">
