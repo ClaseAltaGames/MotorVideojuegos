@@ -133,6 +133,7 @@
     <ClCompile Include="ImporterFBX.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MyWindow.cpp" />
+    <ClCompile Include="Textures.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BasicForms.h" />
@@ -140,6 +141,7 @@
     <ClInclude Include="DisplayFunc.h" />
     <ClInclude Include="ImporterFBX.h" />
     <ClInclude Include="MyWindow.h" />
+    <ClInclude Include="Textures.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

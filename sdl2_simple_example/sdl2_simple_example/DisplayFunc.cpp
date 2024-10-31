@@ -3,9 +3,11 @@
 #include "ImporterFBX.h"
 #include "BasicForms.h"
 #include "Camera.h"
+#include "Textures.h"
 
 
 #define FBX_FILE "Assets/BakerHouse.fbx"
+#define TEXTURE_FILE "Assets/Baker_house.png"
 
 DisplayFunc::DisplayFunc()
 {
@@ -23,6 +25,7 @@ void DisplayFunc::DisplayALL()
 	ImporterFBX* importerFBX = new ImporterFBX;
 	BasicForms* basicForms = new BasicForms;
 	Camera* camera = new Camera;
+	Textures* textures = new Textures;
 
 	importerFBX->draw_fbx(FBX_FILE);
 	camera->CameraMovement();
@@ -33,6 +36,8 @@ void DisplayFunc::DisplayALL()
 	if (pyramidActive == true) {
 		basicForms->draw_Pyramid(vec3(0.0, 0.0, 0.0), 1.0);
 	}
+	textures->DrawTextures(TEXTURE_FILE);
+
 
 	// Forzar el renderizado
 	glFlush();

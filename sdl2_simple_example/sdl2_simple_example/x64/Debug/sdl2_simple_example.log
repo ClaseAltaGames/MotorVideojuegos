@@ -20,6 +20,10 @@
   una ruta de acceso, compruebe que dicha ruta es correcta e inténtelo de nuevo.
   En C:\Users\Pau Mena\Documents\GitHub\MotorVideojuegos\vcpkg\scripts\bootstrap.ps1: 66 Carácter: 3
   + & "$vcpkgRootDir\vcpkg.exe" version --disable-metrics
+  +   ~~~~~~~~~~~~~~~~~~~~~~~~~
+      + CategoryInfo          : ObjectNotFound: (C:\Users\Pau Me...vcpkg\vcpkg.exe:String) [], CommandNotFoundException
+      + FullyQualifiedErrorId : CommandNotFoundException
+   
   Telemetry
   ---------
   vcpkg collects usage data in order to help us improve your experience.
@@ -29,11 +33,10 @@
   or by setting the VCPKG_DISABLE_METRICS environment variable.
   
   Read more about vcpkg telemetry at docs/about/privacy.md
-  +   ~~~~~~~~~~~~~~~~~~~~~~~~~
-      + CategoryInfo          : ObjectNotFound: (C:\Users\Pau Me...vcpkg\vcpkg.exe:String) [], CommandNotFoundException
-      + FullyQualifiedErrorId : CommandNotFoundException
-   
-  BasicForms.cpp
+  DisplayFunc.cpp
+  main.cpp
+  Textures.cpp
+  Generando código...
   sdl2_simple_example.vcxproj -> C:\Users\Pau Mena\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\x64\Debug\sdl2_simple_example.exe
   "pwsh.exe" no se reconoce como un comando interno o externo,
   programa o archivo por lotes ejecutable.

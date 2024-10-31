@@ -4,22 +4,23 @@
 #include <exception>
 #include <glm/glm.hpp>
 #include <SDL2/SDL_events.h>
-#include "MyWindow.h"
 #include "imgui.h"
 #include "imgui_impl_sdl2.h"
 #include "imgui_impl_opengl3.h"
 #include <assimp/cimport.h>
 #include <assimp/scene.h>
 #include <assimp/postprocess.h>
-#include <stdio.h>
-#include "ImporterFBX.h"
-#include "BasicForms.h"
-#include "DisplayFunc.h"
 #include <IL/il.h>
 #include <IL/ilu.h>
 #include <IL/ilut.h>
-#include <codecvt>
-#include <locale>
+#include <stdio.h>
+#include <iostream>
+
+//Clases
+#include "MyWindow.h"
+#include "ImporterFBX.h"
+#include "BasicForms.h"
+#include "DisplayFunc.h"
 
 using namespace std;
 
@@ -37,8 +38,6 @@ static const auto FRAME_DT = 1.0s / FPS;
 
 DisplayFunc* displayFunc = new DisplayFunc();
 
-
-
 void init_openGL() {
     glewInit();
     if (!GLEW_VERSION_3_0) throw exception("OpenGL 3.0 API is not available.");
@@ -55,50 +54,6 @@ void init_devil() {
 }
 
 GLubyte checkerImage[CHECKERS_HEIGHT][CHECKERS_WIDTH][4];
-GLuint textureID;
-
-static void generate_textures(const char* filePath) {
-    ILuint imageID;
-
-    // Inicializa DevIL (esto debe hacerse solo una vez en el programa)
-    ilInit();
-
-    // Genera y enlaza un identificador de imagen de DevIL
-    ilGenImages(1, &imageID);
-    ilBindImage(imageID);
-
-    // Convertir const char* a const wchar_t*
-    //std::wstring wideFilePath = charToWstring(filePath);
-
-    // Carga la imagen con DevIL
-
-    if (ilLoadImage((const wchar_t *) filePath)) {
-        // Configura parámetros de la textura en OpenGL
-        glGenTextures(1, &textureID);
-        glBindTexture(GL_TEXTURE_2D, textureID);
-
-        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
-        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
-        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-
-        // Transferencia de datos de imagen de DevIL a OpenGL
-        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, ilGetInteger(IL_IMAGE_WIDTH), ilGetInteger(IL_IMAGE_HEIGHT),
-            0, ilGetInteger(IL_IMAGE_FORMAT), GL_UNSIGNED_BYTE, ilGetData());
-        glGenerateMipmap(GL_TEXTURE_2D);
-
-        // Borra la imagen de DevIL de la memoria
-        ilDeleteImages(1, &imageID);
-    }
-    else {
-        // Imprimir el error de DevIL
-        ILenum error = ilGetError();
-        std::cerr << "DevIL error: " << iluErrorString(error) << "\n";
-        std::cerr << "Failed to load texture: " << filePath << "\n";
-        std::cerr << "DevIL error: " << iluErrorString(error) << "\n";
-    }
-}
-
 
 static bool processEvents() {
     SDL_Event event;
