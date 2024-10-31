@@ -69,6 +69,7 @@ static bool processEvents() {
         case SDL_DROPFILE: {
             // Cargar el archivo FBX arrastrado
             displayFunc->currentFBXFile = event.drop.file;
+            printf("%s\n", event.drop.file);
             importerFBX->draw_fbx(displayFunc->currentFBXFile.c_str());
             SDL_free(event.drop.file);
             break;
