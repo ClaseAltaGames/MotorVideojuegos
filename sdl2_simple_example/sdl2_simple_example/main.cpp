@@ -296,6 +296,13 @@ static bool processEvents() {
                 farPlane = 2000.0;
             }
             break;
+		case SDL_DROPFILE: {
+			// Cargar el archivo FBX
+			importer->draw_fbx(event.drop.file);
+            printf("%s\n", event.drop.file);
+			SDL_free(event.drop.file);
+			break;
+		}
         default: {
             ImGui_ImplSDL2_ProcessEvent(&event);
             break;
@@ -312,6 +319,7 @@ int main(int argc, char** argv) {
 	init_devil();
 
     while (processEvents()) {
+		SDL_EventState(SDL_DROPFILE, SDL_ENABLE);
         const auto t0 = hrclock::now();
         display_func();
         window.swapBuffers();

@@ -52,6 +52,7 @@ void ImporterFBX::render_fbx(const aiScene* scene) {
 int ImporterFBX::draw_fbx(const char* file) {
     const aiScene* scene = load_fbx(file);
     if (!scene) {
+        printf("Error al cargar el archivo FBX\n");
         return -1;
     }
     render_fbx(scene);
