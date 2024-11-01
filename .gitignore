@@ -400,4 +400,9 @@ FodyWeavers.xsd
 *.ipch
 *.db
 *.exe
+*.idb
+*.pdb
+*.suo
+*.tlog
+*.ilk
 
