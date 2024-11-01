@@ -21,5 +21,7 @@ public:
 
 	void draw_Sphere(const vec3& center, double radius);
 
+	void draw_Cylindre(const vec3& center, double radius, double height, int segments);
+
 };
 

@@ -60,6 +60,9 @@ void MyWindow::swapBuffers() const {
 			if (ImGui::MenuItem("Esfera")) {
 				displayFunc->sphereActive = true;
 			}
+            if (ImGui::MenuItem("Cylinder")) {
+                displayFunc->cylinderActive = true;
+            }
 
             ImGui::EndMenu();
         }

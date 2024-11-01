@@ -37,6 +37,9 @@ void DisplayFunc::DisplayALL()
 	if (sphereActive == true) {
 		basicForms->draw_Sphere(vec3(0.0, 0.0, 0.0), 1.0);
 	}
+	if (cylinderActive == true) {
+		basicForms->draw_Cylindre(vec3(0.0, 0.0, 0.0), 1.0, 2.0, 36);
+	}
 	textures->DrawTextures(TEXTURE_FILE);
 
 	// Forzar el renderizado

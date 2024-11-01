@@ -103,3 +103,41 @@ void BasicForms::draw_Sphere(const vec3& center, double radius) {
         glEnd();
     }
 }
+
+void BasicForms::draw_Cylindre(const vec3& center, double radius, double height, int segments) {
+    double halfHeight = height / 2.0;
+
+    // Dibujar tapa superior
+    glBegin(GL_TRIANGLE_FAN);
+    glVertex3f(center.x, center.y + halfHeight, center.z); // Centro de la tapa superior
+    for (int i = 0; i <= segments; ++i) {
+        double theta = 2.0 * M_PI * i / segments;
+        double x = radius * cos(theta);
+        double z = radius * sin(theta);
+        glVertex3f(center.x + x, center.y + halfHeight, center.z + z);
+    }
+    glEnd();
+
+    // Dibujar tapa inferior
+    glBegin(GL_TRIANGLE_FAN);
+    glVertex3f(center.x, center.y - halfHeight, center.z); // Centro de la tapa inferior
+    for (int i = 0; i <= segments; ++i) {
+        double theta = 2.0 * M_PI * i / segments;
+        double x = radius * cos(theta);
+        double z = radius * sin(theta);
+        glVertex3f(center.x + x, center.y - halfHeight, center.z + z);
+    }
+    glEnd();
+
+    // Dibujar pared lateral
+    glBegin(GL_QUAD_STRIP);
+    for (int i = 0; i <= segments; ++i) {
+        double theta = 2.0 * M_PI * i / segments;
+        double x = radius * cos(theta);
+        double z = radius * sin(theta);
+
+        glVertex3f(center.x + x, center.y - halfHeight, center.z + z); // Punto inferior
+        glVertex3f(center.x + x, center.y + halfHeight, center.z + z); // Punto superior
+    }
+    glEnd();
+}
