@@ -7,8 +7,8 @@
       + CategoryInfo          : ObjectNotFound: (C:\Users\Pau Me...12-download.exe:String) [], CommandNotFoundException
       + FullyQualifiedErrorId : CommandNotFoundException
    
-  La variable '$LASTEXITCODE' no se puede recuperar porque no se ha establecido.
   
+  La variable '$LASTEXITCODE' no se puede recuperar porque no se ha establecido.
   En C:\Users\Pau Mena\Documents\GitHub\MotorVideojuegos\vcpkg\scripts\bootstrap.ps1: 60 Carácter: 5
   + if ($LASTEXITCODE -ne 0)
   +     ~~~~~~~~~~~~~
@@ -33,7 +33,43 @@
   or by setting the VCPKG_DISABLE_METRICS environment variable.
   
   Read more about vcpkg telemetry at docs/about/privacy.md
-  DisplayFunc.cpp
+  BasicForms.cpp
+C:\Users\Pau Mena\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\BasicForms.cpp(91,24): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\Pau Mena\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\BasicForms.cpp(92,24): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\Pau Mena\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\BasicForms.cpp(93,24): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\Pau Mena\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\BasicForms.cpp(96,24): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\Pau Mena\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\BasicForms.cpp(97,24): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\Pau Mena\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\BasicForms.cpp(98,24): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\Pau Mena\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\BasicForms.cpp(100,81): warning C4244: 'argumento': conversión de 'T' a 'GLfloat'; posible pérdida de datos
+C:\Users\Pau Mena\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\BasicForms.cpp(100,81): warning C4244:         with
+C:\Users\Pau Mena\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\BasicForms.cpp(100,81): warning C4244:         [
+C:\Users\Pau Mena\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\BasicForms.cpp(100,81): warning C4244:             T=glm::f64
+C:\Users\Pau Mena\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\BasicForms.cpp(100,81): warning C4244:         ]
+C:\Users\Pau Mena\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\BasicForms.cpp(100,57): warning C4244: 'argumento': conversión de 'T' a 'GLfloat'; posible pérdida de datos
+C:\Users\Pau Mena\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\BasicForms.cpp(100,57): warning C4244:         with
+C:\Users\Pau Mena\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\BasicForms.cpp(100,57): warning C4244:         [
+C:\Users\Pau Mena\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\BasicForms.cpp(100,57): warning C4244:             T=glm::f64
+C:\Users\Pau Mena\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\BasicForms.cpp(100,57): warning C4244:         ]
+C:\Users\Pau Mena\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\BasicForms.cpp(100,33): warning C4244: 'argumento': conversión de 'T' a 'GLfloat'; posible pérdida de datos
+C:\Users\Pau Mena\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\BasicForms.cpp(100,33): warning C4244:         with
+C:\Users\Pau Mena\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\BasicForms.cpp(100,33): warning C4244:         [
+C:\Users\Pau Mena\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\BasicForms.cpp(100,33): warning C4244:             T=glm::f64
+C:\Users\Pau Mena\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\BasicForms.cpp(100,33): warning C4244:         ]
+C:\Users\Pau Mena\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\BasicForms.cpp(101,81): warning C4244: 'argumento': conversión de 'T' a 'GLfloat'; posible pérdida de datos
+C:\Users\Pau Mena\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\BasicForms.cpp(101,81): warning C4244:         with
+C:\Users\Pau Mena\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\BasicForms.cpp(101,81): warning C4244:         [
+C:\Users\Pau Mena\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\BasicForms.cpp(101,81): warning C4244:             T=glm::f64
+C:\Users\Pau Mena\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\BasicForms.cpp(101,81): warning C4244:         ]
+C:\Users\Pau Mena\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\BasicForms.cpp(101,57): warning C4244: 'argumento': conversión de 'T' a 'GLfloat'; posible pérdida de datos
+C:\Users\Pau Mena\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\BasicForms.cpp(101,57): warning C4244:         with
+C:\Users\Pau Mena\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\BasicForms.cpp(101,57): warning C4244:         [
+C:\Users\Pau Mena\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\BasicForms.cpp(101,57): warning C4244:             T=glm::f64
+C:\Users\Pau Mena\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\BasicForms.cpp(101,57): warning C4244:         ]
+C:\Users\Pau Mena\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\BasicForms.cpp(101,33): warning C4244: 'argumento': conversión de 'T' a 'GLfloat'; posible pérdida de datos
+C:\Users\Pau Mena\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\BasicForms.cpp(101,33): warning C4244:         with
+C:\Users\Pau Mena\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\BasicForms.cpp(101,33): warning C4244:         [
+C:\Users\Pau Mena\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\BasicForms.cpp(101,33): warning C4244:             T=glm::f64
+C:\Users\Pau Mena\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\sdl2_simple_example\BasicForms.cpp(101,33): warning C4244:         ]
   sdl2_simple_example.vcxproj -> C:\Users\Pau Mena\Documents\GitHub\MotorVideojuegos\sdl2_simple_example\x64\Debug\sdl2_simple_example.exe
   "pwsh.exe" no se reconoce como un comando interno o externo,
   programa o archivo por lotes ejecutable.

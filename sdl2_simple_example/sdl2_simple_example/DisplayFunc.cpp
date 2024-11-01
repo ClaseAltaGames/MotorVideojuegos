@@ -34,6 +34,9 @@ void DisplayFunc::DisplayALL()
 	if (pyramidActive == true) {
 		basicForms->draw_Pyramid(vec3(0.0, 0.0, 0.0), 1.0);
 	}
+	if (sphereActive == true) {
+		basicForms->draw_Sphere(vec3(0.0, 0.0, 0.0), 1.0);
+	}
 	textures->DrawTextures(TEXTURE_FILE);
 
 	// Forzar el renderizado

@@ -3,8 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\Pau Mena\\Documents\\GitHub\\MotorVideojuegos\\sdl2_simple_example\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{58145ABE-1438-4332-BECA-65D74173C2B7}|sdl2_simple_example\\sdl2_simple_example.vcxproj|C:\\Users\\Pau Mena\\Documents\\GitHub\\MotorVideojuegos\\sdl2_simple_example\\sdl2_simple_example\\BasicForms.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{58145ABE-1438-4332-BECA-65D74173C2B7}|sdl2_simple_example\\sdl2_simple_example.vcxproj|solutionrelative:sdl2_simple_example\\BasicForms.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58145ABE-1438-4332-BECA-65D74173C2B7}|sdl2_simple_example\\sdl2_simple_example.vcxproj|C:\\Users\\Pau Mena\\Documents\\GitHub\\MotorVideojuegos\\sdl2_simple_example\\sdl2_simple_example\\MyWindow.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{58145ABE-1438-4332-BECA-65D74173C2B7}|sdl2_simple_example\\sdl2_simple_example.vcxproj|solutionrelative:sdl2_simple_example\\MyWindow.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{58145ABE-1438-4332-BECA-65D74173C2B7}|sdl2_simple_example\\sdl2_simple_example.vcxproj|C:\\Users\\Pau Mena\\Documents\\GitHub\\MotorVideojuegos\\sdl2_simple_example\\sdl2_simple_example\\DisplayFunc.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{58145ABE-1438-4332-BECA-65D74173C2B7}|sdl2_simple_example\\sdl2_simple_example.vcxproj|solutionrelative:sdl2_simple_example\\DisplayFunc.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58145ABE-1438-4332-BECA-65D74173C2B7}|sdl2_simple_example\\sdl2_simple_example.vcxproj|C:\\Users\\Pau Mena\\Documents\\GitHub\\MotorVideojuegos\\sdl2_simple_example\\sdl2_simple_example\\MyWindow.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{58145ABE-1438-4332-BECA-65D74173C2B7}|sdl2_simple_example\\sdl2_simple_example.vcxproj|solutionrelative:sdl2_simple_example\\MyWindow.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58145ABE-1438-4332-BECA-65D74173C2B7}|sdl2_simple_example\\sdl2_simple_example.vcxproj|C:\\Users\\Pau Mena\\Documents\\GitHub\\MotorVideojuegos\\sdl2_simple_example\\sdl2_simple_example\\DisplayFunc.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{58145ABE-1438-4332-BECA-65D74173C2B7}|sdl2_simple_example\\sdl2_simple_example.vcxproj|solutionrelative:sdl2_simple_example\\DisplayFunc.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58145ABE-1438-4332-BECA-65D74173C2B7}|sdl2_simple_example\\sdl2_simple_example.vcxproj|C:\\Users\\Pau Mena\\Documents\\GitHub\\MotorVideojuegos\\sdl2_simple_example\\sdl2_simple_example\\BasicForms.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{58145ABE-1438-4332-BECA-65D74173C2B7}|sdl2_simple_example\\sdl2_simple_example.vcxproj|solutionrelative:sdl2_simple_example\\BasicForms.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{58145ABE-1438-4332-BECA-65D74173C2B7}|sdl2_simple_example\\sdl2_simple_example.vcxproj|C:\\Users\\Pau Mena\\Documents\\GitHub\\MotorVideojuegos\\sdl2_simple_example\\sdl2_simple_example\\Textures.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -23,32 +43,12 @@
       "RelativeMoniker": "D:0:0:{58145ABE-1438-4332-BECA-65D74173C2B7}|sdl2_simple_example\\sdl2_simple_example.vcxproj|solutionrelative:sdl2_simple_example\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{58145ABE-1438-4332-BECA-65D74173C2B7}|sdl2_simple_example\\sdl2_simple_example.vcxproj|C:\\Users\\Pau Mena\\Documents\\GitHub\\MotorVideojuegos\\sdl2_simple_example\\sdl2_simple_example\\DisplayFunc.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{58145ABE-1438-4332-BECA-65D74173C2B7}|sdl2_simple_example\\sdl2_simple_example.vcxproj|solutionrelative:sdl2_simple_example\\DisplayFunc.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{58145ABE-1438-4332-BECA-65D74173C2B7}|sdl2_simple_example\\sdl2_simple_example.vcxproj|C:\\Users\\Pau Mena\\Documents\\GitHub\\MotorVideojuegos\\sdl2_simple_example\\sdl2_simple_example\\Textures.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{58145ABE-1438-4332-BECA-65D74173C2B7}|sdl2_simple_example\\sdl2_simple_example.vcxproj|solutionrelative:sdl2_simple_example\\Textures.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{58145ABE-1438-4332-BECA-65D74173C2B7}|sdl2_simple_example\\sdl2_simple_example.vcxproj|C:\\Users\\Pau Mena\\Documents\\GitHub\\MotorVideojuegos\\sdl2_simple_example\\sdl2_simple_example\\BasicForms.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{58145ABE-1438-4332-BECA-65D74173C2B7}|sdl2_simple_example\\sdl2_simple_example.vcxproj|solutionrelative:sdl2_simple_example\\BasicForms.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{58145ABE-1438-4332-BECA-65D74173C2B7}|sdl2_simple_example\\sdl2_simple_example.vcxproj|C:\\Users\\Pau Mena\\Documents\\GitHub\\MotorVideojuegos\\sdl2_simple_example\\sdl2_simple_example\\BasicForms.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{58145ABE-1438-4332-BECA-65D74173C2B7}|sdl2_simple_example\\sdl2_simple_example.vcxproj|solutionrelative:sdl2_simple_example\\BasicForms.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{58145ABE-1438-4332-BECA-65D74173C2B7}|sdl2_simple_example\\sdl2_simple_example.vcxproj|C:\\Users\\Pau Mena\\Documents\\GitHub\\MotorVideojuegos\\sdl2_simple_example\\sdl2_simple_example\\MyWindow.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{58145ABE-1438-4332-BECA-65D74173C2B7}|sdl2_simple_example\\sdl2_simple_example.vcxproj|solutionrelative:sdl2_simple_example\\MyWindow.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{58145ABE-1438-4332-BECA-65D74173C2B7}|sdl2_simple_example\\sdl2_simple_example.vcxproj|C:\\Users\\Pau Mena\\Documents\\GitHub\\MotorVideojuegos\\sdl2_simple_example\\sdl2_simple_example\\Camera.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{58145ABE-1438-4332-BECA-65D74173C2B7}|sdl2_simple_example\\sdl2_simple_example.vcxproj|solutionrelative:sdl2_simple_example\\Camera.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{58145ABE-1438-4332-BECA-65D74173C2B7}|sdl2_simple_example\\sdl2_simple_example.vcxproj|C:\\Users\\Pau Mena\\Documents\\GitHub\\MotorVideojuegos\\sdl2_simple_example\\sdl2_simple_example\\MyWindow.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{58145ABE-1438-4332-BECA-65D74173C2B7}|sdl2_simple_example\\sdl2_simple_example.vcxproj|solutionrelative:sdl2_simple_example\\MyWindow.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{58145ABE-1438-4332-BECA-65D74173C2B7}|sdl2_simple_example\\sdl2_simple_example.vcxproj|C:\\Users\\Pau Mena\\Documents\\GitHub\\MotorVideojuegos\\sdl2_simple_example\\sdl2_simple_example\\Camera.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -62,11 +62,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "ImporterFBX.cpp",
               "DocumentMoniker": "C:\\Users\\Pau Mena\\Documents\\GitHub\\MotorVideojuegos\\sdl2_simple_example\\sdl2_simple_example\\ImporterFBX.cpp",
               "RelativeDocumentMoniker": "sdl2_simple_example\\ImporterFBX.cpp",
@@ -74,12 +74,11 @@
               "RelativeToolTip": "sdl2_simple_example\\ImporterFBX.cpp",
               "ViewState": "AgIAAA0AAAAAAAAAAAAqwCMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-10-31T16:10:32.32Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-31T16:10:32.32Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "Textures.cpp",
               "DocumentMoniker": "C:\\Users\\Pau Mena\\Documents\\GitHub\\MotorVideojuegos\\sdl2_simple_example\\sdl2_simple_example\\Textures.cpp",
               "RelativeDocumentMoniker": "sdl2_simple_example\\Textures.cpp",
@@ -87,38 +86,37 @@
               "RelativeToolTip": "sdl2_simple_example\\Textures.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAEYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-10-31T12:59:36.754Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-31T12:59:36.754Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "DisplayFunc.cpp",
               "DocumentMoniker": "C:\\Users\\Pau Mena\\Documents\\GitHub\\MotorVideojuegos\\sdl2_simple_example\\sdl2_simple_example\\DisplayFunc.cpp",
               "RelativeDocumentMoniker": "sdl2_simple_example\\DisplayFunc.cpp",
               "ToolTip": "C:\\Users\\Pau Mena\\Documents\\GitHub\\MotorVideojuegos\\sdl2_simple_example\\sdl2_simple_example\\DisplayFunc.cpp",
               "RelativeToolTip": "sdl2_simple_example\\DisplayFunc.cpp",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAcwCQAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAB0AAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-10-31T11:40:07.926Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "DisplayFunc.h",
               "DocumentMoniker": "C:\\Users\\Pau Mena\\Documents\\GitHub\\MotorVideojuegos\\sdl2_simple_example\\sdl2_simple_example\\DisplayFunc.h",
               "RelativeDocumentMoniker": "sdl2_simple_example\\DisplayFunc.h",
               "ToolTip": "C:\\Users\\Pau Mena\\Documents\\GitHub\\MotorVideojuegos\\sdl2_simple_example\\sdl2_simple_example\\DisplayFunc.h",
               "RelativeToolTip": "sdl2_simple_example\\DisplayFunc.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-10-31T11:33:29.489Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
               "Title": "main.cpp",
               "DocumentMoniker": "C:\\Users\\Pau Mena\\Documents\\GitHub\\MotorVideojuegos\\sdl2_simple_example\\sdl2_simple_example\\main.cpp",
               "RelativeDocumentMoniker": "sdl2_simple_example\\main.cpp",
@@ -126,36 +124,37 @@
               "RelativeToolTip": "sdl2_simple_example\\main.cpp",
               "ViewState": "AgIAADgAAAAAAAAAAAAuwEgAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-10-07T10:54:08.949Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-07T10:54:08.949Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 1,
               "Title": "MyWindow.cpp",
               "DocumentMoniker": "C:\\Users\\Pau Mena\\Documents\\GitHub\\MotorVideojuegos\\sdl2_simple_example\\sdl2_simple_example\\MyWindow.cpp",
               "RelativeDocumentMoniker": "sdl2_simple_example\\MyWindow.cpp",
               "ToolTip": "C:\\Users\\Pau Mena\\Documents\\GitHub\\MotorVideojuegos\\sdl2_simple_example\\sdl2_simple_example\\MyWindow.cpp",
               "RelativeToolTip": "sdl2_simple_example\\MyWindow.cpp",
-              "ViewState": "AgIAADMAAAAAAAAAAAAcwDoAAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAcwEkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-10-07T10:54:08.996Z"
+              "WhenOpened": "2024-10-07T10:54:08.996Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
               "Title": "BasicForms.cpp",
               "DocumentMoniker": "C:\\Users\\Pau Mena\\Documents\\GitHub\\MotorVideojuegos\\sdl2_simple_example\\sdl2_simple_example\\BasicForms.cpp",
               "RelativeDocumentMoniker": "sdl2_simple_example\\BasicForms.cpp",
               "ToolTip": "C:\\Users\\Pau Mena\\Documents\\GitHub\\MotorVideojuegos\\sdl2_simple_example\\sdl2_simple_example\\BasicForms.cpp",
               "RelativeToolTip": "sdl2_simple_example\\BasicForms.cpp",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAADUAAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAAADIAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-10-30T17:41:03.064Z"
+              "WhenOpened": "2024-10-30T17:41:03.064Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "ImporterFBX.h",
               "DocumentMoniker": "C:\\Users\\Pau Mena\\Documents\\GitHub\\MotorVideojuegos\\sdl2_simple_example\\sdl2_simple_example\\ImporterFBX.h",
               "RelativeDocumentMoniker": "sdl2_simple_example\\ImporterFBX.h",
@@ -163,12 +162,11 @@
               "RelativeToolTip": "sdl2_simple_example\\ImporterFBX.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-10-23T08:58:35.306Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-23T08:58:35.306Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "Camera.h",
               "DocumentMoniker": "C:\\Users\\Pau Mena\\Documents\\GitHub\\MotorVideojuegos\\sdl2_simple_example\\sdl2_simple_example\\Camera.h",
               "RelativeDocumentMoniker": "sdl2_simple_example\\Camera.h",
@@ -180,7 +178,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "Textures.h",
               "DocumentMoniker": "C:\\Users\\Pau Mena\\Documents\\GitHub\\MotorVideojuegos\\sdl2_simple_example\\sdl2_simple_example\\Textures.h",
               "RelativeDocumentMoniker": "sdl2_simple_example\\Textures.h",
@@ -188,24 +186,24 @@
               "RelativeToolTip": "sdl2_simple_example\\Textures.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-10-31T12:58:39.274Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-31T12:58:39.274Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 5,
               "Title": "BasicForms.h",
               "DocumentMoniker": "C:\\Users\\Pau Mena\\Documents\\GitHub\\MotorVideojuegos\\sdl2_simple_example\\sdl2_simple_example\\BasicForms.h",
               "RelativeDocumentMoniker": "sdl2_simple_example\\BasicForms.h",
               "ToolTip": "C:\\Users\\Pau Mena\\Documents\\GitHub\\MotorVideojuegos\\sdl2_simple_example\\sdl2_simple_example\\BasicForms.h",
               "RelativeToolTip": "sdl2_simple_example\\BasicForms.h",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAMwBUAAAA1AAAAAAAAAA==",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAMwBUAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-10-30T17:39:36.655Z"
+              "WhenOpened": "2024-10-30T17:39:36.655Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 3,
               "Title": "MyWindow.h",
               "DocumentMoniker": "C:\\Users\\Pau Mena\\Documents\\GitHub\\MotorVideojuegos\\sdl2_simple_example\\sdl2_simple_example\\MyWindow.h",
               "RelativeDocumentMoniker": "sdl2_simple_example\\MyWindow.h",
@@ -213,7 +211,8 @@
               "RelativeToolTip": "sdl2_simple_example\\MyWindow.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-10-23T09:00:53.895Z"
+              "WhenOpened": "2024-10-23T09:00:53.895Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",

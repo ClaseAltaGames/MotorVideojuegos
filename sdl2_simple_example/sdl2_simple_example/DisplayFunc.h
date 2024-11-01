@@ -17,6 +17,7 @@ public:
 
 	bool cubeActive = false;
 	bool pyramidActive = false;
+	bool sphereActive = false;
 
 	string currentFBXFile = FBX_FILE;
 

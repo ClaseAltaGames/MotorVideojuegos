@@ -54,8 +54,11 @@ void MyWindow::swapBuffers() const {
             if (ImGui::MenuItem("Cubo")) {
 				displayFunc->cubeActive = true;
             }
-			if (ImGui::MenuItem("Pyramid")) {
+			if (ImGui::MenuItem("Piramide")) {
 				displayFunc->pyramidActive = true;
+			}
+			if (ImGui::MenuItem("Esfera")) {
+				displayFunc->sphereActive = true;
 			}
 
             ImGui::EndMenu();

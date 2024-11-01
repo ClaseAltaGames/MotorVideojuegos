@@ -15,11 +15,11 @@ public:
 	BasicForms();
 	~BasicForms();
 
-	void cambiarFormas(Formas forma);
-
 	void draw_Cube(const vec3& center, double size);
 
 	void draw_Pyramid(const vec3& center, double size);	
+
+	void draw_Sphere(const vec3& center, double radius);
 
 };
 
