@@ -398,4 +398,6 @@ FodyWeavers.xsd
 *.sln.iml
 
 *.ipch
-sdl2_simple_example/.vs/sdl2_simple_example/CopilotIndices/0.2.1657.32929/CodeChunks.db
+*.db
+*.exe
+
