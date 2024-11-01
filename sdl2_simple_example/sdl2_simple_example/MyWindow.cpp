@@ -57,6 +57,9 @@ void MyWindow::swapBuffers() const {
 			if (ImGui::MenuItem("Pyramid")) {
 				displayFunc->pyramidActive = true;
 			}
+            if (ImGui::MenuItem("Cylinder")) {
+                displayFunc->cylinderActive = true;
+            }
 
             ImGui::EndMenu();
         }

@@ -21,5 +21,7 @@ public:
 
 	void draw_Pyramid(const vec3& center, double size);	
 
+	void draw_Cylindre(const vec3& center, double radius, double height, int segments);
+
 };
 
