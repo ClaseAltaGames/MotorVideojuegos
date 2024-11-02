@@ -68,6 +68,7 @@ void MyWindow::swapBuffers() const {
         }
         if (ImGui::BeginMenu("Acerca de")) {
             if (ImGui::MenuItem("GitHub")) {
+				//formato para poder abrir paginas web en el navegador del ordenador (no se si se puede hacer de otra forma)
                 system("start https://github.com/ClaseAltaGames/MotorVideojuegos");
             }
 			if (ImGui::BeginMenu("Miembros")) {
