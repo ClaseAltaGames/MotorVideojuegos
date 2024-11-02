@@ -64,3 +64,65 @@ int ImporterFBX::draw_fbx(const char* file) {
     aiReleaseImport(scene);
     return 0;
 }
+
+struct Transform {
+    glm::vec3 position;
+    glm::vec3 rotation;
+    glm::vec3 scale;
+
+    Transform() : position(0.0f), rotation(0.0f), scale(1.0f) {}
+
+    glm::mat4 getMatrix() const {
+        glm::mat4 trans = glm::translate(glm::mat4(1.0f), position);
+        trans = glm::rotate(trans, glm::radians(rotation.x), glm::vec3(1, 0, 0));
+        trans = glm::rotate(trans, glm::radians(rotation.y), glm::vec3(0, 1, 0));
+        trans = glm::rotate(trans, glm::radians(rotation.z), glm::vec3(0, 0, 1));
+        trans = glm::scale(trans, scale);
+        return trans;
+    }
+};
+struct Mesh {
+    unsigned int vao, vbo;
+    aiMesh* aiMeshData;
+
+    Mesh(aiMesh* meshData) : aiMeshData(meshData) {
+        // Cargar vértices, UVs y otras propiedades en VAO/VBO aquí
+    }
+
+    void render() {
+        glBindVertexArray(vao);
+        glDrawArrays(GL_TRIANGLES, 0, aiMeshData->mNumVertices);
+        glBindVertexArray(0);
+    }
+};
+
+struct Texture {
+    unsigned int id;
+
+    Texture(const std::string& filePath) {
+        // Cargar la textura aquí usando stb_image o SDL_image
+    }
+
+    void bind() const {
+        glBindTexture(GL_TEXTURE_2D, id);
+    }
+};
+struct GameObject {
+    Transform transform;
+    Mesh* mesh;
+    Texture* texture;
+
+    GameObject(Mesh* m, Texture* t) : mesh(m), texture(t) {}
+
+    void render() {
+        // Aplicar transformación
+        glm::mat4 modelMatrix = transform.getMatrix();
+        //glUniformMatrix4fv(glGetUniformLocation(shaderProgram, "model"), 1, GL_FALSE, &modelMatrix[0][0]);
+
+        // Enlazar textura
+        texture->bind();
+
+        // Renderizar malla
+        mesh->render();
+    }
+};

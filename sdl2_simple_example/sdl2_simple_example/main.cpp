@@ -32,7 +32,7 @@ using u8vec4 = glm::u8vec4;
 using ivec2 = glm::ivec2;
 using vec3 = glm::dvec3;
 
-static const ivec2 WINDOW_SIZE(512, 512);
+static const ivec2 WINDOW_SIZE(1024, 768);
 static const unsigned int FPS = 60;
 static const auto FRAME_DT = 1.0s / FPS;
 
@@ -89,6 +89,7 @@ int main(int argc, char** argv) {
 
     init_openGL();
 	init_devil();
+    
 
     while (processEvents()) {
         SDL_EventState(SDL_DROPFILE, SDL_ENABLE);

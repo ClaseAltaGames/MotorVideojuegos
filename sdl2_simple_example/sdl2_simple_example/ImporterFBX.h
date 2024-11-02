@@ -4,6 +4,9 @@
 #include <assimp/postprocess.h>
 #include <GL/glew.h>
 #include <iostream>
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+#include <string>
 
 class ImporterFBX {
 public:
@@ -19,3 +22,5 @@ private:
     // Función auxiliar para renderizar la escena cargada
     void render_fbx(const aiScene* scene);
 };
+
+// Estructura de Transformación
