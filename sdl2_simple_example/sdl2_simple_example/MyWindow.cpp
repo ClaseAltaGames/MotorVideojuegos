@@ -66,6 +66,13 @@ void MyWindow::swapBuffers() const {
 
             ImGui::EndMenu();
         }
+        if (ImGui::BeginMenu("Acerca de")) {
+            if (ImGui::MenuItem("GitHub")) {
+                system("start https://github.com/ClaseAltaGames/MotorVideojuegos");
+            }
+
+            ImGui::EndMenu();
+        }
         ImGui::EndMainMenuBar();
     }
     ImGui::Render();
