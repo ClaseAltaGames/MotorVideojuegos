@@ -70,7 +70,15 @@ void MyWindow::swapBuffers() const {
             if (ImGui::MenuItem("GitHub")) {
                 system("start https://github.com/ClaseAltaGames/MotorVideojuegos");
             }
-
+			if (ImGui::BeginMenu("Miembros")) {
+                if (ImGui::MenuItem("Pau Mena")) {
+                    system("start https://github.com/PauMenaTorres");
+                }
+                if (ImGui::MenuItem("Edgar Mesa")) {
+                    system("start https://github.com/edgarmd1");
+                }
+				ImGui::EndMenu();
+			}
             ImGui::EndMenu();
         }
         ImGui::EndMainMenuBar();
