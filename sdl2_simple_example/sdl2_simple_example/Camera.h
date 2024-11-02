@@ -1,8 +1,4 @@
 #pragma once
-#include <GL/glew.h>
-#include <GL/glut.h>
-#include "SDL2/SDL.h"
-
 
 class Camera
 {
@@ -16,7 +12,9 @@ public:
 
 	void ResetCamera();
 
-	const Uint8* state = SDL_GetKeyboardState(NULL);
+	void ZoomIN();
+
+	void ZoomOUT();
 
 };
 

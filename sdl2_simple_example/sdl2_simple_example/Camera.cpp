@@ -1,4 +1,9 @@
 #include "Camera.h"
+#include <GL/glew.h>
+#include <GL/glut.h>
+#include "SDL2/SDL.h"
+
+const Uint8* state = SDL_GetKeyboardState(NULL);
 
 // Variables globales para la posición y orientación de la cámara
 GLdouble cameraPosX = 5.0, cameraPosY = 5.0, cameraPosZ = 5.0;
@@ -44,6 +49,8 @@ void Camera::CameraMovement()
     const double rotationSpeed = 0.05;
 
     if (state[SDL_SCANCODE_LSHIFT]) moveSpeed *= 2.0;
+
+    SDL_MouseWheelEvent;
 
     // Actualizar posición de la cámara con teclas de dirección
     if (state[SDL_SCANCODE_W]) {
@@ -100,6 +107,20 @@ void Camera::ResetCamera()
 		nearPlane = 0.01;
 		farPlane = 2000.0;
 	}
+}
+
+void Camera::ZoomIN()
+{
+	cameraPosX += 0.25;
+	cameraPosY += 0.25;
+	cameraPosZ += 0.25;
+}
+
+void Camera::ZoomOUT()
+{
+	cameraPosX -= 0.25;
+	cameraPosY -= 0.25;
+	cameraPosZ -= 0.25;
 }
 
 

@@ -21,6 +21,7 @@
 #include "ImporterFBX.h"
 #include "BasicForms.h"
 #include "DisplayFunc.h"
+#include "Camera.h"
 
 using namespace std;
 
@@ -38,6 +39,7 @@ static const auto FRAME_DT = 1.0s / FPS;
 
 DisplayFunc* displayFunc = new DisplayFunc();
 ImporterFBX* importerFBX = new ImporterFBX();
+Camera* camera = new Camera();
 
 void init_openGL() {
     glewInit();
@@ -73,7 +75,16 @@ static bool processEvents() {
             importerFBX->draw_fbx(displayFunc->currentFBXFile.c_str());
             SDL_free(event.drop.file);
             break;
-        }
+        }      
+        case SDL_MOUSEWHEEL:
+            if (event.wheel.y > 0) {
+                std::cout << "Rueda del ratón hacia arriba" << std::endl;
+                camera->ZoomOUT();
+            }
+            else if (event.wheel.y < 0) {
+                std::cout << "Rueda del ratón hacia abajo" << std::endl;
+				camera->ZoomIN();
+            }
         default: {
             ImGui_ImplSDL2_ProcessEvent(&event);
             break;
