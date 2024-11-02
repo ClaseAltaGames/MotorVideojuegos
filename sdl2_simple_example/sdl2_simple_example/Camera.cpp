@@ -40,8 +40,10 @@ void Camera::CameraMovement()
     Set3DView();
 	ResetCamera();
     // Control de velocidad de movimiento y rotación
-    const double moveSpeed = 2.0;
+    double moveSpeed = 2.0;
     const double rotationSpeed = 0.05;
+
+    if (state[SDL_SCANCODE_LSHIFT]) moveSpeed *= 2.0;
 
     // Actualizar posición de la cámara con teclas de dirección
     if (state[SDL_SCANCODE_W]) {
