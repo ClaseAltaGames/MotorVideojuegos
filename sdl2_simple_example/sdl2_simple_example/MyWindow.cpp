@@ -5,10 +5,17 @@
 #include "imgui_impl_sdl2.h"
 #include "imgui_impl_opengl3.h"
 #include <SDL2/SDL_events.h>
+#include <windows.h>
+#include <comdef.h>
+#include <Wbemidl.h>
+#pragma comment(lib, "wbemuuid.lib")
 using namespace std;
 
 
 bool mostrarFPS = false;
+bool hardwareDetection = false;
+bool memoryConsume = false;
+bool displayInfo = false;
 
 
 MyWindow::MyWindow(const std::string& title, int w, int h) : _width(w), _height(h) {
@@ -90,6 +97,9 @@ void MyWindow::swapBuffers() const {
         }
 		if (ImGui::BeginMenu("Ajustes")) {
             if (ImGui::Checkbox("Mostrar FPS", &mostrarFPS));
+			if (ImGui::Checkbox("Deteccion de hardware", &hardwareDetection));
+			if (ImGui::Checkbox("Consumo de memoria", &memoryConsume));
+			if (ImGui::Checkbox("Informacion de pantalla", &displayInfo));
 			ImGui::EndMenu();
 		}
         if (mostrarFPS) {
@@ -101,11 +111,74 @@ void MyWindow::swapBuffers() const {
 
             ImGui::End();
         }
+        if (memoryConsume) {
+            ImGui::Begin("Ventana de Consumo de Memoria");
+
+            MEMORYSTATUSEX memInfo;
+            memInfo.dwLength = sizeof(MEMORYSTATUSEX);
+            GlobalMemoryStatusEx(&memInfo);
+
+            DWORDLONG totalMemoria = memInfo.ullTotalPhys / (1024 * 1024);  // Total de RAM en MB
+            DWORDLONG memoriaEnUso = (memInfo.ullTotalPhys - memInfo.ullAvailPhys) / (1024 * 1024);  // RAM en uso en MB
+
+            ImGui::Text("Memoria Total: %llu MB", totalMemoria);
+            ImGui::Text("Memoria en Uso: %llu MB", memoriaEnUso);
+            ImGui::End();
+        }
+        if (hardwareDetection) {
+            ImGui::Begin("Info de Hardware");
+
+            // Muestra el nombre de la CPU
+            ImGui::Text("CPU: %s", ObtenerInfoCPU().c_str());
+
+            ImGui::End();
+        }
+        if (displayInfo) {
+            ImGui::Begin("Version del Programa");  // Ventana de versión
+            ImGui::Text("Version 0.5 beta");
+            ImGui::End();
+        }
         ImGui::EndMainMenuBar();
     }
     ImGui::Render();
     ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
     SDL_GL_SwapWindow(static_cast<SDL_Window*>(_window));
+}
+
+string MyWindow::ObtenerInfoCPU() const {
+    IWbemLocator* locator = nullptr;
+    IWbemServices* services = nullptr;
+    CoInitializeEx(0, COINIT_MULTITHREADED);
+    CoInitializeSecurity(nullptr, -1, nullptr, nullptr, RPC_C_AUTHN_LEVEL_DEFAULT, RPC_C_IMP_LEVEL_IMPERSONATE, nullptr, EOAC_NONE, nullptr);
+
+    HRESULT hres = CoCreateInstance(CLSID_WbemLocator, 0, CLSCTX_INPROC_SERVER, IID_IWbemLocator, (LPVOID*)&locator);
+    if (FAILED(hres)) return "Error al inicializar WMI.";
+
+    hres = locator->ConnectServer(BSTR(L"ROOT\\CIMV2"), nullptr, nullptr, nullptr, 0, nullptr, nullptr, &services);
+    if (FAILED(hres)) return "Error al conectar a WMI.";
+
+    IEnumWbemClassObject* enumerator = nullptr;
+    hres = services->ExecQuery(BSTR(L"WQL"), BSTR(L"SELECT Name FROM Win32_Processor"), WBEM_FLAG_FORWARD_ONLY | WBEM_FLAG_RETURN_IMMEDIATELY, nullptr, &enumerator);
+    if (FAILED(hres)) return "Error al ejecutar consulta WMI.";
+
+    IWbemClassObject* obj = nullptr;
+    ULONG returnedCount = 0;
+    enumerator->Next(WBEM_INFINITE, 1, &obj, &returnedCount);
+
+    VARIANT name;
+    obj->Get(L"Name", 0, &name, nullptr, nullptr);
+
+    // Conversión explícita de _bstr_t a std::string
+    string cpuName = string(_bstr_t(name.bstrVal).operator const char* ());
+    VariantClear(&name);
+
+    obj->Release();
+    enumerator->Release();
+    services->Release();
+    locator->Release();
+    CoUninitialize();
+
+    return cpuName;
 }
 
 

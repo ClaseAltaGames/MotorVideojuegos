@@ -27,4 +27,6 @@ public:
 	BasicForms* basicForms = new BasicForms();
 	DisplayFunc* displayFunc = new DisplayFunc();
 
+	string ObtenerInfoCPU() const;
+
 };
