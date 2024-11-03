@@ -7,6 +7,10 @@
 #include <SDL2/SDL_events.h>
 using namespace std;
 
+
+bool mostrarFPS = false;
+
+
 MyWindow::MyWindow(const std::string& title, int w, int h) : _width(w), _height(h) {
 
     SDL_GL_SetAttribute(SDL_GL_DOUBLEBUFFER, 1);
@@ -26,6 +30,8 @@ MyWindow::MyWindow(const std::string& title, int w, int h) : _width(w), _height(
     ImGui::CreateContext();
     ImGui_ImplSDL2_InitForOpenGL(_window, _ctx);
     ImGui_ImplOpenGL3_Init("#version 130");
+
+	
 }
 
 
@@ -81,6 +87,19 @@ void MyWindow::swapBuffers() const {
 				ImGui::EndMenu();
 			}
             ImGui::EndMenu();
+        }
+		if (ImGui::BeginMenu("Ajustes")) {
+            if (ImGui::Checkbox("Mostrar FPS", &mostrarFPS));
+			ImGui::EndMenu();
+		}
+        if (mostrarFPS) {
+            ImGui::Begin("Ventana de FPS");
+
+            // Obtener el FPS actual y mostrarlo
+            float fps = ImGui::GetIO().Framerate;
+            ImGui::Text("FPS: %.1f", fps);
+
+            ImGui::End();
         }
         ImGui::EndMainMenuBar();
     }
