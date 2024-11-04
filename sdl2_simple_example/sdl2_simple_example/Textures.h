@@ -4,9 +4,11 @@
 #include <IL/il.h>
 #include <IL/ilu.h>
 #include <IL/ilut.h>
+#include "Component.h"
 
 
-class Textures
+
+class Textures : public Component
 {
 public:
 	Textures();

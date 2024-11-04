@@ -1,6 +1,7 @@
 #include "Textures.h"
 #include <iostream>
 #include <string>
+#include "Component.h"
 
 #define CHECKERS_WIDTH 64
 #define CHECKERS_HEIGHT 64
@@ -16,7 +17,7 @@ std::wstring charToWstring(const char* text) {
     return wtext;
 }
 
-Textures::Textures() : textureID(0) {
+Textures::Textures() : Component() {
 }
 
 Textures::~Textures() {

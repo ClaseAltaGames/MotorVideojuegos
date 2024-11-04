@@ -130,6 +130,7 @@
     <ClCompile Include="BasicForms.cpp" />
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="DisplayFunc.cpp" />
+    <ClCompile Include="GameObjects.cpp" />
     <ClCompile Include="ImporterFBX.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MyWindow.cpp" />
@@ -138,7 +139,9 @@
   <ItemGroup>
     <ClInclude Include="BasicForms.h" />
     <ClInclude Include="Camera.h" />
+    <ClInclude Include="Component.h" />
     <ClInclude Include="DisplayFunc.h" />
+    <ClInclude Include="GameObjects.h" />
     <ClInclude Include="ImporterFBX.h" />
     <ClInclude Include="MyWindow.h" />
     <ClInclude Include="Textures.h" />

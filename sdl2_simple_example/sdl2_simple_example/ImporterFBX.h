@@ -7,8 +7,10 @@
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #include <string>
+#include "Component.h"
 
-class ImporterFBX {
+
+class ImporterFBX : public Component {
 public:
     ImporterFBX();
     ~ImporterFBX();

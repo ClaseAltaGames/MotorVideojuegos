@@ -3,6 +3,8 @@
 #include <GL/glew.h>
 #include <assimp/Importer.hpp>
 #include <assimp/postprocess.h>
+#include "Component.h"
+
 
 using namespace std;
 
@@ -10,7 +12,7 @@ using namespace std;
 #define FBX_FILE "Assets/halo2.fbx"
 //////////////////////////////////////////
 
-ImporterFBX::ImporterFBX() {}
+ImporterFBX::ImporterFBX():Component() {}
 
 ImporterFBX::~ImporterFBX() {}
 
