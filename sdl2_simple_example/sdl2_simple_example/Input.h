@@ -64,9 +64,9 @@ public:
 	// Get mouse / axis position
 	void GetMousePosition(int &x, int &y);
 	void GetMouseMotion(int& x, int& y);
-	MyWindow* window = new MyWindow("SDL2 Simple Example", 800, 600);
+    /*MyWindow* window = new MyWindow("SDL2 Simple Example", 800, 600);*/
 
-private:
+
 	bool windowEvents[WE_COUNT];
 	KeyState*	keyboard;
 	KeyState mouseButtons[NUM_MOUSE_BUTTONS];

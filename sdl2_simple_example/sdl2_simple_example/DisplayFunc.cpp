@@ -40,7 +40,7 @@ void DisplayFunc::DisplayALL()
 	if (cylinderActive == true) {
 		basicForms->draw_Cylindre(vec3(0.0, 0.0, 0.0), 1.0, 2.0, 36);
 	}
-	textures->DrawTextures(TEXTURE_FILE);
+	//textures->DrawTextures(TEXTURE_FILE);
 
 	// Forzar el renderizado
 	glFlush();

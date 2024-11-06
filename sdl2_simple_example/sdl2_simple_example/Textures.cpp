@@ -40,7 +40,7 @@ void Textures::DrawTextures(const char* filePath) {
 
     std::cout << "Intentando cargar la textura desde: " << filePath << std::endl; // Mensaje de depuración
 
-    if (ilLoadImage(wideFilePath.c_str())) {
+    if (ilLoadImage((wchar_t *)filePath)) {
         std::cout << "Textura cargada exitosamente: " << filePath << std::endl; // Mensaje de depuración
         glGenTextures(1, &textureID);  // Generar textura en OpenGL
         glBindTexture(GL_TEXTURE_2D, textureID);
