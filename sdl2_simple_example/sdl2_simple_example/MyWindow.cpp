@@ -145,7 +145,14 @@ void MyWindow::swapBuffers() const {
     SDL_GL_SwapWindow(static_cast<SDL_Window*>(_window));
 }
 
+std::string cachedCPUInfo;  // Variable para almacenar la información del CPU
+bool isCPUInfoCached = false;
+
 string MyWindow::ObtenerInfoCPU() const {
+    if (isCPUInfoCached) {
+        return cachedCPUInfo;  // Devuelve la información almacenada si ya ha sido consultada
+    }
+
     IWbemLocator* locator = nullptr;
     IWbemServices* services = nullptr;
     CoInitializeEx(0, COINIT_MULTITHREADED);
@@ -168,17 +175,18 @@ string MyWindow::ObtenerInfoCPU() const {
     VARIANT name;
     obj->Get(L"Name", 0, &name, nullptr, nullptr);
 
-    // Conversión explícita de _bstr_t a std::string
-    string cpuName = string(_bstr_t(name.bstrVal).operator const char* ());
-    VariantClear(&name);
+    cachedCPUInfo = string(_bstr_t(name.bstrVal).operator const char* ());  // Guardar el resultado
+    isCPUInfoCached = true;  // Marcar como cacheado
 
+    VariantClear(&name);
     obj->Release();
     enumerator->Release();
     services->Release();
     locator->Release();
     CoUninitialize();
 
-    return cpuName;
+    return cachedCPUInfo;
 }
+
 
 
