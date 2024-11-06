@@ -12,7 +12,7 @@ public:
 	GameObjects();
 	~GameObjects();
 	
-	bool Update() ;
+	void Update() override;
 
 	//Component* CreateComponent(ComponentType);
 

@@ -16,7 +16,7 @@ enum class typeComponent {
 
 class Component {
 public:
-	Component(GameObject* parent) : active(true), parent(parent), type(typeComponent::Error) {};
+	Component() {};
 
 	typeComponent type;
 	bool active;

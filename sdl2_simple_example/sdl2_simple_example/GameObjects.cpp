@@ -12,10 +12,9 @@ GameObjects::~GameObjects()
 {
 }
 
-bool GameObjects::Update()
+void GameObjects::Update()
 {
 	
-	return true;
 }
 
 //Component* GameObjects::CreateComponent(ComponentType type)
