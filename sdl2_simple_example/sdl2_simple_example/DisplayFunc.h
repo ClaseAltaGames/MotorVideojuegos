@@ -14,6 +14,7 @@ public:
 	~DisplayFunc();
 
 	void DisplayALL();
+	void drawGrid(float size, int divisions);
 
 	bool cubeActive = false;
 	bool pyramidActive = false;

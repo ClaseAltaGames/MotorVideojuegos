@@ -14,8 +14,7 @@ DisplayFunc::~DisplayFunc()
 {
 }
 
-void DisplayFunc::DisplayALL()
-{
+void DisplayFunc::DisplayALL() {
     // Limpiar el buffer de color y profundidad
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
@@ -28,6 +27,9 @@ void DisplayFunc::DisplayALL()
         textures->LoadTexture(TEXTURE_FILE);  // Cambia esta ruta a tu archivo de textura
         textureLoaded = true;  // Marcar que la textura ya ha sido cargada
     }
+
+    // Dibujar la cuadrícula
+    drawGrid(10.0f, 20);  // Puedes ajustar el tamaño y el número de divisiones según tus necesidades
 
     // Dibujar el contenido 3D
     importerFBX->draw_fbx(currentFBXFile.c_str());
@@ -52,4 +54,22 @@ void DisplayFunc::DisplayALL()
 
     // Forzar el renderizado
     glFlush();
+}
+void DisplayFunc::drawGrid(float size, int divisions) {
+    glColor3f(0.5f, 0.5f, 0.5f);  // Color de la cuadrícula (gris claro)
+    glLineWidth(1.0f);             // Ancho de línea
+
+    glBegin(GL_LINES);
+    for (int i = -divisions; i <= divisions; i++) {
+        float pos = i * (size / divisions);
+
+        // Línea horizontal
+        glVertex3f(-size, 0.0f, pos);
+        glVertex3f(size, 0.0f, pos);
+
+        // Línea vertical
+        glVertex3f(pos, 0.0f, -size);
+        glVertex3f(pos, 0.0f, size);
+    }
+    glEnd();
 }
