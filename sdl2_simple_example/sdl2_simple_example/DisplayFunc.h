@@ -19,6 +19,7 @@ public:
 	bool pyramidActive = false;
 	bool sphereActive = false;
 	bool cylinderActive = false;
+	bool textureLoaded = false;
 
 	string currentFBXFile = FBX_FILE;
 
