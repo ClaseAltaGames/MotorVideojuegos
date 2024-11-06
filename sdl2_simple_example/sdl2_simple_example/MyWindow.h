@@ -32,4 +32,8 @@ public:
 	int GetScale() const;
 	int scale;
 
+	void setCurrentFBXFile(const std::string& fbxFile);
+	char currentFBXFile;
+
+	
 };

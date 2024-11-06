@@ -138,7 +138,21 @@ void MyWindow::swapBuffers() const {
             ImGui::Text("Version 0.5 beta");
             ImGui::End();
         }
+       
         ImGui::EndMainMenuBar();
+        if (ImGui::TreeNode("Propiedades del objeto FBX")) {
+            
+            
+            //ImGui::InputText("Nombre del archivo", currentFBXFile, 256);
+            //tamaño
+            ImGui::Text("Posicion: (%.1f, %.1f, %.1f)");
+			ImGui::Text("Rotacion: (%.1f, %.1f, %.1f)");
+			ImGui::Text("Escala: %.1f", 1.0f);
+
+
+            //ImGui::SliderInt("Escala", &scale, 1, 3);
+            ImGui::TreePop();
+        }
     }
     ImGui::Render();
     ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
@@ -191,6 +205,11 @@ string MyWindow::ObtenerInfoCPU() const {
 int MyWindow::GetScale() const
 {
     return scale;
+}
+
+void MyWindow::setCurrentFBXFile(const std::string& fbxFile)
+{
+	//currentFBXFile = fbxFile;
 }
 
 
