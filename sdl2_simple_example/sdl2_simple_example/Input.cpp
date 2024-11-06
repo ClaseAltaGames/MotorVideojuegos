@@ -103,13 +103,12 @@ bool Input::PreUpdate()
 
 			case SDL_MOUSEBUTTONDOWN:
 				mouseButtons[event.button.button - 1] = KEY_DOWN;
-				//LOG("Mouse button %d down", event.button.button-1);
-			break;
+				break;
 
 			case SDL_MOUSEBUTTONUP:
 				mouseButtons[event.button.button - 1] = KEY_UP;
-				//LOG("Mouse button %d up", event.button.button-1);
-			break;
+				break;
+
 
 			case SDL_MOUSEMOTION:
 				//int scale = window->scale;
@@ -119,6 +118,15 @@ bool Input::PreUpdate()
 				mouseY = event.motion.y / scale;*/
 				//LOG("Mouse motion x %d y %d", mouse_motion_x, mouse_motion_y);
 			break;
+
+			for (int i = 0; i < NUM_MOUSE_BUTTONS; ++i)
+			{
+				if (mouseButtons[i] == KEY_DOWN)
+					mouseButtons[i] = KEY_REPEAT;
+
+				if (mouseButtons[i] == KEY_UP)
+					mouseButtons[i] = KEY_IDLE;
+			}
 		}
 	}
 
@@ -149,4 +157,8 @@ void Input::GetMouseMotion(int& x, int& y)
 {
 	x = mouseMotionX;
 	y = mouseMotionY;
+}
+KeyState Input::GetMouseButton(MouseButton button)
+{
+	return mouseButtons[button];
 }

@@ -6,7 +6,6 @@
 //#define NUM_KEYS 352
 #define NUM_MOUSE_BUTTONS 5
 //#define LAST_KEYS_PRESSED_BUFFER 50
-
 struct SDL_Rect;
 
 enum EventWindow
@@ -23,6 +22,11 @@ enum KeyState
 	KEY_DOWN,
 	KEY_REPEAT,
 	KEY_UP
+};
+enum MouseButton {
+	LEFT_BUTTON = 0,
+	MIDDLE_BUTTON,
+	RIGHT_BUTTON
 };
 
 class Input 
@@ -64,6 +68,7 @@ public:
 	// Get mouse / axis position
 	void GetMousePosition(int &x, int &y);
 	void GetMouseMotion(int& x, int& y);
+	KeyState GetMouseButton(MouseButton button);
     /*MyWindow* window = new MyWindow("SDL2 Simple Example", 800, 600);*/
 
 
@@ -75,5 +80,6 @@ public:
 	int mouseX;
 	int mouseY;
 };
+extern Input* input;
 
 #endif // __INPUT_H__

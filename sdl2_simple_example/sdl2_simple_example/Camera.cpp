@@ -15,11 +15,9 @@ GLdouble cameraUpX = 0.0, cameraUpY = 1.0, cameraUpZ = 0.0;
 GLdouble nearPlane = 0.01;
 GLdouble farPlane = 2000.0;
 
-Input* input = new Input();
 
 Camera::Camera()
 {
-
 }
 
 Camera::~Camera()
@@ -56,8 +54,7 @@ void Camera::CameraMovement()
     SDL_MouseWheelEvent;
 
 	//if right mouse button is pressed
-    if (input->GetMouseButtonDown(input->mouseButtons[SDL_BUTTON_RIGHT]) == KEY_REPEAT)
-    {
+    if (input->GetMouseButton(RIGHT_BUTTON) == KEY_REPEAT) {
         // Actualizar posición de la cámara con teclas de dirección
         if (state[SDL_SCANCODE_W]) {
             cameraPosX += moveSpeed * (cameraDirX - cameraPosX) * 0.1; // Ajustar el movimiento
