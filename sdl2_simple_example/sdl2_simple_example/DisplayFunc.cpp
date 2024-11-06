@@ -24,7 +24,7 @@ void DisplayFunc::DisplayALL() {
     Textures* textures = new Textures;
 
     if (!textureLoaded) {
-        textures->LoadTexture(TEXTURE_FILE);  // Cambia esta ruta a tu archivo de textura
+        textures->LoadTexture(currentTextureFile.c_str());  // Cambia esta ruta a tu archivo de textura
         textureLoaded = true;  // Marcar que la textura ya ha sido cargada
     }
 

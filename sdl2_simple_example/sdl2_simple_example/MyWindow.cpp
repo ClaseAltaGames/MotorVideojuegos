@@ -135,7 +135,7 @@ void MyWindow::swapBuffers() const {
         }
         if (displayInfo) {
             ImGui::Begin("Version del Programa");  // Ventana de versión
-            ImGui::Text("Version 0.5 beta");
+            ImGui::Text("Version 0.5 Beta");
             ImGui::End();
         }
        
@@ -154,7 +154,7 @@ void MyWindow::swapBuffers() const {
                 ImGui::TreePop();
             }
 			if (ImGui::TreeNode("Mesh")) {
-				//ImGui::InputText("Nombre del archivo", currentFBXFile, 256);
+				ImGui::Text("Nombre del FBX %s", displayFunc->currentFBXFile.c_str());
 				//tamaño
 				ImGui::Text("Vertices: %d", 0);
 				ImGui::Text("Caras: %d", 0);
@@ -164,7 +164,7 @@ void MyWindow::swapBuffers() const {
 			if (ImGui::TreeNode("Texturas")) {
 				//ImGui::InputText("Nombre del archivo", currentFBXFile, 256);
 				//tamaño
-				ImGui::Text("Textura: %s", "textura.jpg");
+				ImGui::Text("Nombre de la Textura: %s", displayFunc->currentTextureFile.c_str());
 				ImGui::TreePop();
 			}
 			ImGui::TreePop();
@@ -223,10 +223,6 @@ int MyWindow::GetScale() const
     return scale;
 }
 
-void MyWindow::setCurrentFBXFile(const std::string& fbxFile)
-{
-	//currentFBXFile = fbxFile;
-}
 
 
 

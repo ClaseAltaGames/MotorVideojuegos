@@ -23,6 +23,7 @@ public:
 	bool textureLoaded = false;
 
 	string currentFBXFile = FBX_FILE;
+	string currentTextureFile = TEXTURE_FILE;
 
 };
 
