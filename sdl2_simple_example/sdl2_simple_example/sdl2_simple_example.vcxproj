@@ -132,6 +132,7 @@
     <ClCompile Include="DisplayFunc.cpp" />
     <ClCompile Include="GameObjects.cpp" />
     <ClCompile Include="ImporterFBX.cpp" />
+    <ClCompile Include="Input.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MyWindow.cpp" />
     <ClCompile Include="Textures.cpp" />
@@ -143,6 +144,7 @@
     <ClInclude Include="DisplayFunc.h" />
     <ClInclude Include="GameObjects.h" />
     <ClInclude Include="ImporterFBX.h" />
+    <ClInclude Include="Input.h" />
     <ClInclude Include="MyWindow.h" />
     <ClInclude Include="Textures.h" />
   </ItemGroup>

@@ -2,6 +2,7 @@
 #include <string>
 #include "BasicForms.h"
 #include "DisplayFunc.h"
+#include <cstdint>
 
 struct SDL_Window;
 
@@ -28,5 +29,7 @@ public:
 	DisplayFunc* displayFunc = new DisplayFunc();
 
 	string ObtenerInfoCPU() const;
+	int GetScale() const;
+	int scale;
 
 };

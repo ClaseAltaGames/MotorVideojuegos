@@ -188,5 +188,10 @@ string MyWindow::ObtenerInfoCPU() const {
     return cachedCPUInfo;
 }
 
+int MyWindow::GetScale() const
+{
+    return scale;
+}
+
 
 
