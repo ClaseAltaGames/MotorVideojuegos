@@ -142,16 +142,32 @@ void MyWindow::swapBuffers() const {
         ImGui::EndMainMenuBar();
         if (ImGui::TreeNode("Propiedades del objeto FBX")) {
             
-            
-            //ImGui::InputText("Nombre del archivo", currentFBXFile, 256);
-            //tamaño
-            ImGui::Text("Posicion: (%.1f, %.1f, %.1f)");
-			ImGui::Text("Rotacion: (%.1f, %.1f, %.1f)");
-			ImGui::Text("Escala: %.1f", 1.0f);
+            if (ImGui::TreeNode("Transform")) {
+                //ImGui::InputText("Nombre del archivo", currentFBXFile, 256);
+                //tamaño
+                ImGui::Text("Posicion: (%.1f, %.1f, %.1f)");
+                ImGui::Text("Rotacion: (%.1f, %.1f, %.1f)");
+                ImGui::Text("Escala: %.1f", 1.0f);
 
 
-            //ImGui::SliderInt("Escala", &scale, 1, 3);
-            ImGui::TreePop();
+                //ImGui::SliderInt("Escala", &scale, 1, 3);
+                ImGui::TreePop();
+            }
+			if (ImGui::TreeNode("Mesh")) {
+				//ImGui::InputText("Nombre del archivo", currentFBXFile, 256);
+				//tamaño
+				ImGui::Text("Vertices: %d", 0);
+				ImGui::Text("Caras: %d", 0);
+				ImGui::Text("Texturas: %d", 0);
+				ImGui::TreePop();
+			}
+			if (ImGui::TreeNode("Texturas")) {
+				//ImGui::InputText("Nombre del archivo", currentFBXFile, 256);
+				//tamaño
+				ImGui::Text("Textura: %s", "textura.jpg");
+				ImGui::TreePop();
+			}
+			ImGui::TreePop();
         }
     }
     ImGui::Render();
