@@ -23,6 +23,7 @@
 #include "DisplayFunc.h"
 #include "Camera.h"
 #include "Input.h"
+#include "Textures.h"
 
 using namespace std;
 
@@ -42,6 +43,7 @@ DisplayFunc* displayFunc = new DisplayFunc();
 ImporterFBX* importerFBX = new ImporterFBX();
 Camera* camera = new Camera();
 Input* input = new Input();
+Textures* textures = new Textures();
 
 void init_openGL() {
     glewInit();
@@ -71,8 +73,19 @@ static bool processEvents() {
             if (event.key.keysym.sym == SDLK_ESCAPE) return false;
             break;
         case SDL_DROPFILE: {
+            string droppedFile = event.drop.file;
+            string extension = droppedFile.substr(droppedFile.find_last_of('.') + 1);
+            if (extension == "fbx" || extension == "FBX") {
+                // Cargar el archivo FBX
+                displayFunc->currentFBXFile = droppedFile;
+                importerFBX->draw_fbx(displayFunc->currentFBXFile.c_str());
+            }
+			else if (extension == "png" || extension == "PNG") {// Cargar la textura PNG
+				displayFunc->currentTextureFile = droppedFile;
+				textures->LoadTexture(displayFunc->currentTextureFile.c_str());
+			}
             // Cargar el archivo FBX arrastrado
-            displayFunc->currentFBXFile = event.drop.file;
+            //displayFunc->currentFBXFile = event.drop.file;
             printf("%s\n", event.drop.file);
             importerFBX->draw_fbx(displayFunc->currentFBXFile.c_str());
             SDL_free(event.drop.file);
