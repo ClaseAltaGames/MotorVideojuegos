@@ -170,6 +170,93 @@ void MyWindow::swapBuffers() const {
                     ImGui::TreePop();
                 }
             }
+			if (displayFunc->pyramidActive == true) {
+				if (ImGui::TreeNode("Piramide"))
+				{
+					if (ImGui::TreeNode("Propiedades de la Piramide")) {
+						if (ImGui::TreeNode("Transform")) {
+							ImGui::Text("Nombre del archivo: Piramide precargada");
+							//tamaño
+							ImGui::Text("Posicion: (%.1f, %.1f, %.1f)");
+							ImGui::Text("Rotacion: (%.1f, %.1f, %.1f)");
+							ImGui::Text("Escala: %.1f", 1.0f);
+							ImGui::TreePop();
+						}
+						if (ImGui::TreeNode("Mesh")) {
+							ImGui::Text("Vertices: %d", 0);
+							ImGui::Text("Caras: %d", 0);
+							ImGui::TreePop();
+						}
+						if (ImGui::TreeNode("Texturas")) {
+							//ImGui::InputText("Nombre del archivo", currentFBXFile, 256);
+							//tamaño
+							ImGui::Text("Nombre de la Textura: None");
+							ImGui::TreePop();
+						}
+						ImGui::TreePop();
+					}
+					ImGui::TreePop();
+				}
+			}
+
+			if (displayFunc->sphereActive == true) {
+				if (ImGui::TreeNode("Esfera"))
+				{
+					if (ImGui::TreeNode("Propiedades de la Esfera")) {
+						if (ImGui::TreeNode("Transform")) {
+							ImGui::Text("Nombre del archivo: Esfera precargada");
+							//tamaño
+							ImGui::Text("Posicion: (%.1f, %.1f, %.1f)");
+							ImGui::Text("Rotacion: (%.1f, %.1f, %.1f)");
+							ImGui::Text("Escala: %.1f", 1.0f);
+							ImGui::TreePop();
+						}
+						if (ImGui::TreeNode("Mesh")) {
+							ImGui::Text("Vertices: %d", 0);
+							ImGui::Text("Caras: %d", 0);
+							ImGui::TreePop();
+						}
+						if (ImGui::TreeNode("Texturas")) {
+							//ImGui::InputText("Nombre del archivo", currentFBXFile, 256);
+							//tamaño
+							ImGui::Text("Nombre de la Textura: None");
+							ImGui::TreePop();
+						}
+						ImGui::TreePop();
+					}
+					ImGui::TreePop();
+				}
+			}
+
+			if (displayFunc->cylinderActive == true) {
+				if (ImGui::TreeNode("Cylinder"))
+				{
+					if (ImGui::TreeNode("Propiedades del Cylinder")) {
+						if (ImGui::TreeNode("Transform")) {
+							ImGui::Text("Nombre del archivo: Cylinder precargado");
+							//tamaño
+							ImGui::Text("Posicion: (%.1f, %.1f, %.1f)");
+							ImGui::Text("Rotacion: (%.1f, %.1f, %.1f)");
+							ImGui::Text("Escala: %.1f", 1.0f);
+							ImGui::TreePop();
+						}
+						if (ImGui::TreeNode("Mesh")) {
+							ImGui::Text("Vertices: %d", 0);
+							ImGui::Text("Caras: %d", 0);
+							ImGui::TreePop();
+						}
+						if (ImGui::TreeNode("Texturas")) {
+							//ImGui::InputText("Nombre del archivo", currentFBXFile, 256);
+							//tamaño
+							ImGui::Text("Nombre de la Textura: None");
+							ImGui::TreePop();
+						}
+						ImGui::TreePop();
+					}
+					ImGui::TreePop();
+				}
+			}
+
 			ImGui::TreePop();
         }
    //     if (ImGui::TreeNode("Propiedades del GameObject")) {
