@@ -63,7 +63,7 @@ void MyWindow::swapBuffers() const {
             }
             ImGui::EndMenu();
         }
-        if (ImGui::BeginMenu("Objetos 3D")) {
+        if (ImGui::BeginMenu("GameObjects")) {
             if (ImGui::MenuItem("Cubo")) {
 				displayFunc->cubeActive = true;
             }
