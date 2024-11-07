@@ -140,35 +140,67 @@ void MyWindow::swapBuffers() const {
         }
        
         ImGui::EndMainMenuBar();
-        if (ImGui::TreeNode("Propiedades del objeto FBX")) {
-            
-            if (ImGui::TreeNode("Transform")) {
-                //ImGui::InputText("Nombre del archivo", currentFBXFile, 256);
-                //tamaño
-                ImGui::Text("Posicion: (%.1f, %.1f, %.1f)");
-                ImGui::Text("Rotacion: (%.1f, %.1f, %.1f)");
-                ImGui::Text("Escala: %.1f", 1.0f);
 
-
-                //ImGui::SliderInt("Escala", &scale, 1, 3);
-                ImGui::TreePop();
+        if (ImGui::TreeNode("Hierachy of GameObjects")) {
+            if (displayFunc->cubeActive == true) {
+                if (ImGui::TreeNode("Cubo"))
+                {
+                    if (ImGui::TreeNode("Propiedades del Cubo")) {
+                        if (ImGui::TreeNode("Transform")) {
+                            ImGui::Text("Nombre del archivo: Cubo precargado");
+                            //tamaño
+                            ImGui::Text("Posicion: (%.1f, %.1f, %.1f)");
+                            ImGui::Text("Rotacion: (%.1f, %.1f, %.1f)");
+                            ImGui::Text("Escala: %.1f", 1.0f);
+                            ImGui::TreePop();
+                        }
+                        if (ImGui::TreeNode("Mesh")) {
+                            ImGui::Text("Vertices: %d", 0);
+                            ImGui::Text("Caras: %d", 0);
+                            ImGui::TreePop();
+                        }
+                        if (ImGui::TreeNode("Texturas")) {
+                            //ImGui::InputText("Nombre del archivo", currentFBXFile, 256);
+                            //tamaño
+                            ImGui::Text("Nombre de la Textura: None");
+                            ImGui::TreePop();
+                        }
+                        ImGui::TreePop();
+                    }
+                    ImGui::TreePop();
+                }
             }
-			if (ImGui::TreeNode("Mesh")) {
-				ImGui::Text("Nombre del FBX %s", displayFunc->currentFBXFile.c_str());
-				//tamaño
-				ImGui::Text("Vertices: %d", 0);
-				ImGui::Text("Caras: %d", 0);
-				ImGui::Text("Texturas: %d", 0);
-				ImGui::TreePop();
-			}
-			if (ImGui::TreeNode("Texturas")) {
-				//ImGui::InputText("Nombre del archivo", currentFBXFile, 256);
-				//tamaño
-				ImGui::Text("Nombre de la Textura: %s", displayFunc->currentTextureFile.c_str());
-				ImGui::TreePop();
-			}
 			ImGui::TreePop();
         }
+   //     if (ImGui::TreeNode("Propiedades del GameObject")) {
+   //         
+   //         if (ImGui::TreeNode("Transform")) {
+   //             //ImGui::InputText("Nombre del archivo", currentFBXFile, 256);
+   //             //tamaño
+   //             ImGui::Text("Posicion: (%.1f, %.1f, %.1f)");
+   //             ImGui::Text("Rotacion: (%.1f, %.1f, %.1f)");
+   //             ImGui::Text("Escala: %.1f", 1.0f);
+
+
+   //             //ImGui::SliderInt("Escala", &scale, 1, 3);
+   //             ImGui::TreePop();
+   //         }
+			//if (ImGui::TreeNode("Mesh")) {
+			//	ImGui::Text("Nombre del FBX %s", displayFunc->currentFBXFile.c_str());
+			//	//tamaño
+			//	ImGui::Text("Vertices: %d", 0);
+			//	ImGui::Text("Caras: %d", 0);
+			//	ImGui::Text("Texturas: %d", 0);
+			//	ImGui::TreePop();
+			//}
+			//if (ImGui::TreeNode("Texturas")) {
+			//	//ImGui::InputText("Nombre del archivo", currentFBXFile, 256);
+			//	//tamaño
+			//	ImGui::Text("Nombre de la Textura: %s", displayFunc->currentTextureFile.c_str());
+			//	ImGui::TreePop();
+			//}
+			//ImGui::TreePop();
+   //     }
     }
     ImGui::Render();
     ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
