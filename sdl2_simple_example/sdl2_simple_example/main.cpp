@@ -121,7 +121,6 @@ int main(int argc, char** argv) {
         SDL_EventState(SDL_DROPFILE, SDL_ENABLE);
         const auto t0 = hrclock::now();
 		displayFunc->DisplayALL();
-		//input->PreUpdate();
         window.swapBuffers();
         const auto t1 = hrclock::now();
         const auto dt = t1 - t0;

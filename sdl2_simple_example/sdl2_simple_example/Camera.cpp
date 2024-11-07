@@ -54,7 +54,7 @@ void Camera::CameraMovement()
     SDL_MouseWheelEvent;
 
 	//if right mouse button is pressed
-    if (input->GetMouseButton(RIGHT_BUTTON) == KEY_REPEAT) {
+    if (input->GetMouseButton(RIGHT_BUTTON) != KEY_UP) {
         // Actualizar posición de la cámara con teclas de dirección
         if (state[SDL_SCANCODE_W]) {
             cameraPosX += moveSpeed * (cameraDirX - cameraPosX) * 0.1; // Ajustar el movimiento
