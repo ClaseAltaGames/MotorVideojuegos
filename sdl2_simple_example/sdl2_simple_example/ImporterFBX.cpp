@@ -5,14 +5,13 @@
 #include <assimp/postprocess.h>
 #include "Component.h"
 
-
 using namespace std;
 
 //////////////////////////////////////////
 #define FBX_FILE "Assets/halo2.fbx"
 //////////////////////////////////////////
 
-ImporterFBX::ImporterFBX():Component() {}
+ImporterFBX::ImporterFBX() :Component() {}
 
 ImporterFBX::~ImporterFBX() {}
 
@@ -30,30 +29,48 @@ void ImporterFBX::render_fbx(const aiScene* scene) {
         cerr << "Error: escena no cargada" << endl;
         return;
     }
-    //if (mesh->HasTextureCoords(0)) {  // Verifica que haya coordenadas de textura
-    //    glEnable(GL_TEXTURE_2D);
-    //    glBindTexture(GL_TEXTURE_2D, textureID);  // Usar tu `textureID`
-    //}
 
+    glEnable(GL_TEXTURE_2D);  // Habilitar texturas en OpenGL
 
+    // Configurar los parámetros de la textura globalmente si aplica
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+
+    // Iterar sobre cada malla en la escena
     for (unsigned int i = 0; i < scene->mNumMeshes; i++) {
         aiMesh* mesh = scene->mMeshes[i];
 
-        // Renderizar los v?rtices y las caras
-        glBegin(GL_TRIANGLES);
+        glBegin(GL_TRIANGLES);  // Inicia el modo de triángulos
+
         for (unsigned int f = 0; f < mesh->mNumFaces; f++) {
             aiFace face = mesh->mFaces[f];
+
             for (unsigned int j = 0; j < face.mNumIndices; j++) {
-                aiVector3D vertex = mesh->mVertices[face.mIndices[j]];
+                unsigned int index = face.mIndices[j];
+
+                // Configuración de coordenadas de textura
+                if (mesh->mTextureCoords[0]) {
+                    aiVector3D uv = mesh->mTextureCoords[0][index];
+                    glTexCoord2f(uv.x, 1.0f - uv.y);  // Cambia entre `uv.y` y `1.0f - uv.y` si es necesario
+                }
+
+                // Configuración de las coordenadas de vértice
+                aiVector3D vertex = mesh->mVertices[index];
                 glVertex3f(vertex.x, vertex.y, vertex.z);
-                if (mesh->mTextureCoords[0]) {  // Verificar que haya coordenadas de textura
-                    aiVector3D uv = mesh->mTextureCoords[0][face.mIndices[j]];
-                    glTexCoord2f(uv.x, uv.y);
+
+                // Configuración de normales (para iluminación)
+                if (mesh->HasNormals()) {
+                    aiVector3D normal = mesh->mNormals[index];
+                    glNormal3f(normal.x, normal.y, normal.z);
                 }
             }
         }
-        glEnd();
+        glEnd();  // Termina el modo de triángulos
     }
+
+    glDisable(GL_TEXTURE_2D);  // Deshabilitar texturas para evitar efectos secundarios
 }
 
 int ImporterFBX::draw_fbx(const char* file) {
@@ -66,65 +83,3 @@ int ImporterFBX::draw_fbx(const char* file) {
     aiReleaseImport(scene);
     return 0;
 }
-
-struct Transform {
-    glm::vec3 position;
-    glm::vec3 rotation;
-    glm::vec3 scale;
-
-    Transform() : position(0.0f), rotation(0.0f), scale(1.0f) {}
-
-    glm::mat4 getMatrix() const {
-        glm::mat4 trans = glm::translate(glm::mat4(1.0f), position);
-        trans = glm::rotate(trans, glm::radians(rotation.x), glm::vec3(1, 0, 0));
-        trans = glm::rotate(trans, glm::radians(rotation.y), glm::vec3(0, 1, 0));
-        trans = glm::rotate(trans, glm::radians(rotation.z), glm::vec3(0, 0, 1));
-        trans = glm::scale(trans, scale);
-        return trans;
-    }
-};
-struct Mesh {
-    unsigned int vao, vbo;
-    aiMesh* aiMeshData;
-
-    Mesh(aiMesh* meshData) : aiMeshData(meshData) {
-        // Cargar vértices, UVs y otras propiedades en VAO/VBO aquí
-    }
-
-    void render() {
-        glBindVertexArray(vao);
-        glDrawArrays(GL_TRIANGLES, 0, aiMeshData->mNumVertices);
-        glBindVertexArray(0);
-    }
-};
-
-struct Texture {
-    unsigned int id;
-
-    Texture(const std::string& filePath) {
-        // Cargar la textura aquí usando stb_image o SDL_image
-    }
-
-    void bind() const {
-        glBindTexture(GL_TEXTURE_2D, id);
-    }
-};
-struct GameObject {
-    Transform transform;
-    Mesh* mesh;
-    Texture* texture;
-
-    GameObject(Mesh* m, Texture* t) : mesh(m), texture(t) {}
-
-    void render() {
-        // Aplicar transformación
-        glm::mat4 modelMatrix = transform.getMatrix();
-        //glUniformMatrix4fv(glGetUniformLocation(shaderProgram, "model"), 1, GL_FALSE, &modelMatrix[0][0]);
-
-        // Enlazar textura
-        texture->bind();
-
-        // Renderizar malla
-        mesh->render();
-    }
-};
