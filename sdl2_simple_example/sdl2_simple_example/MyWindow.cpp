@@ -55,8 +55,8 @@ void MyWindow::swapBuffers() const {
     ImGui_ImplSDL2_NewFrame();
     ImGui::NewFrame();
     if (ImGui::BeginMainMenuBar()) {
-        if (ImGui::BeginMenu("Menu")) {
-            if (ImGui::MenuItem("Adios")) {
+        if (ImGui::BeginMenu("Rockstallica Engine")) {
+            if (ImGui::MenuItem("Salir del motor...")) {
                 SDL_Event quit_event;
                 quit_event.type = SDL_QUIT;
                 SDL_PushEvent(&quit_event);
