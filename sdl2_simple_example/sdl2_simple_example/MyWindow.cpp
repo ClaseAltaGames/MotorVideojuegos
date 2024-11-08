@@ -16,6 +16,7 @@ bool mostrarFPS = false;
 bool hardwareDetection = false;
 bool memoryConsume = false;
 bool displayInfo = false;
+bool abrirPopupAcercaDe = false;
 
 
 MyWindow::MyWindow(const std::string& title, int w, int h) : _width(w), _height(h) {
@@ -56,52 +57,40 @@ void MyWindow::swapBuffers() const {
     ImGui::NewFrame();
     if (ImGui::BeginMainMenuBar()) {
         if (ImGui::BeginMenu("Rockstallica Engine")) {
+            if (ImGui::MenuItem("Acerca de...")) {
+                abrirPopupAcercaDe = true;
+            }
+            if (ImGui::BeginMenu("Ajustes")) {
+                if (ImGui::Checkbox("Mostrar FPS", &mostrarFPS));
+                if (ImGui::Checkbox("Deteccion de hardware", &hardwareDetection));
+                if (ImGui::Checkbox("Consumo de memoria", &memoryConsume));
+                if (ImGui::Checkbox("Informacion de pantalla", &displayInfo));
+                ImGui::EndMenu();
+            }
             if (ImGui::MenuItem("Salir del motor...")) {
                 SDL_Event quit_event;
                 quit_event.type = SDL_QUIT;
                 SDL_PushEvent(&quit_event);
             }
+
             ImGui::EndMenu();
         }
         if (ImGui::BeginMenu("GameObjects")) {
             if (ImGui::MenuItem("Cubo")) {
-				displayFunc->cubeActive = true;
+                displayFunc->cubeActive = true;
             }
-			if (ImGui::MenuItem("Piramide")) {
-				displayFunc->pyramidActive = true;
-			}
-			if (ImGui::MenuItem("Esfera")) {
-				displayFunc->sphereActive = true;
-			}
+            if (ImGui::MenuItem("Piramide")) {
+                displayFunc->pyramidActive = true;
+            }
+            if (ImGui::MenuItem("Esfera")) {
+                displayFunc->sphereActive = true;
+            }
             if (ImGui::MenuItem("Cylinder")) {
                 displayFunc->cylinderActive = true;
             }
 
             ImGui::EndMenu();
         }
-        if (ImGui::BeginMenu("Acerca de")) {
-            if (ImGui::MenuItem("GitHub")) {
-				//formato para poder abrir paginas web en el navegador del ordenador (no se si se puede hacer de otra forma)
-                system("start https://github.com/ClaseAltaGames/MotorVideojuegos");
-            }
-			if (ImGui::BeginMenu("Miembros")) {
-                if (ImGui::MenuItem("Pau Mena")) {
-                    system("start https://github.com/PauMenaTorres");
-                }
-                if (ImGui::MenuItem("Edgar Mesa")) {
-                    system("start https://github.com/edgarmd1");
-                }
-				ImGui::EndMenu();
-			}
-            ImGui::EndMenu();
-        }
-		if (ImGui::BeginMenu("Ajustes")) {
-            if (ImGui::Checkbox("Mostrar FPS", &mostrarFPS));
-			if (ImGui::Checkbox("Deteccion de hardware", &hardwareDetection));
-			if (ImGui::Checkbox("Consumo de memoria", &memoryConsume));
-			if (ImGui::Checkbox("Informacion de pantalla", &displayInfo));
-			ImGui::EndMenu();
-		}
         if (mostrarFPS) {
             ImGui::Begin("Ventana de FPS");
 
@@ -137,6 +126,34 @@ void MyWindow::swapBuffers() const {
             ImGui::Begin("Version del Programa");  // Ventana de versión
             ImGui::Text("Version 0.5 Beta");
             ImGui::End();
+        }
+		if (abrirPopupAcercaDe) {
+			ImGui::OpenPopup("Acerca de...");
+			abrirPopupAcercaDe = false;
+		}
+        if (ImGui::BeginPopup("Acerca de...")) {
+            ImGui::Text("Rockstallica Engine version 0.5");
+            ImGui::Text(" ");
+            ImGui::Text("Todos los derechos reservados a Clase Alta Games");
+            ImGui::Text(" ");
+            ImGui::Text("Copyright: Clase Alta Games");
+            ImGui::Text(" ");
+            if (ImGui::Button("Visitar GitHub")) {
+                system("start https://github.com/ClaseAltaGames/MotorVideojuegos");
+            }
+            ImGui::Text(" ");
+			if (ImGui::Button("Pau Mena Torres")) {
+				system("start https://github.com/PauMenaTorres");
+			}
+            ImGui::Text(" ");
+			if (ImGui::Button("Edgar Mesa Dominguez")) {
+				system("start https://github.com/edgarmd1");
+			}
+            ImGui::Text(" ");
+            if (ImGui::Button("Cerrar")) {
+                ImGui::CloseCurrentPopup();
+            }
+            ImGui::EndPopup();
         }
        
         ImGui::EndMainMenuBar();
@@ -291,35 +308,6 @@ void MyWindow::swapBuffers() const {
 
 			ImGui::TreePop();
         }
-   //     if (ImGui::TreeNode("Propiedades del GameObject")) {
-   //         
-   //         if (ImGui::TreeNode("Transform")) {
-   //             //ImGui::InputText("Nombre del archivo", currentFBXFile, 256);
-   //             //tamaño
-   //             ImGui::Text("Posicion: (%.1f, %.1f, %.1f)");
-   //             ImGui::Text("Rotacion: (%.1f, %.1f, %.1f)");
-   //             ImGui::Text("Escala: %.1f", 1.0f);
-
-
-   //             //ImGui::SliderInt("Escala", &scale, 1, 3);
-   //             ImGui::TreePop();
-   //         }
-			//if (ImGui::TreeNode("Mesh")) {
-			//	ImGui::Text("Nombre del FBX %s", displayFunc->currentFBXFile.c_str());
-			//	//tamaño
-			//	ImGui::Text("Vertices: %d", 0);
-			//	ImGui::Text("Caras: %d", 0);
-			//	ImGui::Text("Texturas: %d", 0);
-			//	ImGui::TreePop();
-			//}
-			//if (ImGui::TreeNode("Texturas")) {
-			//	//ImGui::InputText("Nombre del archivo", currentFBXFile, 256);
-			//	//tamaño
-			//	ImGui::Text("Nombre de la Textura: %s", displayFunc->currentTextureFile.c_str());
-			//	ImGui::TreePop();
-			//}
-			//ImGui::TreePop();
-   //     }
     }
     ImGui::Render();
     ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
