@@ -21,6 +21,9 @@ public:
 	aiFace face;
 	aiVector3D vertex;
 
+    int totalVertices = 3075; // Nueva variable para almacenar el número de vértices
+    int totalFaces = 1025;    // Nu
+
 private:
     // Función auxiliar para cargar el archivo FBX
     const aiScene* load_fbx(const char* file);

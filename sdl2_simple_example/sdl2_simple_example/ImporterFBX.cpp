@@ -70,8 +70,21 @@ int ImporterFBX::draw_fbx(const char* file) {
         printf("Error al cargar el archivo FBX\n");
         return -1;
     }
+
+    // Inicializar los contadores
+    totalVertices = 0;
+    totalFaces = 0;
+
+    // Contar los vértices y caras
+    for (unsigned int i = 0; i < scene->mNumMeshes; i++) {
+        aiMesh* mesh = scene->mMeshes[i];
+        totalVertices += mesh->mNumVertices;
+        totalFaces += mesh->mNumFaces;
+    }
+
     render_fbx(scene);
     aiReleaseImport(scene);
     return 0;
 }
+
 

@@ -290,8 +290,8 @@ void MyWindow::swapBuffers() const {
 						if (ImGui::TreeNode("Mesh")) {
 							ImGui::Text("Nombre del FBX %s", displayFunc->currentFBXFile.c_str());
 							//tamaño
-							ImGui::Text("Vertices: %d", importerFBX->vertex);
-							ImGui::Text("Caras: %d", importerFBX->face);
+							ImGui::Text("Vertices: %d", importerFBX->totalVertices);
+							ImGui::Text("Triangulos: %d", importerFBX->totalFaces);
 							ImGui::TreePop();
 						}
 						if (ImGui::TreeNode("Texturas")) {
