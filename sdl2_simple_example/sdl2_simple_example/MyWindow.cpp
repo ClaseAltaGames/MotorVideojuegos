@@ -1,3 +1,4 @@
+#include "GL/glew.h"
 #include <SDL2/SDL_video.h>
 #include <SDL2/SDL_opengl.h>
 #include "MyWindow.h"
@@ -289,9 +290,8 @@ void MyWindow::swapBuffers() const {
 						if (ImGui::TreeNode("Mesh")) {
 							ImGui::Text("Nombre del FBX %s", displayFunc->currentFBXFile.c_str());
 							//tamaño
-							ImGui::Text("Vertices: %d", 0);
-							ImGui::Text("Caras: %d", 0);
-							ImGui::Text("Texturas: %d", 0);
+							ImGui::Text("Vertices: %d", importerFBX->vertex);
+							ImGui::Text("Caras: %d", importerFBX->face);
 							ImGui::TreePop();
 						}
 						if (ImGui::TreeNode("Texturas")) {

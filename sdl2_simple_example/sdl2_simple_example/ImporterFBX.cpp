@@ -32,12 +32,12 @@ void ImporterFBX::render_fbx(const aiScene* scene) {
 
     // Iterar sobre cada malla en la escena
     for (unsigned int i = 0; i < scene->mNumMeshes; i++) {
-        aiMesh* mesh = scene->mMeshes[i];
+        mesh = scene->mMeshes[i];
 
         glBegin(GL_TRIANGLES);  // Inicia el modo de triángulos
 
         for (unsigned int f = 0; f < mesh->mNumFaces; f++) {
-            aiFace face = mesh->mFaces[f];
+            face = mesh->mFaces[f];
 
             for (unsigned int j = 0; j < face.mNumIndices; j++) {
                 unsigned int index = face.mIndices[j];
@@ -49,7 +49,7 @@ void ImporterFBX::render_fbx(const aiScene* scene) {
                 }
 
                 // Configuración de las coordenadas de vértice
-                aiVector3D vertex = mesh->mVertices[index];
+                vertex = mesh->mVertices[index];
                 glVertex3f(vertex.x, vertex.y, vertex.z);
 
                 // Configuración de normales (para iluminación)
@@ -74,3 +74,4 @@ int ImporterFBX::draw_fbx(const char* file) {
     aiReleaseImport(scene);
     return 0;
 }
+

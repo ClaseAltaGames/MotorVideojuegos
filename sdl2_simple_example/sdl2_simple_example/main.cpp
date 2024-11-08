@@ -112,6 +112,7 @@ static bool processEvents() {
 int main(int argc, char** argv) {
     MyWindow window("SDL2 Simple Example", WINDOW_SIZE.x, WINDOW_SIZE.y);
 	window.displayFunc = displayFunc;
+    window.importerFBX = importerFBX;
 
     init_openGL();
 	init_devil();

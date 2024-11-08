@@ -17,6 +17,9 @@ public:
 
     // Cargar y dibujar archivo FBX
     int draw_fbx(const char* file);
+	aiMesh* mesh;
+	aiFace face;
+	aiVector3D vertex;
 
 private:
     // Función auxiliar para cargar el archivo FBX

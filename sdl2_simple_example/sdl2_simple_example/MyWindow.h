@@ -1,8 +1,10 @@
 #pragma once
 #include <string>
-#include "BasicForms.h"
+#include "ImporterFBX.h"
 #include "DisplayFunc.h"
 #include <cstdint>
+#include "GL/gl.h"
+#include "GL/glew.h"
 
 struct SDL_Window;
 
@@ -25,7 +27,7 @@ public:
 	void swapBuffers() const;
 
 
-	BasicForms* basicForms = new BasicForms();
+	ImporterFBX* importerFBX = new ImporterFBX();
 	DisplayFunc* displayFunc = new DisplayFunc();
 
 	string ObtenerInfoCPU() const;
