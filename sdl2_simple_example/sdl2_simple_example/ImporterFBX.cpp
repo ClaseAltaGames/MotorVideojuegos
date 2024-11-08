@@ -30,14 +30,6 @@ void ImporterFBX::render_fbx(const aiScene* scene) {
         return;
     }
 
-    glEnable(GL_TEXTURE_2D);  // Habilitar texturas en OpenGL
-
-    // Configurar los parámetros de la textura globalmente si aplica
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-
     // Iterar sobre cada malla en la escena
     for (unsigned int i = 0; i < scene->mNumMeshes; i++) {
         aiMesh* mesh = scene->mMeshes[i];
@@ -70,7 +62,6 @@ void ImporterFBX::render_fbx(const aiScene* scene) {
         glEnd();  // Termina el modo de triángulos
     }
 
-    glDisable(GL_TEXTURE_2D);  // Deshabilitar texturas para evitar efectos secundarios
 }
 
 int ImporterFBX::draw_fbx(const char* file) {
