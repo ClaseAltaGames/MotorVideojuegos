@@ -15,6 +15,7 @@ public:
 
 	void DisplayALL();
 	void drawGrid(float size, int divisions);
+	void setActiveObject(const std::string& objectName);
 
 	bool cubeActive = false;
 	bool pyramidActive = false;

@@ -15,62 +15,58 @@ BasicForms::~BasicForms()
 }
 
 void BasicForms::draw_Cube(const vec3& center, double size) {
-	// Vértices del cubo
-	static const GLfloat v0[3] = { -1.0f, -1.0f,  1.0f };
-	static const GLfloat v1[3] = { 1.0f, -1.0f,  1.0f };
-	static const GLfloat v2[3] = { 1.0f,  1.0f,  1.0f };
-	static const GLfloat v3[3] = { -1.0f,  1.0f,  1.0f };
-	static const GLfloat v4[3] = { -1.0f, -1.0f, -1.0f };
-	static const GLfloat v5[3] = { 1.0f, -1.0f, -1.0f };
-	static const GLfloat v6[3] = { 1.0f,  1.0f, -1.0f };
-	static const GLfloat v7[3] = { -1.0f,  1.0f, -1.0f };
+    GLfloat v0[3] = { center.x - 1.0f, center.y - 1.0f, center.z + 1.0f };
+    GLfloat v1[3] = { center.x + 1.0f, center.y - 1.0f, center.z + 1.0f };
+    GLfloat v2[3] = { center.x + 1.0f, center.y + 1.0f, center.z + 1.0f };
+    GLfloat v3[3] = { center.x - 1.0f, center.y + 1.0f, center.z + 1.0f };
+    GLfloat v4[3] = { center.x - 1.0f, center.y - 1.0f, center.z - 1.0f };
+    GLfloat v5[3] = { center.x + 1.0f, center.y - 1.0f, center.z - 1.0f };
+    GLfloat v6[3] = { center.x + 1.0f, center.y + 1.0f, center.z - 1.0f };
+    GLfloat v7[3] = { center.x - 1.0f, center.y + 1.0f, center.z - 1.0f };
 
-	glBegin(GL_TRIANGLES);  // Dibujar el cubo con triángulos
+    glBegin(GL_TRIANGLES);
+    glVertex3fv(v0); glVertex3fv(v1); glVertex3fv(v2);
+    glVertex3fv(v2); glVertex3fv(v3); glVertex3fv(v0);
 
-	glVertex3fv(v0); glVertex3fv(v1); glVertex3fv(v2);  // Primer triángulo
-	glVertex3fv(v2); glVertex3fv(v3); glVertex3fv(v0);  // Segundo triángulo
+    glVertex3fv(v1); glVertex3fv(v5); glVertex3fv(v6);
+    glVertex3fv(v6); glVertex3fv(v2); glVertex3fv(v1);
 
-	glVertex3fv(v1); glVertex3fv(v5); glVertex3fv(v6);  // Primer triángulo
-	glVertex3fv(v6); glVertex3fv(v2); glVertex3fv(v1);  // Segundo triángulo
+    glVertex3fv(v5); glVertex3fv(v4); glVertex3fv(v7);
+    glVertex3fv(v7); glVertex3fv(v6); glVertex3fv(v5);
 
-    glVertex3fv(v5); glVertex3fv(v4); glVertex3fv(v7);  // Primer triángulo
-    glVertex3fv(v7); glVertex3fv(v6); glVertex3fv(v5);  // Segundo triángulo
+    glVertex3fv(v4); glVertex3fv(v0); glVertex3fv(v3);
+    glVertex3fv(v3); glVertex3fv(v7); glVertex3fv(v4);
 
-    glVertex3fv(v4); glVertex3fv(v0); glVertex3fv(v3);  // Primer triángulo
-    glVertex3fv(v3); glVertex3fv(v7); glVertex3fv(v4);  // Segundo triángulo
+    glVertex3fv(v3); glVertex3fv(v2); glVertex3fv(v6);
+    glVertex3fv(v6); glVertex3fv(v7); glVertex3fv(v3);
 
-    glVertex3fv(v3); glVertex3fv(v2); glVertex3fv(v6);  // Primer triángulo
-    glVertex3fv(v6); glVertex3fv(v7); glVertex3fv(v3);  // Segundo triángulo
-
-    glVertex3fv(v4); glVertex3fv(v5); glVertex3fv(v1);  // Primer triángulo
-    glVertex3fv(v1); glVertex3fv(v0); glVertex3fv(v4);  // Segundo triángulo
+    glVertex3fv(v4); glVertex3fv(v5); glVertex3fv(v1);
+    glVertex3fv(v1); glVertex3fv(v0); glVertex3fv(v4);
 
     glEnd();
 }
 
 void BasicForms::draw_Pyramid(const vec3& center, double size) {
-    // Vértices de la pirámide
-    static const GLfloat v0[3] = { -1.0f, -1.0f,  1.0f }; // base inferior izquierda
-    static const GLfloat v1[3] = { 1.0f, -1.0f,  1.0f }; // base inferior derecha
-    static const GLfloat v2[3] = { 1.0f, -1.0f, -1.0f }; // base superior derecha
-    static const GLfloat v3[3] = { -1.0f, -1.0f, -1.0f }; // base superior izquierda
-    static const GLfloat top[3] = { 0.0f,  1.0f,  0.0f }; // vértice superior
+    GLfloat v0[3] = { center.x - 1.0f, center.y - 1.0f, center.z + 1.0f };
+    GLfloat v1[3] = { center.x + 1.0f, center.y - 1.0f, center.z + 1.0f };
+    GLfloat v2[3] = { center.x + 1.0f, center.y - 1.0f, center.z - 1.0f };
+    GLfloat v3[3] = { center.x - 1.0f, center.y - 1.0f, center.z - 1.0f };
+    GLfloat top[3] = { center.x, center.y + 1.0f, center.z };
 
-    glBegin(GL_TRIANGLES);  // Dibujar la pirámide con triángulos
-
+    glBegin(GL_TRIANGLES);
     glVertex3fv(v0); glVertex3fv(v1); glVertex3fv(top);
     glVertex3fv(v1); glVertex3fv(v2); glVertex3fv(top);
     glVertex3fv(v2); glVertex3fv(v3); glVertex3fv(top);
     glVertex3fv(v3); glVertex3fv(v0); glVertex3fv(top);
-    glVertex3fv(v0); glVertex3fv(v1); glVertex3fv(v2); // Primer triángulo
-    glVertex3fv(v2); glVertex3fv(v3); glVertex3fv(v0); // Segundo triángulo
+    glVertex3fv(v0); glVertex3fv(v1); glVertex3fv(v2);
+    glVertex3fv(v2); glVertex3fv(v3); glVertex3fv(v0);
     glEnd();
 }
 
 
 void BasicForms::draw_Sphere(const vec3& center, double radius) {
-    const int numLatitudeBands = 20;  // Número de bandas en la latitud
-    const int numLongitudeBands = 20; // Número de bandas en la longitud
+    const int numLatitudeBands = 20;
+    const int numLongitudeBands = 20;
 
     for (int lat = 0; lat <= numLatitudeBands; ++lat) {
         double theta1 = lat * M_PI / numLatitudeBands;
@@ -87,12 +83,10 @@ void BasicForms::draw_Sphere(const vec3& center, double radius) {
             double sinPhi = sin(phi);
             double cosPhi = cos(phi);
 
-            // Primer vértice del triángulo
             GLfloat x1 = cosPhi * sinTheta1;
             GLfloat y1 = cosTheta1;
             GLfloat z1 = sinPhi * sinTheta1;
 
-            // Segundo vértice del triángulo
             GLfloat x2 = cosPhi * sinTheta2;
             GLfloat y2 = cosTheta2;
             GLfloat z2 = sinPhi * sinTheta2;

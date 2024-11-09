@@ -35,18 +35,21 @@ void DisplayFunc::DisplayALL() {
     importerFBX->draw_fbx(currentFBXFile.c_str());
     camera->CameraMovement();
 
-    // Dibujar las formas si están activas
-    if (cubeActive == true) {
-        basicForms->draw_Cube(vec3(0.0, 0.0, 0.0), 1.0);
+    // Dibujar las formas si están activas, posicionadas para no solaparse
+    //float separation = 5.0f;  // Distancia de separación entre objetos
+    //float currentX = -1000000.0f;  // Posición X inicial
+
+    if (cubeActive) {
+        basicForms->draw_Cube(vec3(-10.0f, 0.0f, 0.0f), 1.0);  // Posición fija para el cubo
     }
-    if (pyramidActive == true) {
-        basicForms->draw_Pyramid(vec3(0.0, 0.0, 0.0), 1.0);
+    if (pyramidActive) {
+        basicForms->draw_Pyramid(vec3(-5.0f, 0.0f, 0.0f), 1.0);  // Posición fija para la pirámide
     }
-    if (sphereActive == true) {
-        basicForms->draw_Sphere(vec3(0.0, 0.0, 0.0), 1.0);
+    if (sphereActive) {
+        basicForms->draw_Sphere(vec3(5.0f, 0.0f, 0.0f), 1.0);  // Posición fija para la esfera
     }
-    if (cylinderActive == true) {
-        basicForms->draw_Cylindre(vec3(0.0, 0.0, 0.0), 1.0, 2.0, 36);
+    if (cylinderActive) {
+        basicForms->draw_Cylindre(vec3(10.0f, 0.0f, 0.0f), 1.0, 2.0, 36);  // Posición fija para el cilindro
     }
 
     // Dibujar la textura cargada
@@ -72,4 +75,25 @@ void DisplayFunc::drawGrid(float size, int divisions) {
         glVertex3f(pos, 0.0f, size);
     }
     glEnd();
+}
+void DisplayFunc::setActiveObject(const std::string& objectName) {
+    // Desactivar todos los objetos antes de activar el seleccionado
+   /* cubeActive = false;
+    pyramidActive = false;
+    sphereActive = false;
+    cylinderActive = false;*/
+
+    // Activar solo el objeto especificado
+    if (objectName == "cube") {
+        cubeActive = true;
+    }
+    else if (objectName == "pyramid") {
+        pyramidActive = true;
+    }
+    else if (objectName == "sphere") {
+        sphereActive = true;
+    }
+    else if (objectName == "cylinder") {
+        cylinderActive = true;
+    }
 }

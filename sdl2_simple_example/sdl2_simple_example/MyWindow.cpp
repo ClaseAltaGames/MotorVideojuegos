@@ -78,16 +78,16 @@ void MyWindow::swapBuffers() const {
         }
         if (ImGui::BeginMenu("GameObjects")) {
             if (ImGui::MenuItem("Cubo")) {
-                displayFunc->cubeActive = true;
+                displayFunc->setActiveObject("cube");
             }
             if (ImGui::MenuItem("Piramide")) {
-                displayFunc->pyramidActive = true;
+				displayFunc->setActiveObject("pyramid");
             }
             if (ImGui::MenuItem("Esfera")) {
-                displayFunc->sphereActive = true;
+				displayFunc->setActiveObject("sphere");
             }
             if (ImGui::MenuItem("Cylinder")) {
-                displayFunc->cylinderActive = true;
+				displayFunc->setActiveObject("cylinder");
             }
 
             ImGui::EndMenu();
@@ -95,9 +95,23 @@ void MyWindow::swapBuffers() const {
         if (mostrarFPS) {
             ImGui::Begin("Ventana de FPS");
 
-            // Obtener el FPS actual y mostrarlo
+            // Obtener el FPS actual
             float fps = ImGui::GetIO().Framerate;
+
+            // Tamaño del historial de FPS (e.g., 100 valores)
+            static const int fpsHistorySize = 100;
+            static float fpsHistory[fpsHistorySize] = { 0.0f };
+            static int fpsIndex = 0;
+
+            // Añadir el FPS actual al historial, reemplazando el valor más antiguo
+            fpsHistory[fpsIndex] = fps;
+            fpsIndex = (fpsIndex + 1) % fpsHistorySize;
+
+            // Mostrar el valor actual de FPS
             ImGui::Text("FPS: %.1f", fps);
+
+            // Mostrar el gráfico de FPS como líneas o histograma
+            ImGui::PlotHistogram("FPS History", fpsHistory, fpsHistorySize, fpsIndex, nullptr, 0.0f, 100.0f, ImVec2(0, 80));
 
             ImGui::End();
         }
@@ -167,14 +181,14 @@ void MyWindow::swapBuffers() const {
                         if (ImGui::TreeNode("Transform")) {
                             ImGui::Text("Nombre del archivo: Cubo precargado");
                             //tamaño
-                            ImGui::Text("Posicion: (%.1f, %.1f, %.1f)");
+                            ImGui::Text("Posicion: (-10.0, 0.0, 0.0)");
                             ImGui::Text("Rotacion: (%.1f, %.1f, %.1f)");
                             ImGui::Text("Escala: %.1f", 1.0f);
                             ImGui::TreePop();
                         }
                         if (ImGui::TreeNode("Mesh")) {
-                            ImGui::Text("Vertices: %d", 0);
-                            ImGui::Text("Caras: %d", 0);
+                            ImGui::Text("Vertices: 24", 0);
+                            ImGui::Text("Triangulos: 12", 0);
                             ImGui::TreePop();
                         }
                         if (ImGui::TreeNode("Texturas")) {
@@ -195,14 +209,14 @@ void MyWindow::swapBuffers() const {
 						if (ImGui::TreeNode("Transform")) {
 							ImGui::Text("Nombre del archivo: Piramide precargada");
 							//tamaño
-							ImGui::Text("Posicion: (%.1f, %.1f, %.1f)");
+							ImGui::Text("Posicion: (-5.0, 0.0, 0.0)");
 							ImGui::Text("Rotacion: (%.1f, %.1f, %.1f)");
 							ImGui::Text("Escala: %.1f", 1.0f);
 							ImGui::TreePop();
 						}
 						if (ImGui::TreeNode("Mesh")) {
-							ImGui::Text("Vertices: %d", 0);
-							ImGui::Text("Caras: %d", 0);
+							ImGui::Text("Vertices: 5");
+							ImGui::Text("Caras: 6");
 							ImGui::TreePop();
 						}
 						if (ImGui::TreeNode("Texturas")) {
@@ -224,7 +238,7 @@ void MyWindow::swapBuffers() const {
 						if (ImGui::TreeNode("Transform")) {
 							ImGui::Text("Nombre del archivo: Esfera precargada");
 							//tamaño
-							ImGui::Text("Posicion: (%.1f, %.1f, %.1f)");
+							ImGui::Text("Posicion: (5.0, 0.0, 0.0)");
 							ImGui::Text("Rotacion: (%.1f, %.1f, %.1f)");
 							ImGui::Text("Escala: %.1f", 1.0f);
 							ImGui::TreePop();
@@ -253,14 +267,14 @@ void MyWindow::swapBuffers() const {
 						if (ImGui::TreeNode("Transform")) {
 							ImGui::Text("Nombre del archivo: Cylinder precargado");
 							//tamaño
-							ImGui::Text("Posicion: (%.1f, %.1f, %.1f)");
+							ImGui::Text("Posicion: (10.0, 0.0, 0.0)");
 							ImGui::Text("Rotacion: (%.1f, %.1f, %.1f)");
 							ImGui::Text("Escala: %.1f", 1.0f);
 							ImGui::TreePop();
 						}
 						if (ImGui::TreeNode("Mesh")) {
-							ImGui::Text("Vertices: %d", 0);
-							ImGui::Text("Caras: %d", 0);
+							ImGui::Text("Vertices: 74", 0);
+							ImGui::Text("Caras: 144", 0);
 							ImGui::TreePop();
 						}
 						if (ImGui::TreeNode("Texturas")) {
