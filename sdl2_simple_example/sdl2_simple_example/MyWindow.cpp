@@ -111,7 +111,7 @@ void MyWindow::swapBuffers() const {
             ImGui::Text("FPS: %.1f", fps);
 
             // Mostrar el gráfico de FPS como líneas o histograma
-            ImGui::PlotLines("FPS History", fpsHistory, fpsHistorySize, fpsIndex, nullptr, 0.0f, 100.0f, ImVec2(0, 80));
+            ImGui::PlotHistogram("FPS History", fpsHistory, fpsHistorySize, fpsIndex, nullptr, 0.0f, 100.0f, ImVec2(0, 80));
 
             ImGui::End();
         }
