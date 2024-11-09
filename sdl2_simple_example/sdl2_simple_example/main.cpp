@@ -51,6 +51,8 @@ void init_openGL() {
     glEnable(GL_DEPTH_TEST);
     glEnable(GL_TEXTURE_2D);
     glClearColor(0.5, 0.5, 0.5, 1.0);
+	printf("OpenGL version: %s, GLSL version: %s\n", glGetString(GL_VERSION), glGetString(GL_SHADING_LANGUAGE_VERSION));
+    printf("OpenGL cargada exitosamente!\n");
 
 }
 void init_devil() {
@@ -58,6 +60,8 @@ void init_devil() {
 	iluInit();
 	ilutInit();
 	ilutRenderer(ILUT_OPENGL);
+	printf("Devil version: 1.8.0\n");
+	printf("Devil cargada exitosamente!\n");
 }
 
 GLubyte checkerImage[CHECKERS_HEIGHT][CHECKERS_WIDTH][4];
