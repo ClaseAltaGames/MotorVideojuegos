@@ -7,10 +7,6 @@
 
 using namespace std;
 
-//////////////////////////////////////////
-#define FBX_FILE "Assets/halo2.fbx"
-//////////////////////////////////////////
-
 ImporterFBX::ImporterFBX() :Component() {}
 
 ImporterFBX::~ImporterFBX() {}
@@ -21,6 +17,7 @@ const aiScene* ImporterFBX::load_fbx(const char* file) {
         cerr << "Error al cargar el archivo: " << aiGetErrorString() << endl;
         return nullptr;
     }
+
     return scene;
 }
 
@@ -81,6 +78,7 @@ int ImporterFBX::draw_fbx(const char* file) {
         totalFaces += mesh->mNumFaces;
     }
 
+	
     render_fbx(scene);
     aiReleaseImport(scene);
     return 0;

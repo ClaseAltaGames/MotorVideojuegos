@@ -85,6 +85,7 @@ static bool processEvents() {
                 // Cargar el archivo FBX
                 displayFunc->currentFBXFile = droppedFile;
                 importerFBX->draw_fbx(displayFunc->currentFBXFile.c_str());
+                printf("Objeto FBX cargado: %s\n", displayFunc->currentFBXFile.c_str());
             }
 			else if (extension == "png" || extension == "PNG" || extension == "DDS" || extension == "dds") {
                 // Cargar la textura PNG o DDS
@@ -136,6 +137,7 @@ int main(int argc, char** argv) {
     init_openGL();
 	init_devil();
     
+    printf("Objeto FBX cargado: %s\n", displayFunc->currentFBXFile.c_str());
 
     //bucle principal
     while (processEvents()) {
