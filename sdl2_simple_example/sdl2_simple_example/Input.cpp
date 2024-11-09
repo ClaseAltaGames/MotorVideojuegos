@@ -11,7 +11,7 @@ Input::Input(bool startEnabled) {
     memset(mouseButtons, KEY_IDLE, sizeof(KeyState) * NUM_MOUSE_BUTTONS);
 }
 
-// Destructor
+
 Input::~Input()
 {
     delete[] keyboard;

@@ -20,7 +20,7 @@ public:
 
 private:
     GLuint textureID;  // ID de la textura en OpenGL
-    bool isTextureLoaded;  // Bandera para verificar si la textura ya está cargada
+    bool isTextureLoaded;  // Verificar si la textura ya está cargada
 };
 
 #endif // TEXTURES_H

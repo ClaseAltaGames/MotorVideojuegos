@@ -98,7 +98,7 @@ void MyWindow::swapBuffers() const {
             // Obtener el FPS actual
             float fps = ImGui::GetIO().Framerate;
 
-            // Tamaño del historial de FPS (e.g., 100 valores)
+            // Tamaño del historial de FPS
             static const int fpsHistorySize = 100;
             static float fpsHistory[fpsHistorySize] = { 0.0f };
             static int fpsIndex = 0;
@@ -110,7 +110,7 @@ void MyWindow::swapBuffers() const {
             // Mostrar el valor actual de FPS
             ImGui::Text("FPS: %.1f", fps);
 
-            // Mostrar el gráfico de FPS como líneas o histograma
+            // Mostrar el gráfico de FPS con cubitos
             ImGui::PlotHistogram("FPS History", fpsHistory, fpsHistorySize, fpsIndex, nullptr, 0.0f, 100.0f, ImVec2(0, 80));
 
             ImGui::End();
@@ -132,7 +132,8 @@ void MyWindow::swapBuffers() const {
         if (hardwareDetection) {
             ImGui::Begin("Info de Hardware");
 
-            // Muestra el nombre de la CPU
+            // Muestra el nombre de la CPU 
+			// En ARM (Apple Silicon) solamente muestra la marca del procesador pero no los @GHz
             ImGui::Text("CPU: %s", ObtenerInfoCPU().c_str());
 
             ImGui::End();
@@ -180,7 +181,6 @@ void MyWindow::swapBuffers() const {
                     if (ImGui::TreeNode("Propiedades del Cubo")) {
                         if (ImGui::TreeNode("Transform")) {
                             ImGui::Text("Nombre del archivo: Cubo precargado");
-                            //tamaño
                             ImGui::Text("Posicion: (-10.0, 0.0, 0.0)");
                             ImGui::Text("Rotacion: (%.1f, %.1f, %.1f)");
                             ImGui::Text("Escala: %.1f", 1.0f);
@@ -192,8 +192,6 @@ void MyWindow::swapBuffers() const {
                             ImGui::TreePop();
                         }
                         if (ImGui::TreeNode("Texturas")) {
-                            //ImGui::InputText("Nombre del archivo", currentFBXFile, 256);
-                            //tamaño
                             ImGui::Text("Nombre de la Textura: None");
                             ImGui::TreePop();
                         }
@@ -221,7 +219,7 @@ void MyWindow::swapBuffers() const {
 						}
 						if (ImGui::TreeNode("Texturas")) {
 							//ImGui::InputText("Nombre del archivo", currentFBXFile, 256);
-							//tamaño
+							//nombre
 							ImGui::Text("Nombre de la Textura: None");
 							ImGui::TreePop();
 						}
@@ -250,7 +248,7 @@ void MyWindow::swapBuffers() const {
 						}
 						if (ImGui::TreeNode("Texturas")) {
 							//ImGui::InputText("Nombre del archivo", currentFBXFile, 256);
-							//tamaño
+							//nombre
 							ImGui::Text("Nombre de la Textura: None");
 							ImGui::TreePop();
 						}
@@ -279,7 +277,7 @@ void MyWindow::swapBuffers() const {
 						}
 						if (ImGui::TreeNode("Texturas")) {
 							//ImGui::InputText("Nombre del archivo", currentFBXFile, 256);
-							//tamaño
+							//nombre
 							ImGui::Text("Nombre de la Textura: None");
 							ImGui::TreePop();
 						}
@@ -303,14 +301,14 @@ void MyWindow::swapBuffers() const {
 						}
 						if (ImGui::TreeNode("Mesh")) {
 							ImGui::Text("Nombre del FBX %s", displayFunc->currentFBXFile.c_str());
-							//tamaño
+							//meshes
 							ImGui::Text("Vertices: %d", importerFBX->totalVertices);
 							ImGui::Text("Triangulos: %d", importerFBX->totalFaces);
 							ImGui::TreePop();
 						}
 						if (ImGui::TreeNode("Texturas")) {
 							//ImGui::InputText("Nombre del archivo", currentFBXFile, 256);
-							//tamaño
+							//nombre
 							ImGui::Text("Nombre de la Textura: %s", displayFunc->currentTextureFile.c_str());
 							ImGui::TreePop();
 						}

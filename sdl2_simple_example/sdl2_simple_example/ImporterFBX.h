@@ -21,14 +21,13 @@ public:
 	aiFace face;
 	aiVector3D vertex;
 
-    int totalVertices = 3075; // Nueva variable para almacenar el número de vértices
-    int totalFaces = 1025;    // Nu
+    int totalVertices = 3075; // Vertices iniciales de la BakerHouse
+	int totalFaces = 1025;    // Caras iniciales de la BakerHouse
 
 private:
-    // Función auxiliar para cargar el archivo FBX
+    // Función para cargar el archivo FBX
     const aiScene* load_fbx(const char* file);
-    // Función auxiliar para renderizar la escena cargada
+    // Función para renderizar la escena cargada
     void render_fbx(const aiScene* scene);
 };
 
-// Estructura de Transformación

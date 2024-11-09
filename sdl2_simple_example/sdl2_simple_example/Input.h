@@ -3,9 +3,9 @@
 
 #include "MyWindow.h"
 
-//#define NUM_KEYS 352
+
 #define NUM_MOUSE_BUTTONS 5
-//#define LAST_KEYS_PRESSED_BUFFER 50
+
 struct SDL_Rect;
 
 enum EventWindow
@@ -70,7 +70,7 @@ public:
 	void GetMouseMotion(int& x, int& y);
 	KeyState GetMouseButton(MouseButton button);
 	void SetMouseButton(MouseButton button, KeyState state);
-    /*MyWindow* window = new MyWindow("SDL2 Simple Example", 800, 600);*/
+    
 
 
 	bool windowEvents[WE_COUNT];

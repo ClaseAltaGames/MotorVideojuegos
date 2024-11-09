@@ -29,27 +29,25 @@ void DisplayFunc::DisplayALL() {
     }
 
     // Dibujar la cuadrícula
-    drawGrid(10.0f, 20);  // Puedes ajustar el tamaño y el número de divisiones según tus necesidades
+    drawGrid(10.0f, 20);  
 
     // Dibujar el contenido 3D
     importerFBX->draw_fbx(currentFBXFile.c_str());
     camera->CameraMovement();
 
-    // Dibujar las formas si están activas, posicionadas para no solaparse
-    //float separation = 5.0f;  // Distancia de separación entre objetos
-    //float currentX = -1000000.0f;  // Posición X inicial
+    
 
     if (cubeActive) {
-        basicForms->draw_Cube(vec3(-10.0f, 0.0f, 0.0f), 1.0);  // Posición fija para el cubo
+		basicForms->draw_Cube(vec3(-10.0f, 0.0f, 0.0f), 1.0);  // El -10 es para que el cubo no se superponga con la pirámide (ajuste de la posicion)
     }
     if (pyramidActive) {
-        basicForms->draw_Pyramid(vec3(-5.0f, 0.0f, 0.0f), 1.0);  // Posición fija para la pirámide
+        basicForms->draw_Pyramid(vec3(-5.0f, 0.0f, 0.0f), 1.0);  //Lo mismo
     }
     if (sphereActive) {
-        basicForms->draw_Sphere(vec3(5.0f, 0.0f, 0.0f), 1.0);  // Posición fija para la esfera
+        basicForms->draw_Sphere(vec3(5.0f, 0.0f, 0.0f), 1.0);  // Lo mismo
     }
     if (cylinderActive) {
-        basicForms->draw_Cylindre(vec3(10.0f, 0.0f, 0.0f), 1.0, 2.0, 36);  // Posición fija para el cilindro
+        basicForms->draw_Cylindre(vec3(10.0f, 0.0f, 0.0f), 1.0, 2.0, 36);  // Lo mismo
     }
 
     // Dibujar la textura cargada
@@ -59,7 +57,7 @@ void DisplayFunc::DisplayALL() {
     glFlush();
 }
 void DisplayFunc::drawGrid(float size, int divisions) {
-    glColor3f(0.5f, 0.5f, 0.5f);  // Color de la cuadrícula (gris claro)
+    glColor3f(0.5f, 0.5f, 0.5f);  // Color de la cuadrícula
     glLineWidth(1.0f);             // Ancho de línea
 
     glBegin(GL_LINES);
@@ -77,13 +75,8 @@ void DisplayFunc::drawGrid(float size, int divisions) {
     glEnd();
 }
 void DisplayFunc::setActiveObject(const std::string& objectName) {
-    // Desactivar todos los objetos antes de activar el seleccionado
-   /* cubeActive = false;
-    pyramidActive = false;
-    sphereActive = false;
-    cylinderActive = false;*/
 
-    // Activar solo el objeto especificado
+    // Activar el objeto especificado
     if (objectName == "cube") {
         cubeActive = true;
     }

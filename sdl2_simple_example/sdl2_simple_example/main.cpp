@@ -79,20 +79,20 @@ static bool processEvents() {
             break;
         case SDL_DROPFILE: {
             string droppedFile = event.drop.file;
+			//esto es para que sepa que tipo de archivo es el que le estas arrastrando (comprobando que hay despues del .)
             string extension = droppedFile.substr(droppedFile.find_last_of('.') + 1);
             if (extension == "fbx" || extension == "FBX") {
                 // Cargar el archivo FBX
                 displayFunc->currentFBXFile = droppedFile;
                 importerFBX->draw_fbx(displayFunc->currentFBXFile.c_str());
             }
-			else if (extension == "png" || extension == "PNG" || extension == "DDS" || extension == "dds") {// Cargar la textura PNG
+			else if (extension == "png" || extension == "PNG" || extension == "DDS" || extension == "dds") {
+                // Cargar la textura PNG o DDS
 				displayFunc->currentTextureFile = droppedFile;
 				textures->LoadTexture(displayFunc->currentTextureFile.c_str());
 			}
-            // Cargar el archivo FBX arrastrado
-            //displayFunc->currentFBXFile = event.drop.file;
+            
             printf("%s\n", event.drop.file);
-            importerFBX->draw_fbx(displayFunc->currentFBXFile.c_str());
             SDL_free(event.drop.file);
             break;
         }      
@@ -132,10 +132,12 @@ int main(int argc, char** argv) {
 	window.displayFunc = displayFunc;
     window.importerFBX = importerFBX;
 
+    //iniciamos las librerias
     init_openGL();
 	init_devil();
     
 
+    //bucle principal
     while (processEvents()) {
         SDL_EventState(SDL_DROPFILE, SDL_ENABLE);
         const auto t0 = hrclock::now();

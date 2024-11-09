@@ -44,7 +44,7 @@ void ImporterFBX::render_fbx(const aiScene* scene) {
                 // Configuración de coordenadas de textura
                 if (mesh->mTextureCoords[0]) {
                     aiVector3D uv = mesh->mTextureCoords[0][index];
-                    glTexCoord2f(uv.x, 1.0f - uv.y);  // Cambia entre `uv.y` y `1.0f - uv.y` si es necesario
+                    glTexCoord2f(uv.x, 1.0f - uv.y);  
                 }
 
                 // Configuración de las coordenadas de vértice
@@ -70,11 +70,11 @@ int ImporterFBX::draw_fbx(const char* file) {
         return -1;
     }
 
-    // Inicializar los contadores
+    // Inicializar los contadores para que en el inspector aparezcan los valores que queremos
     totalVertices = 0;
     totalFaces = 0;
 
-    // Contar los vértices y caras
+    // Contar los vértices y caras (triangulos)
     for (unsigned int i = 0; i < scene->mNumMeshes; i++) {
         aiMesh* mesh = scene->mMeshes[i];
         totalVertices += mesh->mNumVertices;

@@ -73,7 +73,7 @@ void Textures::LoadTexture(const char* filePath) {
         glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, CHECKERS_WIDTH, CHECKERS_HEIGHT, 0,
             GL_RGBA, GL_UNSIGNED_BYTE, checkerImage);
 
-        isTextureLoaded = true;  // Marcar que se ha cargado una textura de comprobaci�n
+        isTextureLoaded = true;  // Marcar que se ha cargado una textura de comprobacion
         std::cerr << "La textura BLANCO y NEGRO ha sido cargada correctamente" << std::endl;
 
     }
