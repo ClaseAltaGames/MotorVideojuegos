@@ -24,3 +24,6 @@
 -  About menu with info of our GitHub repo
 -  Menu for loading our basic figures.
 
+## Enlace al repositorio de GitHub
+[Enlace](https://github.com/ClaseAltaGames/MotorVideojuegos)
+
