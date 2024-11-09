@@ -54,6 +54,11 @@ void Camera::CameraMovement()
         OrbitWorld();
     }
 
+	// Movimiento con el mouse si el botón izquierdo está presionado
+	if (input->GetMouseButton(LEFT_BUTTON) == KEY_DOWN && state[SDL_SCANCODE_LALT]) {
+		OrbitObject();
+	}
+
     // Rotación suave con teclas de flecha
     if (state[SDL_SCANCODE_LEFT]) {
         cameraDirX = cameraPosX + cos(rotationSpeed) * (cameraDirX - cameraPosX) - sin(rotationSpeed) * (cameraDirZ - cameraPosZ);
@@ -147,4 +152,23 @@ void Camera::OrbitWorld()
         cameraPosX += strafeX * moveSpeed;
         cameraPosZ += strafeZ * moveSpeed;
     }
+}
+
+void Camera::OrbitObject()
+{
+	//haz que de vueltas alrededor del objeto automaticamente
+	cameraPosX = 0.0 + 5.0 * cos(SDL_GetTicks() / 1000.0);
+	cameraPosZ = 0.0 + 5.0 * sin(SDL_GetTicks() / 1000.0);
+	cameraPosY = 0.0 + 5.0 * sin(SDL_GetTicks() / 1000.0);
+
+	cameraDirX = 0.0;
+	cameraDirY = 0.0;
+	cameraDirZ = 0.0;
+
+	cameraUpX = 0.0;
+	cameraUpY = 1.0;
+	cameraUpZ = 0.0;
+
+	nearPlane = 0.01;
+	farPlane = 2000.0;
 }

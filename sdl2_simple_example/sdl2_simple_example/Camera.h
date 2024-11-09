@@ -17,6 +17,9 @@ public:
 	void ZoomOUT();
 
 	void OrbitWorld();
+
+	void OrbitObject();
+
     double moveSpeed = 0.1;       // Velocidad de avance y desplazamiento lateral
     double rotationSpeed = 0.05;  // Cantidad de rotación
 
