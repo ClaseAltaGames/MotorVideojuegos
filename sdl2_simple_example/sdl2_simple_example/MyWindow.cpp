@@ -95,9 +95,23 @@ void MyWindow::swapBuffers() const {
         if (mostrarFPS) {
             ImGui::Begin("Ventana de FPS");
 
-            // Obtener el FPS actual y mostrarlo
+            // Obtener el FPS actual
             float fps = ImGui::GetIO().Framerate;
+
+            // Tamaño del historial de FPS (e.g., 100 valores)
+            static const int fpsHistorySize = 100;
+            static float fpsHistory[fpsHistorySize] = { 0.0f };
+            static int fpsIndex = 0;
+
+            // Añadir el FPS actual al historial, reemplazando el valor más antiguo
+            fpsHistory[fpsIndex] = fps;
+            fpsIndex = (fpsIndex + 1) % fpsHistorySize;
+
+            // Mostrar el valor actual de FPS
             ImGui::Text("FPS: %.1f", fps);
+
+            // Mostrar el gráfico de FPS como líneas o histograma
+            ImGui::PlotLines("FPS History", fpsHistory, fpsHistorySize, fpsIndex, nullptr, 0.0f, 100.0f, ImVec2(0, 80));
 
             ImGui::End();
         }
