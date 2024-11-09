@@ -65,6 +65,7 @@ GLubyte checkerImage[CHECKERS_HEIGHT][CHECKERS_WIDTH][4];
 static bool processEvents() {
     SDL_Event event;
     while (SDL_PollEvent(&event)) {
+        ImGui_ImplSDL2_ProcessEvent(&event);
         switch (event.type) {
         case SDL_QUIT:
             return false;
@@ -100,10 +101,23 @@ static bool processEvents() {
                 std::cout << "Rueda del ratón hacia abajo" << std::endl;
 				camera->ZoomIN();
             }
-        default: {
-            ImGui_ImplSDL2_ProcessEvent(&event);
+        case SDL_MOUSEBUTTONDOWN:
+            if (event.button.button == SDL_BUTTON_LEFT) {
+                input->SetMouseButton(LEFT_BUTTON, KEY_DOWN);  // Actualiza el estado al presionar
+            }
+            if (event.button.button == SDL_BUTTON_RIGHT) {
+                input->SetMouseButton(RIGHT_BUTTON, KEY_DOWN);
+            }
             break;
-        }
+
+        case SDL_MOUSEBUTTONUP:
+            if (event.button.button == SDL_BUTTON_LEFT) {
+                input->SetMouseButton(LEFT_BUTTON, KEY_UP);  // Actualiza el estado al soltar
+            }
+            if (event.button.button == SDL_BUTTON_RIGHT) {
+                input->SetMouseButton(RIGHT_BUTTON, KEY_UP);
+            }
+            break;
         }
     }
     return true;

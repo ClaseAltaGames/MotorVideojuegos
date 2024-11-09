@@ -69,6 +69,7 @@ public:
 	void GetMousePosition(int &x, int &y);
 	void GetMouseMotion(int& x, int& y);
 	KeyState GetMouseButton(MouseButton button);
+	void SetMouseButton(MouseButton button, KeyState state);
     /*MyWindow* window = new MyWindow("SDL2 Simple Example", 800, 600);*/
 
 

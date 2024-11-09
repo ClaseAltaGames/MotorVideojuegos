@@ -50,7 +50,7 @@ void Camera::CameraMovement()
     ResetCamera();
 
     // Movimiento con el mouse si el botón derecho está presionado
-    if (input->GetMouseButton(RIGHT_BUTTON) != SDL_MOUSEBUTTONUP) {
+    if (input->GetMouseButton(RIGHT_BUTTON) == KEY_DOWN) {
         OrbitWorld();
     }
 
@@ -91,16 +91,16 @@ void Camera::ResetCamera()
 
 void Camera::ZoomIN()
 {
-    cameraPosX += 0.25;
+	cameraPosX += 0.25;
     cameraPosY += 0.25;
-    cameraPosZ += 0.25;
+	cameraPosZ += 0.25;
 }
 
 void Camera::ZoomOUT()
 {
-    cameraPosX -= 0.25;
+	cameraPosX -= 0.25;
     cameraPosY -= 0.25;
-    cameraPosZ -= 0.25;
+	cameraPosZ -= 0.25;
 }
 
 void Camera::OrbitWorld()

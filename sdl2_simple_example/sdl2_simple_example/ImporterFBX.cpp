@@ -41,7 +41,6 @@ void ImporterFBX::render_fbx(const aiScene* scene) {
 
             for (unsigned int j = 0; j < face.mNumIndices; j++) {
                 unsigned int index = face.mIndices[j];
-
                 // Configuración de coordenadas de textura
                 if (mesh->mTextureCoords[0]) {
                     aiVector3D uv = mesh->mTextureCoords[0][index];
