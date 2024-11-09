@@ -1,3 +1,5 @@
+#define SDL_MAIN_HANDLED  
+
 #include <GL/glew.h>
 #include <chrono>
 #include <thread>
@@ -15,6 +17,7 @@
 #include <IL/ilut.h>
 #include <stdio.h>
 #include <iostream>
+#include <SDL2/SDL.h>
 
 //Clases
 #include "MyWindow.h"
@@ -51,17 +54,27 @@ void init_openGL() {
     glEnable(GL_DEPTH_TEST);
     glEnable(GL_TEXTURE_2D);
     glClearColor(0.5, 0.5, 0.5, 1.0);
-	printf("OpenGL version: %s, GLSL version: %s\n", glGetString(GL_VERSION), glGetString(GL_SHADING_LANGUAGE_VERSION));
+    printf("OpenGL version: %s, GLSL version: %s\n", glGetString(GL_VERSION), glGetString(GL_SHADING_LANGUAGE_VERSION));
     printf("OpenGL cargada exitosamente!\n");
-
 }
+
 void init_devil() {
-	ilInit();
-	iluInit();
-	ilutInit();
-	ilutRenderer(ILUT_OPENGL);
-	printf("Devil version: 1.8.0\n");
-	printf("Devil cargada exitosamente!\n");
+    ilInit();
+    iluInit();
+    ilutInit();
+    ilutRenderer(ILUT_OPENGL);
+    printf("Devil version: 1.8.0\n");
+    printf("Devil cargada exitosamente!\n");
+}
+
+void getSDLVersion() {
+    SDL_version compiled;
+    SDL_version linked;
+
+    SDL_VERSION(&compiled);
+    SDL_GetVersion(&linked);
+    printf("Compiled against SDL version %d.%d.%d\n", compiled.major, compiled.minor, compiled.patch);
+    printf("Linked against SDL version %d.%d.%d\n", linked.major, linked.minor, linked.patch);
 }
 
 GLubyte checkerImage[CHECKERS_HEIGHT][CHECKERS_WIDTH][4];
@@ -79,7 +92,7 @@ static bool processEvents() {
             break;
         case SDL_DROPFILE: {
             string droppedFile = event.drop.file;
-			//esto es para que sepa que tipo de archivo es el que le estas arrastrando (comprobando que hay despues del .)
+            //esto es para que sepa que tipo de archivo es el que le estas arrastrando (comprobando que hay despues del .)
             string extension = droppedFile.substr(droppedFile.find_last_of('.') + 1);
             if (extension == "fbx" || extension == "FBX") {
                 // Cargar el archivo FBX
@@ -87,16 +100,16 @@ static bool processEvents() {
                 importerFBX->draw_fbx(displayFunc->currentFBXFile.c_str());
                 printf("Objeto FBX cargado: %s\n", displayFunc->currentFBXFile.c_str());
             }
-			else if (extension == "png" || extension == "PNG" || extension == "DDS" || extension == "dds") {
+            else if (extension == "png" || extension == "PNG" || extension == "DDS" || extension == "dds") {
                 // Cargar la textura PNG o DDS
-				displayFunc->currentTextureFile = droppedFile;
-				textures->LoadTexture(displayFunc->currentTextureFile.c_str());
-			}
-            
+                displayFunc->currentTextureFile = droppedFile;
+                textures->LoadTexture(displayFunc->currentTextureFile.c_str());
+            }
+
             printf("%s\n", event.drop.file);
             SDL_free(event.drop.file);
             break;
-        }      
+        }
         case SDL_MOUSEWHEEL:
             if (event.wheel.y > 0) {
                 std::cout << "Rueda del ratón hacia arriba" << std::endl;
@@ -104,7 +117,7 @@ static bool processEvents() {
             }
             else if (event.wheel.y < 0) {
                 std::cout << "Rueda del ratón hacia abajo" << std::endl;
-				camera->ZoomIN();
+                camera->ZoomIN();
             }
         case SDL_MOUSEBUTTONDOWN:
             if (event.button.button == SDL_BUTTON_LEFT) {
@@ -130,20 +143,21 @@ static bool processEvents() {
 
 int main(int argc, char** argv) {
     MyWindow window("SDL2 Simple Example", WINDOW_SIZE.x, WINDOW_SIZE.y);
-	window.displayFunc = displayFunc;
+    window.displayFunc = displayFunc;
     window.importerFBX = importerFBX;
 
     //iniciamos las librerias
     init_openGL();
-	init_devil();
-    
+    init_devil();
+    getSDLVersion();
+
     printf("Objeto FBX cargado: %s\n", displayFunc->currentFBXFile.c_str());
 
     //bucle principal
     while (processEvents()) {
         SDL_EventState(SDL_DROPFILE, SDL_ENABLE);
         const auto t0 = hrclock::now();
-		displayFunc->DisplayALL();
+        displayFunc->DisplayALL();
         window.swapBuffers();
         const auto t1 = hrclock::now();
         const auto dt = t1 - t0;
