@@ -85,7 +85,7 @@ static bool processEvents() {
                 displayFunc->currentFBXFile = droppedFile;
                 importerFBX->draw_fbx(displayFunc->currentFBXFile.c_str());
             }
-			else if (extension == "png" || extension == "PNG") {// Cargar la textura PNG
+			else if (extension == "png" || extension == "PNG" || extension == "DDS" || extension == "dds") {// Cargar la textura PNG
 				displayFunc->currentTextureFile = droppedFile;
 				textures->LoadTexture(displayFunc->currentTextureFile.c_str());
 			}

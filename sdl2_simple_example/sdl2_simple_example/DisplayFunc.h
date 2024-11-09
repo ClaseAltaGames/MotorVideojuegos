@@ -4,7 +4,7 @@
 using namespace std;
 
 #define FBX_FILE "Assets/BakerHouse.fbx"
-#define TEXTURE_FILE "Assets/Baker_house.png"
+#define TEXTURE_FILE "Assets/Baker_house.dds"
 
 class DisplayFunc
 {
