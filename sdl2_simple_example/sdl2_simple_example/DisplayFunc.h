@@ -1,30 +1,53 @@
 #pragma once
 #include <string>
-
-using namespace std;
+#include <glm/glm.hpp>
+#include "ImporterFBX.h"
+#include "BasicForms.h"
+#include "Camera.h"
+#include "Textures.h"
 
 #define FBX_FILE "Assets/BakerHouse.fbx"
 #define TEXTURE_FILE "Assets/Baker_house.dds"
 
-class DisplayFunc
-{
+using namespace std;
+
+class DisplayFunc {
 public:
+    DisplayFunc();
+    ~DisplayFunc();
 
-	DisplayFunc();
-	~DisplayFunc();
+    // Main display function to render all components
+    void DisplayALL();
 
-	void DisplayALL();
-	void drawGrid(float size, int divisions);
-	void setActiveObject(const std::string& objectName);
+    // Draws a grid for the scene
+    void drawGrid(float size, int divisions);
 
-	bool cubeActive = false;
-	bool pyramidActive = false;
-	bool sphereActive = false;
-	bool cylinderActive = false;
-	bool textureLoaded = false;
+    // Sets the active basic form to display
+    void setActiveObject(const std::string& objectName);
 
-	string currentFBXFile = FBX_FILE;
-	string currentTextureFile = TEXTURE_FILE;
+    // Flags for toggling visibility of different objects
+    bool cubeActive = false;
+    bool pyramidActive = false;
+    bool sphereActive = false;
+    bool cylinderActive = false;
+    bool textureLoaded = false;
 
+    // File paths for the FBX model and texture
+    string currentFBXFile = FBX_FILE;
+    string currentTextureFile = TEXTURE_FILE;
+
+    // Pointers to external objects and resources
+    ImporterFBX* importerFBX;
+    BasicForms* basicForms;
+    Camera* camera;
+    Textures* textures;
+
+    // Transformation variables for the FBX model
+    glm::vec3 fbxPosition = glm::vec3(0.0f, 0.0f, 0.0f);
+    glm::vec3 fbxRotation = glm::vec3(0.0f, 0.0f, 0.0f);
+    glm::vec3 fbxScale = glm::vec3(1.0f, 1.0f, 1.0f);
+
+    // Method to render the ImGui-based gizmo UI
+    void renderGizmoUI();
 };
 

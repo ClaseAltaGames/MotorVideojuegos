@@ -6,6 +6,7 @@
 #include "GL/gl.h"
 #include "GL/glew.h"
 
+
 struct SDL_Window;
 
 class MyWindow {

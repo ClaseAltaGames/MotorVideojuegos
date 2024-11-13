@@ -1,4 +1,5 @@
 #pragma once
+#include "SDL2/SDL.h"
 
 class Camera
 {
@@ -23,8 +24,6 @@ public:
     double moveSpeed = 0.1;       
     double rotationSpeed = 0.05;  
 
-
-
-
+	const Uint8* state = SDL_GetKeyboardState(NULL);
 };
 

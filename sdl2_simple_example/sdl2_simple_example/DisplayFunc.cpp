@@ -4,7 +4,8 @@
 #include "BasicForms.h"
 #include "Camera.h"
 #include "Textures.h"
-
+#include "Input.h"
+#include "SDL2/SDL.h"
 
 DisplayFunc::DisplayFunc()
 {
@@ -28,17 +29,23 @@ void DisplayFunc::DisplayALL() {
         textureLoaded = true;  // Marcar que la textura ya ha sido cargada
     }
 
+    if (camera->state[SDL_SCANCODE_K])
+    {
+		importerFBX->setPosition(5.0f, 0.0f, 0.0f);
+		importerFBX->setRotation(5.0f, 5.0f, 5.0f);
+		importerFBX->setScale(2.0f, 2.0f, 2.0f);
+    }
     // Dibujar la cuadrícula
-    drawGrid(10.0f, 20);  
+    drawGrid(10.0f, 20);
 
     // Dibujar el contenido 3D
     importerFBX->draw_fbx(currentFBXFile.c_str());
     camera->CameraMovement();
 
-    
+
 
     if (cubeActive) {
-		basicForms->draw_Cube(vec3(-10.0f, 0.0f, 0.0f), 1.0);  // El -10 es para que el cubo no se superponga con la pirámide (ajuste de la posicion)
+        basicForms->draw_Cube(vec3(-10.0f, 0.0f, 0.0f), 1.0);  // El -10 es para que el cubo no se superponga con la pirámide (ajuste de la posicion)
     }
     if (pyramidActive) {
         basicForms->draw_Pyramid(vec3(-5.0f, 0.0f, 0.0f), 1.0);  //Lo mismo
@@ -49,6 +56,8 @@ void DisplayFunc::DisplayALL() {
     if (cylinderActive) {
         basicForms->draw_Cylindre(vec3(10.0f, 0.0f, 0.0f), 1.0, 2.0, 36);  // Lo mismo
     }
+
+
 
     // Dibujar la textura cargada
     textures->DrawTexture();

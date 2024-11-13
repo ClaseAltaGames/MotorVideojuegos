@@ -1,10 +1,8 @@
 #include "Camera.h"
 #include <GL/glew.h>
 #include <GL/glut.h>
-#include "SDL2/SDL.h"
 #include "Input.h"
 
-const Uint8* state = SDL_GetKeyboardState(NULL);
 
 // Variables globales para la posición y orientación de la cámara
 GLdouble cameraPosX = 5.0, cameraPosY = 5.0, cameraPosZ = 5.0;
