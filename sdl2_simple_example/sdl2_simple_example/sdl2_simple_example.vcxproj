@@ -131,6 +131,7 @@
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="DisplayFunc.cpp" />
     <ClCompile Include="GameObjects.cpp" />
+    <ClCompile Include="Gizmo.cpp" />
     <ClCompile Include="ImporterFBX.cpp" />
     <ClCompile Include="Input.cpp" />
     <ClCompile Include="main.cpp" />
@@ -143,6 +144,7 @@
     <ClInclude Include="Component.h" />
     <ClInclude Include="DisplayFunc.h" />
     <ClInclude Include="GameObjects.h" />
+    <ClInclude Include="Gizmo.h" />
     <ClInclude Include="ImporterFBX.h" />
     <ClInclude Include="Input.h" />
     <ClInclude Include="MyWindow.h" />

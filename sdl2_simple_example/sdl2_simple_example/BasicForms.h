@@ -23,5 +23,10 @@ public:
 
 	void draw_Cylindre(const vec3& center, double radius, double height, int segments);
 
+	void drawArrow(const glm::vec3& direction);
+
+	void drawCube(const glm::vec3& position);
+
+	void drawCircle(const glm::vec3& axis);
 };
 

@@ -27,6 +27,7 @@
 #include "Camera.h"
 #include "Input.h"
 #include "Textures.h"
+#include "Gizmo.h"
 
 using namespace std;
 
@@ -46,6 +47,7 @@ DisplayFunc* displayFunc = new DisplayFunc();
 ImporterFBX* importerFBX = new ImporterFBX();
 Camera* camera = new Camera();
 Input* input = new Input();
+Gizmo* gizmo = new Gizmo();
 Textures* textures = new Textures();
 
 void init_openGL() {
@@ -83,6 +85,7 @@ static bool processEvents() {
     SDL_Event event;
     while (SDL_PollEvent(&event)) {
         ImGui_ImplSDL2_ProcessEvent(&event);
+		gizmo->handleInput(event);
         switch (event.type) {
         case SDL_QUIT:
             return false;
@@ -156,6 +159,7 @@ int main(int argc, char** argv) {
     //bucle principal
     while (processEvents()) {
         SDL_EventState(SDL_DROPFILE, SDL_ENABLE);
+
         const auto t0 = hrclock::now();
         displayFunc->DisplayALL();
         window.swapBuffers();

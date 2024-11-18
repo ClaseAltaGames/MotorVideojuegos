@@ -5,6 +5,7 @@
 #include "BasicForms.h"
 #include "Camera.h"
 #include "Textures.h"
+#include "Gizmo.h"
 
 #define FBX_FILE "Assets/BakerHouse.fbx"
 #define TEXTURE_FILE "Assets/Baker_house.dds"
@@ -41,6 +42,7 @@ public:
     BasicForms* basicForms;
     Camera* camera;
     Textures* textures;
+	Gizmo* gizmo;
 
     // Transformation variables for the FBX model
     glm::vec3 fbxPosition = glm::vec3(0.0f, 0.0f, 0.0f);

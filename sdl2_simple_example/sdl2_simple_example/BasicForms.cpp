@@ -135,3 +135,85 @@ void BasicForms::draw_Cylindre(const vec3& center, double radius, double height,
     }
     glEnd();
 }
+
+void BasicForms::drawArrow(const glm::vec3& direction) {
+    const float arrowLength = 1.0f;
+    const float arrowRadius = 0.05f;
+    const float coneHeight = 0.2f;
+    const float coneRadius = 0.1f;
+
+    // Orientar la flecha en la dirección dada
+    glPushMatrix();
+    glTranslatef(direction.x, direction.y, direction.z);
+
+    // Dibuja el cilindro (cuerpo de la flecha)
+    GLUquadric* quad = gluNewQuadric();
+    glRotatef(90.0f, -direction.z, direction.x, direction.y); // Rotar hacia el eje correcto
+    gluCylinder(quad, arrowRadius, arrowRadius, arrowLength, 16, 16);
+
+    // Dibuja el cono (punta de la flecha)
+    glTranslatef(0.0f, 0.0f, arrowLength); // Mover al extremo del cilindro
+    gluCylinder(quad, coneRadius, 0.0f, coneHeight, 16, 16);
+
+    gluDeleteQuadric(quad);
+    glPopMatrix();
+}
+
+void BasicForms::drawCube(const glm::vec3& position) {
+    const float cubeSize = 0.1f;
+
+    glPushMatrix();
+    glTranslatef(position.x, position.y, position.z);
+
+    glBegin(GL_LINES);
+    // Dibujar las líneas de un cubo wireframe
+    float s = cubeSize / 2.0f; // Tamaño medio del cubo
+
+    // Lados inferiores
+    glVertex3f(-s, -s, -s); glVertex3f(s, -s, -s);
+    glVertex3f(s, -s, -s); glVertex3f(s, -s, s);
+    glVertex3f(s, -s, s); glVertex3f(-s, -s, s);
+    glVertex3f(-s, -s, s); glVertex3f(-s, -s, -s);
+
+    // Lados superiores
+    glVertex3f(-s, s, -s); glVertex3f(s, s, -s);
+    glVertex3f(s, s, -s); glVertex3f(s, s, s);
+    glVertex3f(s, s, s); glVertex3f(-s, s, s);
+    glVertex3f(-s, s, s); glVertex3f(-s, s, -s);
+
+    // Conexiones verticales
+    glVertex3f(-s, -s, -s); glVertex3f(-s, s, -s);
+    glVertex3f(s, -s, -s); glVertex3f(s, s, -s);
+    glVertex3f(s, -s, s); glVertex3f(s, s, s);
+    glVertex3f(-s, -s, s); glVertex3f(-s, s, s);
+
+    glEnd();
+
+    glPopMatrix();
+}
+
+void BasicForms::drawCircle(const glm::vec3& axis) {
+    const int segments = 64; // Número de segmentos del círculo
+    const float radius = 1.0f;
+
+    glPushMatrix();
+
+    // Orientar el círculo en función del eje
+    if (axis == glm::vec3(1.0f, 0.0f, 0.0f)) {
+        glRotatef(90.0f, 0.0f, 1.0f, 0.0f);
+    }
+    else if (axis == glm::vec3(0.0f, 1.0f, 0.0f)) {
+        glRotatef(90.0f, 1.0f, 0.0f, 0.0f);
+    } // Z no requiere rotación
+
+    glBegin(GL_LINE_LOOP);
+    for (int i = 0; i < segments; ++i) {
+        float theta = 2.0f * 3.1415926f * float(i) / float(segments); // Ángulo
+        float x = radius * cosf(theta);
+        float z = radius * sinf(theta);
+        glVertex3f(x, 0.0f, z);
+    }
+    glEnd();
+
+    glPopMatrix();
+}

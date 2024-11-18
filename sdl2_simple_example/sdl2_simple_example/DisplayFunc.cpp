@@ -23,6 +23,7 @@ void DisplayFunc::DisplayALL() {
     BasicForms* basicForms = new BasicForms;
     Camera* camera = new Camera;
     Textures* textures = new Textures;
+	Gizmo* gizmo = new Gizmo;
 
     if (!textureLoaded) {
         textures->LoadTexture(currentTextureFile.c_str());  // Cambia esta ruta a tu archivo de textura
@@ -57,6 +58,18 @@ void DisplayFunc::DisplayALL() {
         basicForms->draw_Cylindre(vec3(10.0f, 0.0f, 0.0f), 1.0, 2.0, 36);  // Lo mismo
     }
 
+    // Dibujar el Gizmo según el modo actual
+    switch (gizmo->currentGizmoMode) {
+    case TRANSLATE:
+        gizmo->drawTranslateGizmo();
+        break;
+    case SCALE:
+        gizmo->drawScaleGizmo();
+        break;
+    case ROTATE:
+        gizmo->drawRotateGizmo();
+        break;
+    }
 
 
     // Dibujar la textura cargada
