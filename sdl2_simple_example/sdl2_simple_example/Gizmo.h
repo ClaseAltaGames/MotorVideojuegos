@@ -20,7 +20,7 @@ public:
 
 	double moveSpeed = 0.1;
 	double rotationSpeed = 0.05;
-	GizmoMode currentGizmoMode = TRANSLATE;  // Modo inicial
+	GizmoMode currentGizmoMode = SCALE;  // Modo inicial
 	void handleInput(SDL_Event& event);
 	void drawTranslateGizmo();
 	void drawScaleGizmo();

@@ -59,17 +59,14 @@ void DisplayFunc::DisplayALL() {
     }
 
     // Dibujar el Gizmo según el modo actual
-    switch (gizmo->currentGizmoMode) {
-    case TRANSLATE:
+    if (gizmo->currentGizmoMode == TRANSLATE) {
         gizmo->drawTranslateGizmo();
-        break;
-    case SCALE:
+    } else if (gizmo->currentGizmoMode == SCALE) {
         gizmo->drawScaleGizmo();
-        break;
-    case ROTATE:
+    } else if (gizmo->currentGizmoMode == ROTATE) {
         gizmo->drawRotateGizmo();
-        break;
     }
+
 
 
     // Dibujar la textura cargada
