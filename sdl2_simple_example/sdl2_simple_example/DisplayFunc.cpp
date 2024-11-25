@@ -43,7 +43,7 @@ void DisplayFunc::DisplayALL() {
     importerFBX->draw_fbx(currentFBXFile.c_str());
     camera->CameraMovement();
 
-
+    
 
     if (cubeActive) {
         basicForms->draw_Cube(vec3(-10.0f, 0.0f, 0.0f), 1.0);  // El -10 es para que el cubo no se superponga con la pirámide (ajuste de la posicion)
@@ -59,13 +59,15 @@ void DisplayFunc::DisplayALL() {
     }
 
     // Dibujar el Gizmo según el modo actual
-    if (gizmo->currentGizmoMode == TRANSLATE) {
+	gizmo->changeGizmoMode();
+	gizmo->draw();
+  /*  if (gizmo->currentGizmoMode == TRANSLATE) {
         gizmo->drawTranslateGizmo();
     } else if (gizmo->currentGizmoMode == SCALE) {
         gizmo->drawScaleGizmo();
     } else if (gizmo->currentGizmoMode == ROTATE) {
         gizmo->drawRotateGizmo();
-    }
+    }*/
 
 
 

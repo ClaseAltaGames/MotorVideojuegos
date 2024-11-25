@@ -5,6 +5,7 @@
 #include "glm/gtc/matrix_transform.hpp"
 #include "glm/gtc/type_ptr.hpp"
 #include "BasicForms.h"
+#include "Input.h"
 
 enum GizmoMode {
 	TRANSLATE,
@@ -20,11 +21,13 @@ public:
 
 	double moveSpeed = 0.1;
 	double rotationSpeed = 0.05;
-	GizmoMode currentGizmoMode = SCALE;  // Modo inicial
-	void handleInput(SDL_Event& event);
+	GizmoMode currentGizmoMode;  // Modo inicial
+	void changeGizmoMode();
 	void drawTranslateGizmo();
 	void drawScaleGizmo();
 	void drawRotateGizmo();
+	void draw();
+
 
 	BasicForms* basicForms = new BasicForms;
 };

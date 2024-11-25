@@ -8,23 +8,42 @@ Gizmo::~Gizmo()
 {
 }
 
-void Gizmo::handleInput(SDL_Event& event) {
-    if (event.type == SDL_KEYDOWN) {
-        switch (event.key.keysym.sym) {
-        case SDLK_w: 
-            currentGizmoMode = TRANSLATE; 
-            break;
-        case SDLK_e: 
-            currentGizmoMode = SCALE;
-            break;
-        case SDLK_r: 
-            currentGizmoMode = ROTATE; 
-            break;
-        }
+void Gizmo::changeGizmoMode() {
+    // Cambiar el modo de Gizmo al detectar una pulsación inicial
+    if (input->GetKey(SDL_SCANCODE_W) == KEY_DOWN) {
+        currentGizmoMode = TRANSLATE;
+    }
+    if (input->GetKey(SDL_SCANCODE_E) == KEY_DOWN) {
+        currentGizmoMode = ROTATE;
+    }
+    if (input->GetKey(SDL_SCANCODE_R) == KEY_DOWN) {
+        currentGizmoMode = SCALE;
     }
 }
+
+void Gizmo::draw() {
+    glDisable(GL_DEPTH_TEST);
+
+    // Dibujar el Gizmo según el modo actual
+    switch (currentGizmoMode) {
+    case TRANSLATE:
+        drawTranslateGizmo();
+        break;
+    case ROTATE:
+        drawRotateGizmo();
+        break;
+    case SCALE:
+        drawScaleGizmo();
+        break;
+    default:
+        break; // No se dibuja nada si no hay un modo válido
+    }
+
+    glEnable(GL_DEPTH_TEST);
+}
 void Gizmo::drawTranslateGizmo() {
-	glDisable(GL_DEPTH_TEST);
+   
+    glDisable(GL_DEPTH_TEST);
     glColor3f(1.0f, 0.0f, 0.0f); // Rojo para X
     basicForms->drawArrow(glm::vec3(1.0f, 0.0f, 0.0f));
 
@@ -33,7 +52,8 @@ void Gizmo::drawTranslateGizmo() {
 
     glColor3f(0.0f, 0.0f, 1.0f); // Azul para Z
     basicForms->drawArrow(glm::vec3(0.0f, 0.0f, 1.0f));
-	glEnable(GL_DEPTH_TEST);
+    glEnable(GL_DEPTH_TEST);
+	
 }
 void Gizmo::drawScaleGizmo() {
     glDisable(GL_DEPTH_TEST);

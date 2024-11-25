@@ -1,8 +1,6 @@
 #ifndef __INPUT_H__
 #define __INPUT_H__
 
-#include "MyWindow.h"
-
 
 #define NUM_MOUSE_BUTTONS 5
 

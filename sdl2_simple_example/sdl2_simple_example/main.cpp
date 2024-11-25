@@ -85,13 +85,21 @@ static bool processEvents() {
     SDL_Event event;
     while (SDL_PollEvent(&event)) {
         ImGui_ImplSDL2_ProcessEvent(&event);
-		gizmo->handleInput(event);
         switch (event.type) {
         case SDL_QUIT:
             return false;
             break;
         case SDL_KEYDOWN:
             if (event.key.keysym.sym == SDLK_ESCAPE) return false;
+			if (event.key.keysym.sym == SDLK_w) {
+				gizmo->currentGizmoMode = TRANSLATE;
+			}
+			if (event.key.keysym.sym == SDLK_e) {
+				gizmo->currentGizmoMode = ROTATE;
+			}
+			if (event.key.keysym.sym == SDLK_r) {
+				gizmo->currentGizmoMode = SCALE;
+			}
             break;
         case SDL_DROPFILE: {
             string droppedFile = event.drop.file;
@@ -159,8 +167,8 @@ int main(int argc, char** argv) {
     //bucle principal
     while (processEvents()) {
         SDL_EventState(SDL_DROPFILE, SDL_ENABLE);
-
         const auto t0 = hrclock::now();
+        input->PreUpdate();
         displayFunc->DisplayALL();
         window.swapBuffers();
         const auto t1 = hrclock::now();

@@ -2,6 +2,7 @@
 #include <GL/glew.h>
 #include <GL/glut.h>
 #include "Input.h"
+#include <iostream>
 
 
 // Variables globales para la posición y orientación de la cámara
