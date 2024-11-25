@@ -8,6 +8,7 @@
 #include "Input.h"
 
 enum GizmoMode {
+	NONE,
 	TRANSLATE,
 	SCALE,
 	ROTATE
@@ -21,7 +22,7 @@ public:
 
 	double moveSpeed = 0.1;
 	double rotationSpeed = 0.05;
-	GizmoMode currentGizmoMode;  // Modo inicial
+	GizmoMode currentGizmoMode = NONE;  
 	void changeGizmoMode();
 	void drawTranslateGizmo();
 	void drawScaleGizmo();
@@ -31,5 +32,5 @@ public:
 
 	BasicForms* basicForms = new BasicForms;
 };
-
+extern Gizmo* gizmo;
 

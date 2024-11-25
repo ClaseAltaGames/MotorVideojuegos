@@ -27,4 +27,5 @@ public:
 
 	const Uint8* state = SDL_GetKeyboardState(NULL);
 };
+extern Camera* camera;
 

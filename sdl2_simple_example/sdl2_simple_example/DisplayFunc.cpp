@@ -58,19 +58,8 @@ void DisplayFunc::DisplayALL() {
         basicForms->draw_Cylindre(vec3(10.0f, 0.0f, 0.0f), 1.0, 2.0, 36);  // Lo mismo
     }
 
-    // Dibujar el Gizmo según el modo actual
-	gizmo->changeGizmoMode();
 	gizmo->draw();
-  /*  if (gizmo->currentGizmoMode == TRANSLATE) {
-        gizmo->drawTranslateGizmo();
-    } else if (gizmo->currentGizmoMode == SCALE) {
-        gizmo->drawScaleGizmo();
-    } else if (gizmo->currentGizmoMode == ROTATE) {
-        gizmo->drawRotateGizmo();
-    }*/
-
-
-
+    gizmo->changeGizmoMode();  
     // Dibujar la textura cargada
     textures->DrawTexture();
 

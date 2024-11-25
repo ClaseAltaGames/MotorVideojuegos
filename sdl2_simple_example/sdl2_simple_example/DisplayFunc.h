@@ -37,13 +37,6 @@ public:
     string currentFBXFile = FBX_FILE;
     string currentTextureFile = TEXTURE_FILE;
 
-    // Pointers to external objects and resources
-    ImporterFBX* importerFBX;
-    BasicForms* basicForms;
-    Camera* camera;
-    Textures* textures;
-	Gizmo* gizmo;
-
     // Transformation variables for the FBX model
     glm::vec3 fbxPosition = glm::vec3(0.0f, 0.0f, 0.0f);
     glm::vec3 fbxRotation = glm::vec3(0.0f, 0.0f, 0.0f);

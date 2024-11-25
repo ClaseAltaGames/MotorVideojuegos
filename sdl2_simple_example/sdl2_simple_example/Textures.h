@@ -22,5 +22,6 @@ private:
     GLuint textureID;  // ID de la textura en OpenGL
     bool isTextureLoaded;  // Verificar si la textura ya está cargada
 };
+extern Textures* textures;
 
 #endif // TEXTURES_H

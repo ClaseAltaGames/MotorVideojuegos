@@ -29,4 +29,4 @@ public:
 
 	void drawCircle(const glm::vec3& axis);
 };
-
+extern BasicForms* basicForms;

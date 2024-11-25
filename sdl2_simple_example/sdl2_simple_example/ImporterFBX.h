@@ -46,3 +46,4 @@ private:
     glm::vec3 scale = glm::vec3(1.0f, 1.0f, 1.0f);      // Scale of the model
     glm::mat4 transform = glm::mat4(1.0f);              // Transformation matrix combining position, rotation, and scale
 };
+extern ImporterFBX* importerFBX;

@@ -22,11 +22,13 @@ void Gizmo::changeGizmoMode() {
 }
 
 void Gizmo::draw() {
-    glDisable(GL_DEPTH_TEST);
-
     // Dibujar el Gizmo según el modo actual
     switch (currentGizmoMode) {
     case TRANSLATE:
+        ///////////////////////////////////////////////////
+        //corregir el porque no entra aqui el proximo dia//
+        ///////////////////////////////////////////////////
+        printf("I'm here");
         drawTranslateGizmo();
         break;
     case ROTATE:
@@ -35,14 +37,14 @@ void Gizmo::draw() {
     case SCALE:
         drawScaleGizmo();
         break;
+    case NONE:
+        break; // No se dibuja nada si no hay un modo válido
     default:
         break; // No se dibuja nada si no hay un modo válido
     }
-
-    glEnable(GL_DEPTH_TEST);
 }
 void Gizmo::drawTranslateGizmo() {
-   
+
     glDisable(GL_DEPTH_TEST);
     glColor3f(1.0f, 0.0f, 0.0f); // Rojo para X
     basicForms->drawArrow(glm::vec3(1.0f, 0.0f, 0.0f));
@@ -53,7 +55,7 @@ void Gizmo::drawTranslateGizmo() {
     glColor3f(0.0f, 0.0f, 1.0f); // Azul para Z
     basicForms->drawArrow(glm::vec3(0.0f, 0.0f, 1.0f));
     glEnable(GL_DEPTH_TEST);
-	
+
 }
 void Gizmo::drawScaleGizmo() {
     glDisable(GL_DEPTH_TEST);

@@ -91,15 +91,6 @@ static bool processEvents() {
             break;
         case SDL_KEYDOWN:
             if (event.key.keysym.sym == SDLK_ESCAPE) return false;
-			if (event.key.keysym.sym == SDLK_w) {
-				gizmo->currentGizmoMode = TRANSLATE;
-			}
-			if (event.key.keysym.sym == SDLK_e) {
-				gizmo->currentGizmoMode = ROTATE;
-			}
-			if (event.key.keysym.sym == SDLK_r) {
-				gizmo->currentGizmoMode = SCALE;
-			}
             break;
         case SDL_DROPFILE: {
             string droppedFile = event.drop.file;
