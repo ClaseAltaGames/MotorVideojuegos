@@ -91,6 +91,21 @@ static bool processEvents() {
             break;
         case SDL_KEYDOWN:
             if (event.key.keysym.sym == SDLK_ESCAPE) return false;
+			if (event.key.keysym.sym == SDLK_w) {
+				displayFunc->translateActive = true;
+				displayFunc->rotateActive = false;
+				displayFunc->scaleActive = false;
+			}
+			if (event.key.keysym.sym == SDLK_e) {
+				displayFunc->translateActive = false;
+				displayFunc->rotateActive = true;
+				displayFunc->scaleActive = false;
+			}
+            if (event.key.keysym.sym == SDLK_r) {
+                displayFunc->translateActive = false;
+                displayFunc->rotateActive = false;
+                displayFunc->scaleActive = true;
+            }
             break;
         case SDL_DROPFILE: {
             string droppedFile = event.drop.file;
@@ -159,7 +174,6 @@ int main(int argc, char** argv) {
     while (processEvents()) {
         SDL_EventState(SDL_DROPFILE, SDL_ENABLE);
         const auto t0 = hrclock::now();
-        input->PreUpdate();
         displayFunc->DisplayALL();
         window.swapBuffers();
         const auto t1 = hrclock::now();

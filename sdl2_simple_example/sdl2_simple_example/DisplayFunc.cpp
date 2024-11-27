@@ -63,24 +63,6 @@ void DisplayFunc::DisplayALL() {
             basicForms->draw_Cylindre(vec3(10.0f, 0.0f, 0.0f), 1.0, 2.0, 36);  // Lo mismo
         }
 
-        if (input->GetKey(SDL_SCANCODE_W) == KEY_DOWN)
-        {
-            translateActive = true;
-            scaleActive = false;
-            rotateActive = false;
-        }
-        if (input->GetKey(SDL_SCANCODE_E) == KEY_DOWN)
-        {
-            translateActive = false;
-            scaleActive = false;
-            rotateActive = true;
-        }
-        if (input->GetKey(SDL_SCANCODE_R) == KEY_DOWN)
-        {
-            translateActive = false;
-            scaleActive = true;
-            rotateActive = false;
-        }
         if (translateActive)
         {
             gizmo->drawTranslateGizmo();
