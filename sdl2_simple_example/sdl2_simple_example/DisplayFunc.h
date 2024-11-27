@@ -33,6 +33,10 @@ public:
     bool cylinderActive = false;
     bool textureLoaded = false;
 
+	bool translateActive = false;  
+	bool scaleActive = false;
+	bool rotateActive = false;
+
     // File paths for the FBX model and texture
     string currentFBXFile = FBX_FILE;
     string currentTextureFile = TEXTURE_FILE;

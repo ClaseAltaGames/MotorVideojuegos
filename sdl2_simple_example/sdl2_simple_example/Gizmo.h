@@ -20,15 +20,9 @@ public:
 	Gizmo();
 	~Gizmo();
 
-	double moveSpeed = 0.1;
-	double rotationSpeed = 0.05;
-	GizmoMode currentGizmoMode = NONE;  
-	void changeGizmoMode();
 	void drawTranslateGizmo();
 	void drawScaleGizmo();
 	void drawRotateGizmo();
-	void draw();
-
 
 	BasicForms* basicForms = new BasicForms;
 };

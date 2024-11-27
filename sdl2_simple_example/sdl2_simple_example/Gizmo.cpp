@@ -8,41 +8,6 @@ Gizmo::~Gizmo()
 {
 }
 
-void Gizmo::changeGizmoMode() {
-    // Cambiar el modo de Gizmo al detectar una pulsación inicial
-    if (input->GetKey(SDL_SCANCODE_W) == KEY_DOWN) {
-        currentGizmoMode = TRANSLATE;
-    }
-    if (input->GetKey(SDL_SCANCODE_E) == KEY_DOWN) {
-        currentGizmoMode = ROTATE;
-    }
-    if (input->GetKey(SDL_SCANCODE_R) == KEY_DOWN) {
-        currentGizmoMode = SCALE;
-    }
-}
-
-void Gizmo::draw() {
-    // Dibujar el Gizmo según el modo actual
-    switch (currentGizmoMode) {
-    case TRANSLATE:
-        ///////////////////////////////////////////////////
-        //corregir el porque no entra aqui el proximo dia//
-        ///////////////////////////////////////////////////
-        printf("I'm here");
-        drawTranslateGizmo();
-        break;
-    case ROTATE:
-        drawRotateGizmo();
-        break;
-    case SCALE:
-        drawScaleGizmo();
-        break;
-    case NONE:
-        break; // No se dibuja nada si no hay un modo válido
-    default:
-        break; // No se dibuja nada si no hay un modo válido
-    }
-}
 void Gizmo::drawTranslateGizmo() {
 
     glDisable(GL_DEPTH_TEST);
