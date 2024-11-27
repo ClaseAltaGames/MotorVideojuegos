@@ -7,12 +7,6 @@
 #include "BasicForms.h"
 #include "Input.h"
 
-enum GizmoMode {
-	NONE,
-	TRANSLATE,
-	SCALE,
-	ROTATE
-};
 
 class Gizmo
 {
