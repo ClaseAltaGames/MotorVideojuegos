@@ -20,6 +20,10 @@ bool displayInfo = false;
 bool abrirPopupAcercaDe = false;
 
 
+bool isPlaying = false;
+bool isPaused = false;
+bool nextFrame = false;
+
 MyWindow::MyWindow(const std::string& title, int w, int h) : _width(w), _height(h) {
 
     SDL_GL_SetAttribute(SDL_GL_DOUBLEBUFFER, 1);
@@ -321,6 +325,39 @@ void MyWindow::swapBuffers() const {
 			ImGui::TreePop();
         }
     }
+    // Barra inferior
+    ImGui::SetNextWindowPos(ImVec2(0, ImGui::GetFrameHeight()), ImGuiCond_Always); // Justo debajo de la barra principal
+    ImGui::SetNextWindowSize(ImVec2(ImGui::GetIO().DisplaySize.x, 0), ImGuiCond_Always); // Ancho completo
+
+    ImGuiWindowFlags flags = ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoScrollbar | ImGuiWindowFlags_NoScrollWithMouse;
+    ImGui::Begin("Barra de control", nullptr, flags);
+
+    // Centramos los botones
+    float windowWidth = ImGui::GetWindowSize().x; // Ancho de la barra inferior
+    float buttonWidth = 60.0f;                   // Ancho de cada botón (aproximado)
+    float spacing = ImGui::GetStyle().ItemSpacing.x; // Espaciado entre botones
+    float totalWidth = (buttonWidth * 3) + (spacing * 2); // Total: 3 botones + 2 espacios
+
+    float offsetX = (windowWidth - totalWidth) / 2.0f; // Offset para centrar
+
+    ImGui::SetCursorPosX(offsetX); // Mover el cursor al centro
+    if (ImGui::Button("Play", ImVec2(buttonWidth, 0))) {
+        displayFunc->paused = false;
+    }
+    ImGui::SameLine();
+    if (ImGui::Button("Pause", ImVec2(buttonWidth, 0))) {
+        displayFunc->paused = true; // Pausa o reanuda la simulación
+    }
+    ImGui::SameLine();
+    if (ImGui::Button("Next", ImVec2(buttonWidth, 0))) {
+        if (isPaused) {
+            nextFrame = true; // Marca que debe avanzar un frame
+        }
+    }
+
+    ImGui::End();
+
+
     ImGui::Render();
     ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
     SDL_GL_SwapWindow(static_cast<SDL_Window*>(_window));

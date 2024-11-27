@@ -37,6 +37,8 @@ public:
 	bool scaleActive = false;
 	bool rotateActive = false;
 
+	bool paused = false;
+
     // File paths for the FBX model and texture
     string currentFBXFile = FBX_FILE;
     string currentTextureFile = TEXTURE_FILE;

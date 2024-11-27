@@ -39,4 +39,7 @@ public:
 	char currentFBXFile;
 
 	
+
+	
 };
+extern MyWindow* myWindow;

@@ -6,6 +6,7 @@
 #include "Textures.h"
 #include "Input.h"
 #include "SDL2/SDL.h"
+#include "MyWindow.h"
 
 DisplayFunc::DisplayFunc()
 {
@@ -23,79 +24,83 @@ void DisplayFunc::DisplayALL() {
     BasicForms* basicForms = new BasicForms;
     Camera* camera = new Camera;
     Textures* textures = new Textures;
-	Gizmo* gizmo = new Gizmo;
+    Gizmo* gizmo = new Gizmo;
 
-    if (!textureLoaded) {
-        textures->LoadTexture(currentTextureFile.c_str());  // Cambia esta ruta a tu archivo de textura
-        textureLoaded = true;  // Marcar que la textura ya ha sido cargada
-    }
 
-    if (camera->state[SDL_SCANCODE_K])
-    {
-		importerFBX->setPosition(5.0f, 0.0f, 0.0f);
-		importerFBX->setRotation(5.0f, 5.0f, 5.0f);
-		importerFBX->setScale(2.0f, 2.0f, 2.0f);
-    }
-    // Dibujar la cuadrícula
-    drawGrid(10.0f, 20);
+    if (!paused) {
 
-    // Dibujar el contenido 3D
-    importerFBX->draw_fbx(currentFBXFile.c_str());
-    camera->CameraMovement();
+        if (!textureLoaded) {
+            textures->LoadTexture(currentTextureFile.c_str());  // Cambia esta ruta a tu archivo de textura
+            textureLoaded = true;  // Marcar que la textura ya ha sido cargada
+        }
 
-    
+        if (camera->state[SDL_SCANCODE_K])
+        {
+            importerFBX->setPosition(5.0f, 0.0f, 0.0f);
+            importerFBX->setRotation(5.0f, 5.0f, 5.0f);
+            importerFBX->setScale(2.0f, 2.0f, 2.0f);
+        }
+        // Dibujar la cuadrícula
+        drawGrid(10.0f, 20);
 
-    if (cubeActive) {
-        basicForms->draw_Cube(vec3(-10.0f, 0.0f, 0.0f), 1.0);  // El -10 es para que el cubo no se superponga con la pirámide (ajuste de la posicion)
-    }
-    if (pyramidActive) {
-        basicForms->draw_Pyramid(vec3(-5.0f, 0.0f, 0.0f), 1.0);  //Lo mismo
-    }
-    if (sphereActive) {
-        basicForms->draw_Sphere(vec3(5.0f, 0.0f, 0.0f), 1.0);  // Lo mismo
-    }
-    if (cylinderActive) {
-        basicForms->draw_Cylindre(vec3(10.0f, 0.0f, 0.0f), 1.0, 2.0, 36);  // Lo mismo
-    }
-    
-	if (input->GetKey(SDL_SCANCODE_W) == KEY_DOWN)
-	{
-		translateActive = true;
-		scaleActive = false;
-		rotateActive = false;
-	}
-	if (input->GetKey(SDL_SCANCODE_E) == KEY_DOWN)
-	{
-		translateActive = false;
-		scaleActive = false;
-		rotateActive = true;
-	}
-	if (input->GetKey(SDL_SCANCODE_R) == KEY_DOWN)
-	{
-		translateActive = false;
-		scaleActive = true;
-		rotateActive = false;
-	}
-	if (translateActive)
-	{
-		gizmo->drawTranslateGizmo();
-	}
-	if (scaleActive)
-	{
-		gizmo->drawScaleGizmo();
-	}
-    if (rotateActive)
-    {
-        gizmo->drawRotateGizmo();
-        translateActive = false;
-        scaleActive = false;
-    }
+        // Dibujar el contenido 3D
+        importerFBX->draw_fbx(currentFBXFile.c_str());
+        camera->CameraMovement();
 
-    // Dibujar la textura cargada
-    textures->DrawTexture();
 
-    // Forzar el renderizado
-    glFlush();
+
+        if (cubeActive) {
+            basicForms->draw_Cube(vec3(-10.0f, 0.0f, 0.0f), 1.0);  // El -10 es para que el cubo no se superponga con la pirámide (ajuste de la posicion)
+        }
+        if (pyramidActive) {
+            basicForms->draw_Pyramid(vec3(-5.0f, 0.0f, 0.0f), 1.0);  //Lo mismo
+        }
+        if (sphereActive) {
+            basicForms->draw_Sphere(vec3(5.0f, 0.0f, 0.0f), 1.0);  // Lo mismo
+        }
+        if (cylinderActive) {
+            basicForms->draw_Cylindre(vec3(10.0f, 0.0f, 0.0f), 1.0, 2.0, 36);  // Lo mismo
+        }
+
+        if (input->GetKey(SDL_SCANCODE_W) == KEY_DOWN)
+        {
+            translateActive = true;
+            scaleActive = false;
+            rotateActive = false;
+        }
+        if (input->GetKey(SDL_SCANCODE_E) == KEY_DOWN)
+        {
+            translateActive = false;
+            scaleActive = false;
+            rotateActive = true;
+        }
+        if (input->GetKey(SDL_SCANCODE_R) == KEY_DOWN)
+        {
+            translateActive = false;
+            scaleActive = true;
+            rotateActive = false;
+        }
+        if (translateActive)
+        {
+            gizmo->drawTranslateGizmo();
+        }
+        if (scaleActive)
+        {
+            gizmo->drawScaleGizmo();
+        }
+        if (rotateActive)
+        {
+            gizmo->drawRotateGizmo();
+            translateActive = false;
+            scaleActive = false;
+        }
+
+        // Dibujar la textura cargada
+        textures->DrawTexture();
+
+        // Forzar el renderizado
+        glFlush();
+    }
 }
 void DisplayFunc::drawGrid(float size, int divisions) {
     glColor3f(0.5f, 0.5f, 0.5f);  // Color de la cuadrícula
