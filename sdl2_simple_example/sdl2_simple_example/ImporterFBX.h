@@ -31,9 +31,9 @@ public:
     int totalVertices = 3075;  // Total vertices, dynamically updated on load
     int totalFaces = 1025;     // Total faces, dynamically updated on load
 
-private:
     // Internal function to load the FBX file
     const aiScene* load_fbx(const char* file);
+private:
 
     // Internal function to render the loaded scene
     void render_fbx(const aiScene* scene);

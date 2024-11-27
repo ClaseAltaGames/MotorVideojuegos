@@ -24,6 +24,7 @@ void DisplayFunc::DisplayALL() {
     BasicForms* basicForms = new BasicForms;
     Camera* camera = new Camera;
     Textures* textures = new Textures;
+    GameObject* gameObject = new GameObject("GameObject");
     Gizmo* gizmo = new Gizmo;
 
 

@@ -6,6 +6,7 @@
 #include "Camera.h"
 #include "Textures.h"
 #include "Gizmo.h"
+#include "GameObjects.h"
 
 #define FBX_FILE "Assets/BakerHouse.fbx"
 #define TEXTURE_FILE "Assets/Baker_house.dds"
@@ -51,4 +52,4 @@ public:
     // Method to render the ImGui-based gizmo UI
     void renderGizmoUI();
 };
-
+extern DisplayFunc* displayFunc;
