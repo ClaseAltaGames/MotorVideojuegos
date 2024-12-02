@@ -24,7 +24,7 @@ bool isPlaying = false;
 bool isPaused = false;
 bool nextFrame = false;
 
-bool fullScreen = false;
+bool fullScreen = true;
 
 MyWindow::MyWindow(const std::string& title, int w, int h) : _width(w), _height(h) {
 
