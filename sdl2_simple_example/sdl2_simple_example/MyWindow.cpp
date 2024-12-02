@@ -24,6 +24,8 @@ bool isPlaying = false;
 bool isPaused = false;
 bool nextFrame = false;
 
+bool fullScreen = false;
+
 MyWindow::MyWindow(const std::string& title, int w, int h) : _width(w), _height(h) {
 
     SDL_GL_SetAttribute(SDL_GL_DOUBLEBUFFER, 1);
@@ -70,6 +72,7 @@ void MyWindow::swapBuffers() const {
                 if (ImGui::Checkbox("Deteccion de hardware", &hardwareDetection));
                 if (ImGui::Checkbox("Consumo de memoria", &memoryConsume));
                 if (ImGui::Checkbox("Informacion de pantalla", &displayInfo));
+				if (ImGui::Checkbox("Pantalla completa",&fullScreen));
                 ImGui::EndMenu();
             }
             if (ImGui::MenuItem("Salir del motor...")) {
@@ -151,6 +154,26 @@ void MyWindow::swapBuffers() const {
 			ImGui::OpenPopup("Acerca de...");
 			abrirPopupAcercaDe = false;
 		}
+        if (fullScreen) {
+            // Configurar pantalla completa con escalado
+            SDL_SetWindowFullscreen(static_cast<SDL_Window*>(_window), SDL_WINDOW_FULLSCREEN_DESKTOP);
+
+            // Obtener el tamaño actual del monitor
+            int displayW, displayH;
+            SDL_GetWindowSize(static_cast<SDL_Window*>(_window), &displayW, &displayH);
+
+            // Actualizar el viewport de OpenGL
+            glViewport(0, 0, displayW, displayH);
+        }
+        else {
+            // Salir de pantalla completa y restaurar el tamaño original
+            SDL_SetWindowFullscreen(static_cast<SDL_Window*>(_window), 0);
+            SDL_SetWindowSize(static_cast<SDL_Window*>(_window), _width, _height);
+
+            // Actualizar el viewport de OpenGL
+            glViewport(0, 0, _width, _height);
+        }
+
         if (ImGui::BeginPopup("Acerca de...")) {
             ImGui::Text("Rockstallica Engine version 0.5");
             ImGui::Text(" ");

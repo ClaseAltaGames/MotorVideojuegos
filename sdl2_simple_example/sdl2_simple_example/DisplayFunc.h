@@ -51,5 +51,6 @@ public:
 
     // Method to render the ImGui-based gizmo UI
     void renderGizmoUI();
+    void fullScreen();
 };
 extern DisplayFunc* displayFunc;
