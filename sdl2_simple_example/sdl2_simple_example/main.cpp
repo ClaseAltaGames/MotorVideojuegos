@@ -159,9 +159,11 @@ static bool processEvents() {
 }
 
 int main(int argc, char** argv) {
-    MyWindow window("SDL2 Simple Example", WINDOW_SIZE.x, WINDOW_SIZE.y);
-    window.displayFunc = displayFunc;
-    window.importerFBX = importerFBX;
+    myWindow = new MyWindow ("SDL2 Simple Example", WINDOW_SIZE.x, WINDOW_SIZE.y);
+
+
+    myWindow->displayFunc = displayFunc;
+    myWindow->importerFBX = importerFBX;
 
     //iniciamos las librerias
     init_openGL();
@@ -175,7 +177,7 @@ int main(int argc, char** argv) {
         SDL_EventState(SDL_DROPFILE, SDL_ENABLE);
         const auto t0 = hrclock::now();
         displayFunc->DisplayALL();
-        window.swapBuffers();
+        myWindow->swapBuffers();
         const auto t1 = hrclock::now();
         const auto dt = t1 - t0;
         if (dt < FRAME_DT) this_thread::sleep_for(FRAME_DT - dt);

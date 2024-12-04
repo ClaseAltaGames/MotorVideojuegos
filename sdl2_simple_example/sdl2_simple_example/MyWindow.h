@@ -37,7 +37,7 @@ public:
 
 	void setCurrentFBXFile(const std::string& fbxFile);
 	char currentFBXFile;
-
+	SDL_Window* getWindow() const { return _window; }
 	
 
 	

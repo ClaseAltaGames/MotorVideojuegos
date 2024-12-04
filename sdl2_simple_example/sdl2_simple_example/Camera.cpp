@@ -3,6 +3,7 @@
 #include <GL/glut.h>
 #include "Input.h"
 #include <iostream>
+#include "MyWindow.h"
 
 
 // Variables globales para la posición y orientación de la cámara
@@ -31,7 +32,13 @@ void Camera::Set3DView()
     glLoadIdentity();
 
     // Configurar perspectiva con el ratio de aspecto y los valores de near y far plane
-    gluPerspective(fov, 1, std::max(nearPlane, 0.1), std::min(farPlane, 100000.0));
+	int windowWidth, windowHeight;
+    SDL_GetWindowSize(myWindow->getWindow(), &windowWidth, &windowHeight);
+
+    float aspectRatio = static_cast<float>(windowWidth) / static_cast<float>(windowHeight);
+
+    // Actualiza la proyección con el aspecto correcto
+    gluPerspective(fov, aspectRatio, std::max(static_cast<float>(nearPlane), 0.1f), std::min(static_cast<float>(farPlane), 100000.0f));
 
     // Configuración de la cámara en la matriz de modelo-vista
     glMatrixMode(GL_MODELVIEW);

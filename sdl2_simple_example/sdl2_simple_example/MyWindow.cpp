@@ -26,6 +26,8 @@ bool nextFrame = false;
 
 bool fullScreen = true;
 
+MyWindow* myWindow;
+
 MyWindow::MyWindow(const std::string& title, int w, int h) : _width(w), _height(h) {
 
     SDL_GL_SetAttribute(SDL_GL_DOUBLEBUFFER, 1);
