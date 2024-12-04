@@ -37,16 +37,15 @@ void ImporterFBX::render_fbx(const aiScene* scene) {
     }
 
     glPushMatrix();
-    glMultMatrixf(glm::value_ptr(transform));  // Apply combined transformation matrix
+    glMultMatrixf(glm::value_ptr(transform));  // Aplica la transformación
 
-    // Render each mesh in the scene
+    // Renderiza los objetos aquí
     for (unsigned int i = 0; i < scene->mNumMeshes; i++) {
         aiMesh* mesh = scene->mMeshes[i];
 
         glBegin(GL_TRIANGLES);
         for (unsigned int f = 0; f < mesh->mNumFaces; f++) {
             aiFace face = mesh->mFaces[f];
-
             for (unsigned int j = 0; j < face.mNumIndices; j++) {
                 unsigned int index = face.mIndices[j];
 
@@ -133,3 +132,23 @@ void ImporterFBX::setPosition(float posX, float posY, float posZ) {
     position = glm::vec3(posX, posY, posZ);
     update_transformations();
 }
+
+glm::vec3 ImporterFBX::getPosition() const {
+    return position;
+}
+
+//void ImporterFBX::update_transformations() {
+//    // Reinicia la matriz de transformación a la identidad
+//    transform = glm::mat4(1.0f);
+//
+//    // Aplica la traslación (desplazamiento)
+//    transform = glm::translate(transform, position);
+//
+//    // Aplica la rotación (rotación alrededor de los ejes x, y, z)
+//    transform = glm::rotate(transform, glm::radians(rotation.x), glm::vec3(1.0f, 0.0f, 0.0f));  // Rotación en X
+//    transform = glm::rotate(transform, glm::radians(rotation.y), glm::vec3(0.0f, 1.0f, 0.0f));  // Rotación en Y
+//    transform = glm::rotate(transform, glm::radians(rotation.z), glm::vec3(0.0f, 0.0f, 1.0f));  // Rotación en Z
+//
+//    // Aplica la escala
+//    transform = glm::scale(transform, scale);
+//}

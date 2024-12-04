@@ -106,6 +106,16 @@ static bool processEvents() {
                 displayFunc->rotateActive = false;
                 displayFunc->scaleActive = true;
             }
+            if (event.key.keysym.sym == SDLK_j) {  // Tecla J
+                glm::vec3 currentPosition = importerFBX->getPosition();
+                importerFBX->setPosition(currentPosition.x - 0.1f, currentPosition.y, currentPosition.z);
+                importerFBX->update_transformations();  // Actualiza la transformación
+            }
+            else if (event.key.keysym.sym == SDLK_l) {  // Tecla L
+                glm::vec3 currentPosition = importerFBX->getPosition();
+                importerFBX->setPosition(currentPosition.x + 0.1f, currentPosition.y, currentPosition.z);
+                importerFBX->update_transformations();  // Actualiza la transformación
+            }
             break;
         case SDL_DROPFILE: {
             string droppedFile = event.drop.file;

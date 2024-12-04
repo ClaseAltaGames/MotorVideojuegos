@@ -24,6 +24,8 @@ public:
     // Setters for transformations (position and scale can also be controlled externally)
     void setPosition(float posX, float posY, float posZ);
     void setScale(float scaleX, float scaleY, float scaleZ);
+    glm::vec3 getPosition() const;
+	//void updateTransformations();
 
     // Show ImGui controls for transformation
     void renderUI();
@@ -31,6 +33,7 @@ public:
     int totalVertices = 3075;  // Total vertices, dynamically updated on load
     int totalFaces = 1025;     // Total faces, dynamically updated on load
 
+    void update_transformations();
     // Internal function to load the FBX file
     const aiScene* load_fbx(const char* file);
 private:
@@ -39,7 +42,6 @@ private:
     void render_fbx(const aiScene* scene);
 
     // Update the transformation matrix
-    void update_transformations();
 
     glm::vec3 position = glm::vec3(0.0f, 0.0f, 0.0f);   // Position of the model
     glm::vec3 rotation = glm::vec3(0.0f, 0.0f, 0.0f);   // Rotation (in degrees) for each axis
